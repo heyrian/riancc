@@ -33,8 +33,8 @@ export default defineConfig({
 				public_folder: "/images",
 				i18n: {
 					structure: "multiple_folders",
-					locales: ["en", "it"],
-					default_locale: "en",
+					locales: ["en", "ja","zh"],
+					default_locale: "zh",
 				},
 				collections: [
 					// Content collections
