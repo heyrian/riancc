@@ -1,5 +1,5 @@
 ---
-title: Harnessing the Power of TikTok Ads A Comprehensive Guide
+title: Harnessing the Power of Ads A Comprehensive Guide
 draft: false
 author: Jon Doe
 tags:
