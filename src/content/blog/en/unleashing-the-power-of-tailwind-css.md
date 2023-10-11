@@ -1,5 +1,5 @@
 ---
-title: Unleashing the Power of Tailwind CSS
+title: Unleashing the Power of
 draft: false
 author: Jon Doe
 tags:
