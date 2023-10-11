@@ -24,7 +24,7 @@ export default defineConfig({
 			config: {
 				backend: {
 					name: "github",
-					repo: "zankhq/astros",
+					repo: "heyrian/riancc",
 					branch: "main",
 					base_url: "https://astros.zank.studio",
 					auth_endpoint: "/api/auth",
