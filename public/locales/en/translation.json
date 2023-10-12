@@ -1,21 +1,60 @@
 {
 	"hero": {
-		"title": "Supercharged web development!",
-		"subtitle": "Unleashing the Power of the Web: Combines Astro, Tailwind CSS and Alpine.js to Streamline Your Web Development Process.",
-		"globe_title": "Craft Stunning, High-Performance Websites with Ease and Speed",
-		"main_button_text": "Download on github",
-		"secondary_button_text": "Go to animated version"
-	},
-	"hero_animated": {
-		"secondary_button_text": "Go to base version"
+		"title": "Hey!Rian",
+		"subtitle": "This is a related blog that talks about Programming Technology x Digital Life x Multi-Angle Learning.",
+		"primary_button_text":"primary_button_text",
+		"secondary_button_text": "secondary_button_text"
 	},
 	"header": {
 		"features": "Features",
 		"pricing": "Pricing",
 		"blog": "Blog",
+		"about": "About",
 		"contact": "Contacts",
 		"primary_button_text": "Download",
 		"secondary_button_text": "Login"
+	},
+	"banner":{
+		"primary_button_text": "About Rian",
+		"secondary_button_text":"Read my article."
+	},
+	"footer": {
+		"home": "Home",
+		"blog": "Blog",
+		"privacy_policy": "Privacy Policy"
+	},
+	"privacy_policy":{
+		"title":"隱私權政策",
+		"desc":"Welcome to 'Hey!Rian' (hereinafter referred to as this website), in order to enable you to use the various services and information of this website with peace of mind, we would like to explain to you the privacy protection policy of this website in order to protect your rights and interests, please read the following content:",
+		"scope":{
+			"title":"Scope of the Privacy Protection Policy",
+			"desc":"The Privacy Policy covers how this website handles personally identifiable information collected when you use the services on this website. The Privacy Policy does not apply to linked websites outside of this website, nor does it apply to people who are not commissioned or involved in the management of this website."
+		},
+		"collection":{
+			"title":"Collection, Processing and Utilization of Personal Data",
+			"desc":"When you visit this website or use the functional services provided by this website, we will, depending on the functional nature of the service, ask you to provide the necessary personal information, and process and utilize your personal information within the scope of the specific purpose; without your written consent, this website will not use the personal information for other purposes."
+		},
+		"protection":{
+			"title":"Data Protection",
+			"desc":"The host of this website are equipped with firewalls, anti-virus systems and other related information security equipment and the necessary security measures to protect the website and your personal information using strict protection measures, only authorized personnel to access your personal information, the relevant processing staff have signed a confidentiality contract, if there is a violation of the obligation of confidentiality will be subject to the relevant legal penalties. /If you violate the confidentiality obligations, you will be subject to the relevant legal sanctions. If it is necessary to commission other units to provide services due to business needs, this website will also strictly require them to comply with the confidentiality obligations, and to take the necessary checking procedures to ensure that they will actually comply with them."
+		},
+		"link":{
+			"title":"External Links",
+			"desc":"The pages of this website provide links to other websites, and you may click through the links provided on this website to access other websites. However, the linked site does not apply to the privacy protection policy of this website, and you must refer to the privacy protection policy of the linked site."
+		},
+		"third_part":{
+			"title":"Policy on Sharing of Personal Data with Third Parties",
+			"desc":"This website will not provide, exchange, rent or sell any of your personal information to other individuals, organizations, private businesses or public authorities, unless there is a legal basis or contractual obligation to do so.",
+			"example":"The foregoing proviso includes, without limitation:\n\nWith your written consent.\nWhere expressly required by law.\n\nTo avoid danger to your life, body, liberty or property.\n\n\nIn cooperation with a public agency or academic research organization, when necessary for statistical or academic research in the public interest, and the data has been processed or collected by the provider in such a way that it is not possible to identify the specific subject in the manner in which it was disclosed.\nWhen your behavior on the website violates the Terms of Service or may damage or impede the rights of the website and other users or cause damage to any person, the disclosure of your personal information through the analysis of the website management unit is necessary to identify, contact or take legal action.\nIn favor of your rights.\n\nWhen this website commissions a vendor to collect, process, or utilize your personal information, we will fulfill our responsibility to supervise and manage the outsourced vendor or individual."
+		},
+		"coockie":{
+			"title":"Use of Cookies",
+			"desc":"In order to provide you with the best service, this website will place and use our cookies in your computer. If you do not want to accept the writing of cookies, you can set the privacy level in the function of the browser you are using to be high, so that you can refuse the writing of cookies, but it may lead to the inability of some functions of the website to perform normally."
+		},
+		"policy":{
+			"title":"Amendments to the Privacy Protection Policy",
+			"desc":"The privacy policy of this website will be amended from time to time in response to demand, and the amended terms will be posted on the website."
+		}
 	},
 	"features": {
 		"learn_more": "Learn more",
@@ -44,7 +83,55 @@
 		"privacy_link": "Privacy Policy."
 	},
 	"blog": {
+		"title":"Our Blog",
+		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
 		"prev": "Prev",
-		"next": "Next"
+		"next": "Next",
+		"back_blog_text":"Back to Blog"
+	},
+	"notFound":{
+		"title":"Sorry, we couldn't find this page.",
+		"desc":"But dont worry, you can find plenty of other things on our homepage.",
+		"back_home_text":"Back to homepage"
+	},
+	"about":{
+		"personal_characteristics":{
+			"title":"Personal Characteristics",
+			"desc":["MBTI: ESTP.", "Does things without fuss." , "Easy to get acquainted." , "Loves to experiment and work across entrepreneurial, programming, and design communities."]
+		},
+		"learn":{
+			"title":"Learning Status",
+			"desc":["Japanese beginner.","Piano beginner.","I'm good at editing videos and animations because of my design department, but I'm not good at drawing."]
+		},
+		"information":{
+			"title":"Personal Information",
+			"desc":["Web freelancer." , "Engineer with a business mindset." , "Stable living in Tainan." , "Would like to try remote work in a fixed team when I have the chance."]
+		},
+		"values":{
+			"title":"Values and Ideas",
+			"desc":["It's normal to go back to square one in learning because nothing in the world is meant to be learned once. Even if I've gone back to square one, I've tried a lot of things and I've made progress, and that's good.","There is no standard answer in life, it's all about experience and experimentation, and it's all about the sparks that shine through."]
+		},
+		"preference":{
+			"title":"Likes and Dislikes",
+			"desc":["Loves ACG culture, will follow anime every season", "Loves Japanese food, especially sushi and ramen", "Doesn't like to go out, the highest record is not to go out for one week without a reason.","I don't eat cows or goats, but I like seafood."]
+		},
+		"tech":{
+			"title":"Programming",
+			"type":{
+				"frontend":{
+					"title":"Web Front End",
+					"desc":["Currently good at Javascript.", "Good at Vue3, like the flexibility of the Composition API.", "Used React a long time ago, but I was not familiar with Javascript at that time, so I suffered a lot." , "Used React a long time ago, but I was not familiar with Javascript at that time, so I suffered a lot."]
+				},
+
+				"backend":{
+					"title":"Web Backend",
+					"desc":["Used to work with Node.js Express.", "Learned Sequlize + MySql, because at that time was to help the other half of the store to write management system, at the same time to do front-end and back-end write too hard, and then ran to use Firebase.", "Have plans to learn Python."]
+				}
+			}
+		},
+		"experience":{
+			"title":"Experience and Life",
+			"desc":["I am 日安, it's a Chinese character '晏'","Graduated in Visual Communication Design.","I got married right after I graduated from university.","I'm helping my husband to open a cell phone repair store.","I don't have kids. I'm afraid of noise." , "I was confused about my job and felt that my managerial position did not give me a sense of fulfillment."]
+		}
 	}
 }

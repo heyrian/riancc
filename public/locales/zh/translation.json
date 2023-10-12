@@ -1,21 +1,60 @@
 {
 	"hero": {
-		"title": "Sviluppo web potenziato!",
-		"subtitle": "Liberare il Potere del Web: Combina Astro, Tailwind CSS e Alpine.js per Semplificare il Tuo Processo di Sviluppo Web.",
-		"globe_title": "Crea Siti Web Sorprendenti ad Alte Prestazioni con Facilità e Velocità.",
-		"main_button_text": "Scarica su github",
-		"secondary_button_text": "Vai a versione animata"
+		"title": "嘿！日安",
+		"subtitle": "這是一個談論關於程式技術 x 數位生活 x 多角學習的相關部落格。",
+		"primary_button_text":"primary_button_text",
+		"secondary_button_text": "secondary_button_text"
 	},
-	"hero_animated": {
-		"secondary_button_text": "Vai a versione base"
+	"banner":{
+		"primary_button_text": "關於日安",
+		"secondary_button_text":"來看我的文章"
 	},
 	"header": {
 		"features": "Funzionalità",
 		"pricing": "Prezzi",
-		"blog": "Blog",
-		"contact": "Contatti",
+		"about": "關於日安",
+		"blog": "文章列表",
+		"contact": "聯絡我",
 		"primary_button_text": "Scarica",
 		"secondary_button_text": "Login"
+	},
+	"footer": {
+		"home": "首頁",
+		"blog": "文章列表",
+		"privacy_policy": "隱私權政策"
+	},
+	"privacy_policy":{
+		"title":"隱私權政策",
+		"desc":"非常歡迎您光臨「嘿！日安」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：",
+		"scope":{
+			"title":"一、隱私權保護政策的適用範圍",
+			"desc":"隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。"
+		},
+		"collection":{
+			"title":"二、個人資料的蒐集、處理及利用方式",
+			"desc":"當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。"
+		},
+		"protection":{
+			"title":"三、資料之保護",
+			"desc":"本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。/n如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。"
+		},
+		"link":{
+			"title":"四、網站對外的相關連結",
+			"desc":"本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。"
+		},
+		"third_part":{
+			"title":"五、與第三人共用個人資料之政策",
+			"desc":"本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。",
+			"example":"前項但書之情形包括不限於：\n\n經由您書面同意。\n法律明文規定。\n為免除您生命、身體、自由或財產上之危險。\n與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人。\n當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。\n有利於您的權益。\n本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。"
+		},
+		"coockie":{
+			"title":"六、Cookie之使用",
+			"desc":"為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie 的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。"
+		},
+		"policy":{
+			"title":"七、隱私權保護政策之修正",
+			"desc":"本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。"
+		}
 	},
 	"features": {
 		"learn_more": "Scopri di più",
@@ -44,7 +83,55 @@
 		"privacy_link": "Privacy Policy."
 	},
 	"blog": {
-		"prev": "Precedente",
-		"next": "Successiva"
+		"title":"文章列表",
+		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
+		"prev": "上一頁",
+		"next": "下一頁",
+		"back_blog_text":"回到文章列表"
+	},
+	"notFound":{
+		"title":"我們沒有找到這個頁面 :(",
+		"desc":"你可以嘗試看看找其他的內容。",
+		"back_home_text":"回到首頁"
+	},
+	"about":{
+		"personal_characteristics":{
+			"title":"個人特質",
+			"desc":["MBTI：ESTP。","做事不拘小節。","容易混熟。","喜歡多方嘗試，橫跨創業圈、程式圈、設計圈。"]
+		},
+		"learn":{
+			"title":"學習狀態",
+			"desc":["日文初學中。","鋼琴初學中。","因為設計系的關係，擅長剪接、動畫，但獨獨不擅長畫畫。"]
+		},
+		"information":{
+			"title":"個人資訊",
+			"desc":["目前是網頁自由接案工作者。","具有商業思維的工程師。","穩定居住在台南。","有機會想嘗試固定團隊遠端工作。"]
+		},
+		"values":{
+			"title":"價值觀與思想",
+			"desc":["學習會回到原點是正常的事，因為世界上本就沒有什麼東西是一學就會的。哪怕我有一大半退回去了，但我試了很多東西，有進步，這就很好。","人生沒有標準答案，貴在體驗和不斷嘗試，淬煉出耀眼的火花。"]
+		},
+		"preference":{
+			"title":"各種喜歡與討厭",
+			"desc":["喜歡ACG文化，每季會追動畫的那種","喜歡吃日本料理，尤其是壽司跟拉麵","不喜歡出門，最高紀錄是無理由一個禮拜不出門。","不吃牛不吃羊，喜歡海鮮"]
+		},
+		"tech":{
+			"title":"程式技術",
+			"type":{
+				"frontend":{
+					"title":"網頁前端",
+					"desc":["目前擅長 Javascript。","擅長使用 Vue3，喜歡 Composition API 帶來的彈性。","很早以前使用過 React，但是那時候 Javascript 不熟，所以吃很多苦頭。"]
+				},
+
+				"backend":{
+					"title":"網頁後端",
+					"desc":["寫過 Node.js Express","曾經學習過 Sequlize + MySql，因為那時候是幫店面寫管理系統，前後端都寫太辛苦了，後來跑去用 Firebase。","有計劃學習 Python。"]
+				}
+			}
+		},
+		"experience":{
+			"title":"經歷與生活",
+			"desc":["我叫日安，是名字「晏」拆成組字。","視覺傳達設計系出身。","大學畢業就結婚。","協助另一半開一間手機修店。","沒有小孩，怕吵。","對工作迷惘過，覺得管理職無法給我成就感。"]
+		}
 	}
 }
