@@ -1,0 +1,19 @@
+{
+  "main": [
+    {
+      "name": "facebook",
+      "icon": "facebook",
+      "link": "https://www.facebook.com/hey.rian.cc"
+    },
+    {
+      "name": "instagram",
+      "icon": "instagram",
+      "link": "https://instagram.com/hey.rian.cc"
+    },
+    {
+      "name": "github",
+      "icon": "github",
+      "link": "https://www.github.com/heyrian"
+    }
+  ]
+}

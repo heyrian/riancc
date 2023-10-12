@@ -1,0 +1,26 @@
+{
+  "main": [
+    
+    {
+      "title": "header.about",
+      "path": "/about"
+    },{
+      "title": "header.blog",
+      "path": "/blog"
+    }
+  ],
+  "footer": [
+    {
+      "title": "footer.home",
+      "path": "/"
+    },
+    {
+      "title": "header.blog",
+      "path": "/blog"
+    },
+    {
+      "title": "footer.privacy_policy",
+      "path": "/privacy-policy"
+    }
+  ]
+}
