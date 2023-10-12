@@ -10,7 +10,7 @@
 			"@layouts/*": ["layouts/*"],
 			"@assets/*": ["assets/*"],
 			"@pages/*": ["pages/*"],
-			"@config/*": ["config/*"]
+			"@config/*": ["config/*"],
 		},
 		"types": ["vite-plugin-pwa/info"]
 	}
