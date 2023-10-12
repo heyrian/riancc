@@ -29,12 +29,7 @@ const { title, lang = null } = Astro.props;
 const pf = theme.fonts.font_family.primary;
 const sf = theme.fonts.font_family.secondary;
 
-const makeTitle = () => {
-	const siteTitle = i18next.t("hero.title");
-	const defaultDescription = i18next.t("hero.subtitle");
-
-	return title ? `${title} - ${siteTitle}` : `${siteTitle} - ${defaultDescription}`;
-};
+const makeTitle = title ? title + " - " + "嘿！日安" : "嘿！日安 - 這是一個談論關於程式技術 x 數位生活 x 多角學習的相關部落格。"
 ---
 
 <!doctype html>
