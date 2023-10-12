@@ -1,11 +1,12 @@
 ---
-import i18next, { changeLanguage } from "i18next";
+import i18next, { changeLanguage, t } from "i18next";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { getArticleReadingTime } from "@utils/blog";
+import Giscus from "@components/giscus.astro";
 
 changeLanguage("zh");
 
@@ -53,9 +54,9 @@ const readTime = getArticleReadingTime(post.body);
 			</div>
 			<div class="flex gap-2 mt-4 items-center flex-wrap md:flex-nowrap">
 				<span class="text-gray-400 dark:text-stone-400">
-					{post.data.author}
+					<!-- {post.data.author} -->
 				</span>
-				<span class="text-gray-400 dark:text-stone-400">•</span>
+				<!-- <span class="text-gray-400 dark:text-stone-400">•</span> -->
 				<span class="text-gray-400 dark:text-stone-400">
 					{readTime} min
 				</span>
@@ -73,34 +74,10 @@ const readTime = getArticleReadingTime(post.body);
 			<a href={localizePath("/blog")}>
 				<div class="flex flex-row align-middle justify-center dark:text-stone-200">
 					<Icon name="tabler:chevron-left" class="w-6 h-6" />
-					<p class="ml-2">Back to blog</p>
+					<p class="ml-2">{t("blog.back_blog_text")}</p>
 				</div>
 			</a>
-		</div>
-		<div
-			class="mx-auto prose prose-lg dark:prose-invert mt-20"
-			x-data="{
-				initGiscus: function() {
-					let script = document.createElement('script');
-					script.src = 'https://giscus.app/client.js';
-					script.dataset.repo = 'zankhq/astros';
-					script.dataset.repoId = 'R_kgDOGa6DOg';
-					script.dataset.category = 'Blog';
-					script.dataset.categoryId = 'DIC_kwDOGa6DOs4CXazF';
-					script.dataset.mapping = 'pathname';
-					script.dataset.strict = '0';
-					script.dataset.reactionsEnabled = '1';
-					script.dataset.emitMetadata = '0';
-					script.dataset.inputPosition = 'top';
-					script.dataset.theme = localStorage.theme == 'dark' ? 'dark' : localStorage.theme == 'light' ? 'light' : 'preferred_color_scheme';
-					script.dataset.lang = 'en';
-					script.dataset.loading = 'lazy';
-					script.crossOrigin = 'anonymous';
-					script.async = true;
-					this.$el.appendChild(script);
-				}
-			}"
-			x-init="initGiscus()">
-		</div>
+		</div>	
+		<Giscus/>	
 	</Container>
 </Layout>
