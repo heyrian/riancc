@@ -8,10 +8,11 @@ import NetlifyCMS from "astro-netlify-cms";
 import astroI18next from "astro-i18next";
 import alpinejs from "@astrojs/alpinejs";
 import AstroPWA from "@vite-pwa/astro";
+import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astros.zank.studio",
+	site: config.site.base_url,
 	vite: {
 		define: {
 			__DATE__: `'${new Date().toISOString()}'`,
@@ -26,7 +27,7 @@ export default defineConfig({
 					name: "github",
 					repo: "heyrian/riancc",
 					branch: "main",
-					base_url: "https://astros.zank.studio",
+					base_url: config.site.base_url,
 					auth_endpoint: "/api/auth",
 				},
 				media_folder: "public/images",

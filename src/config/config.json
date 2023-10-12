@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "Rian",
+    "title": "嘿！日安",
     "desc":"",
-    "base_url": "https://astroplate.netlify.app",
+    "base_url": "https://rian.cc",
     "image_alt":"Hey!Rian Homepage Screenshot",
     "base_path": "/",
     "trailing_slash": false,
