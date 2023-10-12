@@ -1,0 +1,31 @@
+---
+import config from '@config/config.json';
+let {switcher, repo, repo_id, category,category_id,dis_title} = config.giscus;
+---
+{switcher && 
+  <div
+      class="mx-auto prose prose-lg dark:prose-invert mt-20"
+      x-data={`{
+          initGiscus: function() {
+              let script = document.createElement('script');
+              script.src = 'https://giscus.app/client.js';
+              script.dataset.repo = '${repo}';
+              script.dataset.repoId = '${repo_id}';
+              script.dataset.category ='${category}';
+              script.dataset.categoryId = '${category_id}';
+              script.dataset.mapping = '${dis_title}';
+              script.dataset.strict = '0';
+              script.dataset.reactionsEnabled = '1';
+              script.dataset.emitMetadata = '0';
+              script.dataset.inputPosition = 'top';
+              script.dataset.theme = localStorage.theme == 'dark' ? 'dark' : localStorage.theme == 'light' ? 'light' : 'preferred_color_scheme';
+              script.dataset.lang = 'en';
+              script.dataset.loading = 'lazy';
+              script.crossOrigin = 'anonymous';
+              script.async = true;
+              this.$el.appendChild(script);
+          }
+      }`}
+      x-init="initGiscus()">
+  </div>
+}
