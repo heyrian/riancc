@@ -87,7 +87,9 @@
 		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
 		"prev": "上一頁",
 		"next": "下一頁",
-		"back_blog_text":"回到文章列表"
+		"back_blog_text":"回到文章列表",
+		"tag_desc":"",
+		"category_desc":""
 	},
 	"notFound":{
 		"title":"我們沒有找到這個頁面 :(",

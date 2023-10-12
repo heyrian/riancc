@@ -87,7 +87,9 @@
 		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
 		"prev": "Prev",
 		"next": "Next",
-		"back_blog_text":"Back to Blog"
+		"back_blog_text":"Back to Blog",
+		"tag_desc":"",
+		"category_desc":""
 	},
 	"notFound":{
 		"title":"Sorry, we couldn't find this page.",

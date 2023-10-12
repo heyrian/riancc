@@ -87,7 +87,9 @@
 		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
 		"prev": "前のページ",
 		"next": "次のページ",
-		"back_blog_text":"記事一覧へ戻る"
+		"back_blog_text":"記事一覧へ戻る",
+		"tag_desc":"",
+		"category_desc":""
 	},
 	"notFound":{
 		"title":"申し訳ありませんが、このページは見つかりませんでした。",
