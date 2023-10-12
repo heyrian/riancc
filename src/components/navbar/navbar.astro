@@ -4,41 +4,20 @@ import Button from "@components/ui/button.astro";
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
+import LanguageSelector from "@components/languageselector.astro";
+import ThemeSelector from "@components/themeselector.astro";
+import menu from '@config/menu.json';
+import config from '@config/config.json';
+import Logo from "@components/logo.astro";
 
-export const menuitems = [
-	{
-		title: "Sub items",
-		children: [
-			{ title: "Subitem 1", path: "#" },
-			{ title: "Subitem 2", path: "#" },
-			{ title: "Subitem 3", path: "#" },
-		],
-	},
-	{
-		title: "header.pricing",
-		path: "/pricing",
-	},
-	{
-		title: "header.blog",
-		path: "/blog",
-	},
-	{
-		title: "header.contact",
-		path: "/contact",
-	},
-];
+export const menuitems = menu.main;
 ---
 
 <div
 	x-data="{open: window.innerWidth < 768 ? false : true}"
 	class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 z-10 md:pt-2 relative">
 	<div class="p-4 flex flex-row items-center justify-between">
-		<a
-			href={localizePath("/")}
-			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
-			<Icon name="logo" width="30" class="dark:invert" alt="Logo"></Icon>
-			Astros
-		</a>
+		<Logo/>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Open main menu</span>
 			<div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -75,8 +54,10 @@ export const menuitems = [
 				menuitems.map((item) =>
 					item.children && item.children.length ? (
 						<div @click.away="open = false" class="relative" x-data="{ open: false }">
-							<Button @click="open = !open" style="link" size="sm" class="mt-[2px]">
-								{t(item.title)}
+							<Button @click="open = !open" style="link" size="md" class="mt-[2px]">
+								<span class="text-md">
+									{t(item.title)}
+								</span>
 								<svg
 									fill="currentColor"
 									viewBox="0 0 20 20"
@@ -103,7 +84,7 @@ export const menuitems = [
 										<Link
 											href={localizePath(subitem.path)}
 											style="hover"
-											size="sm"
+											size="md"
 											class="block"
 											x-data="{ isActive: false }"
 											x-init={`() => {
@@ -129,7 +110,7 @@ export const menuitems = [
 						<Link
 							href={localizePath(item.path)}
 							style="hover"
-							size="sm"
+							size="md"
 							x-data="{ isActive: false }"
 							x-init={`() => {
 								const path = $el.getAttribute('data-path');
@@ -151,13 +132,23 @@ export const menuitems = [
 				)
 			}
 		</div>
-		<div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-4">
+		<div class="mt-4 sm:mx-auto md:mt-0 flex flex-col md:flex-row gap-4 mb-0">
+			<ThemeSelector/>
+			<LanguageSelector
+				showFlag={false}
+				class="appearance-none py-1 px-2 rounded bg-slate-100 dark:bg-stone-950"
+			/>
+			<template x-if={config.settings.secondary_button}>
 			<Link href="/login" style="outline" class="md:px-3 md:py-2 leading-6">
-				{t("header.secondary_button_text")}
+				{t("hero.secondary_button_text")}
 			</Link>
-			<Link href="https://github.com/zankhq/astros" class="md:px-3 md:py-2 leading-6">
-				{t("header.primary_button_text")}
-			</Link>
+			</template>
+
+			<template x-if={config.settings.primary_button}>
+				<Link href="https://github.com/zankhq/astros" class="md:px-3 md:py-2 leading-6">
+					{t("hero.primary_button_text")}
+				</Link>
+				</template>
 		</div>
 	</nav>
 </div>
