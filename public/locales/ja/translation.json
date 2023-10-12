@@ -84,7 +84,7 @@
 	},
 	"blog": {
 		"title":"記事一覧",
-		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
+		"desc":"",
 		"prev": "前のページ",
 		"next": "次のページ",
 		"back_blog_text":"記事一覧へ戻る",

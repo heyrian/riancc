@@ -11,7 +11,7 @@ import Giscus from "@components/giscus.astro";
 changeLanguage("zh");
 
 // Generate a new path for every collection post
-export async function getStaticPaths() {
+export async function getStaticPaths() {changeLanguage('zh')
     const blogEntries = await getCollection("blog");
     var localizedBlogEntries = blogEntries.filter((entry) => entry.slug.startsWith(i18next.language));
     return localizedBlogEntries.map((post) => {

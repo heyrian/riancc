@@ -84,7 +84,7 @@
 	},
 	"blog": {
 		"title":"文章列表",
-		"desc":"Discover Industry Insights, Company News, and Expert Opinions.",
+		"desc":"",
 		"prev": "上一頁",
 		"next": "下一頁",
 		"back_blog_text":"回到文章列表",

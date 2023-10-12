@@ -11,7 +11,7 @@ import config from "@config/config.json";
 
 changeLanguage("zh");
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }) {changeLanguage('zh')
     var posts = await getCollection("blog", ({ data }) => {
         return !data.draft;
     });

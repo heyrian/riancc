@@ -6,10 +6,12 @@ import Container from "@components/container.astro";
 import Posts from "@components/blog/posts.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Pagination from "@components/blog/pagination.astro";
+import { t, changeLanguage } from "i18next";
+import config from "@config/config.json";
 
 changeLanguage("en");
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }) {changeLanguage('en')
     var posts = await getCollection("blog", ({ data }) => {
         return !data.draft;
     });
@@ -34,17 +36,17 @@ export async function getStaticPaths({ paginate }) {
     });
     return paginate(localizedPosts, {
         params: { blog: "blog" || undefined },
-        pageSize: 4,
+        pageSize: config.settings.blog_page_num,
     });
 }
 const { page } = Astro.props;
 ---
 
-<Layout title="Blog">
+<Layout title={t("blog.title")}>
 	<Container>
 		<Sectionhead>
-			<Fragment slot="title">Our Blog</Fragment>
-			<Fragment slot="desc">Discover Industry Insights, Company News, and Expert Opinions.</Fragment>
+			<Fragment slot="title">{t("blog.title")}</Fragment>
+			<Fragment slot="desc">{t("blog.desc")}</Fragment>
 		</Sectionhead>
 		<Posts posts={page.data} />
 		<Pagination class="mt-20" prevUrl={page.url.prev} nextUrl={page.url.next} />

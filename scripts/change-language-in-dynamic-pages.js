@@ -1,8 +1,8 @@
 import fsp from "fs/promises";
 import path from "path";
 
-const locales = ["it"];
-const defaultLocale = "en";
+const locales = ["en","ja"];
+const defaultLocale = "zh";
 const paths = ["blog/[...page]", "blog/category/[category]", "blog/tag/[tag]", "blog/[slug]"];
 
 async function main() {

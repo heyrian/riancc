@@ -1,5 +1,5 @@
 ---
-import i18next, { changeLanguage } from "i18next";
+import i18next, { changeLanguage, t } from "i18next";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
@@ -9,7 +9,7 @@ import Pagination from "@components/blog/pagination.astro";
 
 changeLanguage("ja");
 
-export async function getStaticPaths() {
+export async function getStaticPaths() {changeLanguage('ja')
     const posts = await getCollection("blog", ({ data }) => {
         return !data.draft && data.publishDate < new Date();
     });
@@ -36,11 +36,11 @@ export async function getStaticPaths() {
 const { posts, tag, lang } = Astro.props;
 ---
 
-<Layout title="Blog">
+<Layout title={t("blog.title")}>
 	<Container>
 		<Sectionhead>
 			<Fragment slot="title">#{tag}</Fragment>
-			<Fragment slot="desc">We write about building startups and thoughts going on our mind.</Fragment>
+			<Fragment slot="desc">{t("blog.tag_desc")}</Fragment>
 		</Sectionhead>
 		<Posts posts={posts} />
 	</Container>
