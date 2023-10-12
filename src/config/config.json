@@ -27,7 +27,7 @@
     "summary_length": 200,
     "blog_folder": "blog",
     "blog_page_num":10,
-    "banner_secondary_button_link":"https://github.com/heyrian",
+    "banner_secondary_button_link":"/blog",
     "banner_primary_button_link":"/about"
   },
 
