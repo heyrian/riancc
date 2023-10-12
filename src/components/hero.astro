@@ -47,7 +47,7 @@ const { dynamic = false } = Astro.props;
 							<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">
 								{t("site.subtitle")}
 							</p>
-							<div class="mt-10 flex items-center justify-center gap-x-2 md:gap-x-6">
+							<div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-x-2 md:gap-x-6">
 								<Link href={localizePath(config.settings.banner_primary_button_link)}>{t("banner.primary_button_text")}</Link>
 								<Link href={localizePath(config.settings.banner_secondary_button_link)} style="muted">
 									{t("banner.secondary_button_text")}

@@ -6,7 +6,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
 ---
 <template x-if={theme_switcher}>
 <div
-	class="flex items-center pl-2 rounded-md text-sm font-semibold text-center transition bg-white dark:bg-stone-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 border outline-2 outline-offset-2 border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 dark:active:bg-stone-950">
+	class="mx-auto flex items-center pl-2 rounded-md text-sm font-semibold text-center transition bg-white dark:bg-stone-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 border outline-2 outline-offset-2 border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 dark:active:bg-stone-950">
 	<Icon name="fluent:dark-theme-20-filled" class="w-5 dark:text-white" />
 	<select
 		x-data="{
@@ -31,7 +31,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
 			}"
 		name="theme-selector"
 		id="theme-selector"
-		class="focus:ring-transparent dark:text-white focus:outline-none border-none appearance-none cursor-pointer dark:bg-stone-950 rounded-md pl-3 pr-7 py-1.5"
+		class="focus:ring-transparent dark:text-white bg-white focus:outline-none border-none appearance-none cursor-pointer dark:bg-stone-950 rounded-md pl-3 pr-7 py-1.5"
 		x-init="updateDocumentClassTheme()"
 		x-model="theme"
 		@change="switchTheme($event.target.value)">
