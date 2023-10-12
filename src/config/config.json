@@ -1,7 +1,9 @@
 {
   "site": {
     "title": "Rian",
+    "desc":"",
     "base_url": "https://astroplate.netlify.app",
+    "image_alt":"Hey!Rian Homepage Screenshot",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",

@@ -61,17 +61,17 @@ const makeTitle = () => {
 
 		<SEO
 			title={makeTitle}
-			description="Astros is a starter website template for Astro built with TailwindCSS and alpine js."
+			description={config.site.desc}
 			canonical={canonicalURL}
 			openGraph={{
 				basic: {
 					url: canonicalURL,
 					type: "website",
-					title: `Astros - Starter Template for Astro`,
+					title: `${config.site.title}`,
 					image: resolvedImageWithDomain,
 				},
 				image: {
-					alt: "Astros Homepage Screenshot",
+					alt: `${config.site.image_alt}`,
 				},
 			}}
 		/>
