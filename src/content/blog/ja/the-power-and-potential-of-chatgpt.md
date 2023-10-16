@@ -13,7 +13,7 @@ snippet: Unveiling the world of advanced AI with ChatGPT, a sophisticated
   chatbot that uses machine learning to generate human-like text. Discover its
   applications, strengths, limitations, and future potential.
 publishDate: 2023-07-01 00:00
-category: AI and ML
+category: Design
 ---
 Chatbots are not a new concept. However, the advancement in artificial intelligence and machine learning have revolutionized the space, creating chatbots that are remarkably human-like in their ability to understand and respond to human language. A shining example of this is ChatGPT.
 

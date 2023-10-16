@@ -12,7 +12,7 @@ snippet: Tailwind CSS is a utility-first CSS framework that allows you to
   construct bespoke designs without any opinionated styles, offering flexibility
   and granular control over your styles.
 publishDate: 2023-10-11 13:16
-category: Frameworks
+category: Life
 ---
 Tailwind CSS is a utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup. 
 

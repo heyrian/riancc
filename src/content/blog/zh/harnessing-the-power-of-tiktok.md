@@ -13,7 +13,7 @@ snippet: In the world of social media marketing, a new player is making a
   significant impact TikTok. This guide explores the potential of TikTok ads and
   how to harness them effectively
 publishDate: 2023-06-29 11:39
-category: Marketing
+category: Development
 ---
 
 

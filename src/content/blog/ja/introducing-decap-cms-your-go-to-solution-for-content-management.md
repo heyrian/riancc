@@ -11,7 +11,7 @@ snippet: Decap CMS, formerly known as Netlify CMS, is an open-source content
   management system offering developers a seamless way to manage content for
   static site generators.
 publishDate: 2023-07-01 23:14
-category: Tutorials
+category: Design
 ---
 
 Decap CMS, formerly known as Netlify CMS, is an open-source content management system that offers developers a seamless way to manage content for static site generators.
