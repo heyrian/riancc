@@ -25,7 +25,9 @@ export async function getStaticPaths() {changeLanguage('zh')
         return {
             params: { category: category },
             props: {
-                posts: localizedPosts.filter((post) => typeof post.data.category === "string"),
+                posts: localizedPosts.filter((post) => {
+                    return post.data.category.toLowerCase() == category.toLowerCase();
+                }),
                 category: category,
                 lang: i18next.language,
             },
