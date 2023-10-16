@@ -2,7 +2,7 @@
 title: 探索 Wordpress、Hexo、Vite Press 到 Astro 的選擇之道
 draft: false
 tags:
-  - Astro
+  - astro
 image:
   src: /images/build-blog-so-easy-by-astro.png
   alt: build-blog-so-easy-by-astro
