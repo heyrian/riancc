@@ -60,12 +60,6 @@ export default defineConfig({
 								i18n: "duplicate",
 							},
 							{
-								label: "Author",
-								name: "author",
-								widget: "string",
-								i18n: "duplicate",
-							},
-							{
 								label: "Tags",
 								name: "tags",
 								widget: "list",
