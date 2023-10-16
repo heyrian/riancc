@@ -108,7 +108,7 @@ export default defineConfig({
 								label: "Category",
 								name: "category",
 								widget: "select",
-								options: ["Tutorials", "News", "Reviews", "Frameworks"],
+								options: ["Tutorials", "News", "Reviews", "Frameworks", "Life"],
 								i18n: "duplicate",
 							},
 							{
