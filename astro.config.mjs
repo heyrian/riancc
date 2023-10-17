@@ -44,6 +44,7 @@ export default defineConfig({
 						i18n: true,
 						label: "Blog Posts",
 						folder: "src/content/blog",
+						slug:"{{customSlug}}",
 						create: true,
 						delete: true,
 						fields: [
@@ -52,6 +53,12 @@ export default defineConfig({
 								widget: "string",
 								label: "Post Title",
 								i18n: true,
+							},
+							{
+								name: "customSlug",
+								widget: "string",
+								label: "FileName",
+								i18n: "duplicate"
 							},
 							{
 								label: "Draft",

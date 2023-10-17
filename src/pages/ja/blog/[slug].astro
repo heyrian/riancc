@@ -14,11 +14,9 @@ changeLanguage("ja");
 export async function getStaticPaths() {changeLanguage('ja')
     const blogEntries = await getCollection("blog");
     var localizedBlogEntries = blogEntries.filter((entry) => {
-			console.log(entry)
 			return entry.slug.startsWith(i18next.language);
 		});
     return localizedBlogEntries.map((post) => {
-			console.log(post);
         let slug = post.slug;
         slug = slug.substring(3).replaceAll("blog/", "");
         return {
