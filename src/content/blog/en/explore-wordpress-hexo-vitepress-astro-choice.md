@@ -12,7 +12,7 @@ snippet: 這是一個前端工程師在選擇部落格架站技術的比較文�
 publishDate: 2023-10-16 16:02
 category: Development
 ---
-從2019年開始創業之後開始跟技術圈脫節，因此從2019到2023興起的技術我就沒有跟上，決定重新啟動部落格，參考 [VueMaster](https://www.vuemastery.com/blog/nuxt-vs-vitepress-vs-astro) 的文章，我列舉我目前有的幾個選擇：
+After starting my business from 2019 I started to get out of touch with the tech scene, so I didn't keep up with the technologies emerging from 2019 to 2023, and decided to restart my blog by referring to [VueMaster](https://www.vuemastery.com/blog/nuxt-vs-vitepress-vs-astro)'s article, the technologies I can choose from are as follows:
 
 * Wordpress + Bitnami + GCP Compute Engine
 * Hexo
@@ -22,31 +22,29 @@ category: Development
 
 ## Wordpress + Bitnami + GCP Compute Engine
 
-在 GCP 上建置一個 Wordpress 好像還不錯，因為有 CMS 管理，我要寫作可以很輕鬆完成，不用再打開編輯器辛苦的打 md 檔，可是無法自由建構程式、不能進版控、不支援 markdown，再加上如果要做一些 sitemap、圖片壓縮優化，就要裝一些 plugin，想到就心累。
+It seems not bad to build a Wordpress on GCP, because with CMS management, I can finish my writing easily without having to open the editor and type md files.
 
-放棄這個選項。
+Considering that I can't build programs freely, I can't do version control, I don't support markdown syntax, and if I want to do some sitemap and image compression optimization, I have to install some plugins, it's exhausting to think about it, so I gave up on this choice.
 
 ## Hexo
 
 ![image.png](/images/hexo.png)
 
-Hexo 真的是五年前就開始陪伴我的好朋友了，基於 Node.js，它可以讓前端輕鬆建制一個靜態頁面，網站長的跟五年前差不多，裡面有將近四百多個主題供你選擇，但主題裡面有些寫的技術可能就很陳舊，比方說 jQuery 的套件之類的，我不確定算不算痛點就是了 XD
+Hexo is really a good companion that has been with me since 5 years ago. Based on Node.js, it allows the front-end to easily build a static page, and the site looks pretty much the same as it did 5 years ago. There are about 400 themes to choose from, but some of the themes are written in technologies that may be very old, like jQuery's suite, I'm not sure if that's a pain point or not.
 
-這次部落格再置我想嘗試一些不一樣的技術，這個先列再觀察清單。
+I want to try some different techniques for this blog re-launch, and this one is on the watch list.
 
 ## Vite Press
 
-我一開始先從 Vite Press 試用，但感覺使用的人還不多，生態圈有點小，是使用 Vue 的語法下去寫，用起來跟 hexo 的感受沒什麼太大差異，前陣子有更新網站，新網站看起來漂亮多了，但生態圈真的不大，官方 release 第一版而已 QQ
-
-我覺得這個目前比較適合拿來寫一些文件，比方說你有開發一些套件，拿這個寫文件我就覺得不錯，部落格就先暫緩再觀察。
+At first I tried Vite Press, but I felt that not many people used it, and the ecosystem was a bit small. The ecosystem is a bit small. Because of Vue's syntax, the feeling is similar to hexo. A while ago, the official website was updated, and the new website looks much more beautiful, but the ecosystem is too small for writing documents. After all, it's only the first official release, so it's on the to-watch list.
 
 ## Nuxt
 
-我有想過要不要直接開一個 Nuxt 專案直接跟他拼了，如果我接下來沒有遇到 Astro 的話我應該會這麼做。
+I've thought about starting a Nuxt project to fight him directly, and if I don't run into Astro next I'll probably do that.
 
 ## Astro
 
-Astro 支援許多前端框架，React、Vue、Preact 等等，你甚至可以混合框架，比方說像這樣：
+Astro supports many front-end frameworks, React, Vue, Preact, etc. You can even mix frameworks, let's say like this:
 
 ```jsx
 ---
@@ -62,16 +60,16 @@ import MyVueComponent from '../components/MyVueComponent.vue';
 </div>
 ```
 
-~~這是範例，拜託不要這樣做~~
+~~This is a sample Don't do that.~~
 
-進到 Astro 網站，首先被官方網站的文件嚇到，[Blog Tutorial](https://docs.astro.build/en/tutorial/0-introduction/) 文件有夠詳細，真的像是旁邊有個老司機手把手教，我這個大菜雞都能很輕鬆 Startup 一個部落格專案。
+When I entered the Astro website, I was firstly surprised by the official website's documentation, [Blog Tutorial](https://docs.astro.build/en/tutorial/0-introduction/), which is very detailed, as if there is a senior partner beside the step by step guidance, even a novice can easily Startup a blog project.
 
 ![image 1.png](/images/build-blog-so-easy-by-astro.png)
 
-跟著他的教學過程，發現最後網站部署不是用 Github Page，而是 Netlify（雖然我知道 Astro 可以建置 Static 或 SSR），Netlify 跟前陣子逝去的 Heroku 服務有點相像，之後我會再寫文章來說這個服務。
+Following his tutorial, I found out that the website deployment is not using Github Page, but Netlify (although I know that Astro can build Static or SSR), which is a bit similar to the Heroku service that I left a while ago, and which I'll write more about later.
 
-如果你不想部署到 Netlify 的話，他還有部署到其他的服務的 [Guideline](https://docs.astro.build/en/guides/deploy/)，比方說像是剛剛說的 Github Page，會推薦使用 Github Action 下去做。
+If you don't want to deploy to Netlify, he also has a reference for deploying to other services [Guideline](https://docs.astro.build/en/guides/deploy/). For example, if you want to deploy to the Github Page mentioned earlier, we recommend you to use Github Action to do it.
 
 ![image 2.png](/images/good-doc-let-me-cry.png)
 
-如果真的要講缺點的話，Astro 網站上的[主題](https://astro.build/themes/)沒有像 Hexo 這麼豐富，Filter後發現，裡面通常都是用 React 寫（國外開發者還是比較愛用 React），對於一些 Vue 框架愛用者，在改主題的時候可能會覺得綁手綁腳，但對我來說是沒差（很早期有研究過 React），接下來就是選定主題之後開始做。
+If you really want to talk about the shortcomings, Astro website [theme](https://astro.build/themes/) is not as rich as Hexo, after searching, I found that most of the themes are made with React (foreign developers still love to use React), for some Vue framework users, in the modification of the theme may feel tied up, but for me it is not bad (very early have studied React). For some Vue framework users, they may find it difficult to modify the theme, but for me, it's not a problem (I have studied React in the early days), so I'm just going to choose a theme and start working on it.
