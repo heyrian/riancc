@@ -13,16 +13,17 @@ display_url: https://vuedn.netlify.app/
 media_folder: "src/assets" # Media files will be stored in the repo under docs/.vuepress/public/media
 public_folder: " /assets" # The src attribute for uploaded media will begin with /media
 i18n:
-  - structure: "multiple_folders"
-  - locales: ["zh","en", "ja"]
-  - default_locale: "zh"
+  structure: "multiple_folders"
+  locales: ["zh","en", "ja"]
+  default_locale: "zh"
 editor:
   preview: false # disabled markdown preview in CMS
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/songs
     label: "Blog Posts" # Used in the UI
+    i18n: true
     label_singular: Song
-    folder: "src/pages/blog" # The path to the folder where the documents are stored
+    folder: "src/content/blog" # The path to the folder where the documents are stored
     nested: # adding a nested object will show the collection folder structure
       depth: 2 # max depth to show in the collection tree
     create: true # Allow users to create new documents in this collection
