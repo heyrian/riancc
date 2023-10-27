@@ -49,7 +49,7 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href={`https://fonts.googleapis.com/css2?family=${pf}${sf ? "&family=" + sf : ""}&display=swap`} rel="stylesheet" />
-
+		
 		<!-- responsive meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
 
@@ -78,6 +78,7 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 
 		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 		<script src="/src/pwa.ts"></script>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body class="dark:bg-stone-950">
 		<Navbar />
@@ -136,6 +137,17 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 			</div>
 		</div>
 		<Footer />
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", user => {
+					if (!user) {
+						window.netlifyIdentity.on("login", () => {
+							document.location.href = "/admin/";
+						});
+					}
+				});
+			}
+		</script>
 		<style is:global>
 			/* Improve Page speed */
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
