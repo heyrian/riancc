@@ -210,7 +210,6 @@ function getFrontmatter(item) {
   const formattedDate = date.toLocaleString("en-US", options);
 
   return {
-    draft: false,
     title: item.title,
     snippet: item.snippet,
     image: {
@@ -232,7 +231,6 @@ function getFrontmatter(item) {
  */
 function generateMarkdownArticle(fileName, frontMatter, body) {
   var frontMatterString = `---
-draft: ${frontMatter.draft}
 title: "${frontMatter.title}"
 snippet: "${frontMatter.snippet}"
 image: {

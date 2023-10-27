@@ -29,7 +29,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Post Title", name: "title", widget: "string", i18n: true}
       - {label: "FileName", name: "customSlug", widget: "string", i18n: "duplicate"}
-      - {label: "Draft", name: "draft", widget: "boolean", i18n: "duplicate"}
       - {label: "Tags", name: "tags", widget: "list", i18n: true}
       - {label: "Snippet", name: "snippet", widget: "text", i18n: true}
       - {label: "Publish Date", name: "publishDate", widget: "datetime", format: "YYYY-MM-DD HH:mm", i18n: "duplicate"}

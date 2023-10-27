@@ -187,7 +187,6 @@ function getCategory() {
  */
 function getFrontmatter(item) {
   // ---
-  // draft: false
   // title: "The Complete Guide to Full Stack Web Development"
   // snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
   // image: {
@@ -211,7 +210,6 @@ function getFrontmatter(item) {
   const formattedDate = date.toLocaleString("en-US", options);
 
   return {
-    draft: false,
     title: item.title,
     snippet: item.snippet,
     image: {
@@ -233,7 +231,6 @@ function getFrontmatter(item) {
  */
 function generateMarkdownArticle(fileName, frontMatter, body) {
   var frontMatterString = `---
-draft: ${frontMatter.draft}
 title: "${frontMatter.title}"
 snippet: "${frontMatter.snippet}"
 image: {

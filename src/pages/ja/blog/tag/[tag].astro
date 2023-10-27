@@ -11,7 +11,7 @@ changeLanguage("ja");
 
 export async function getStaticPaths() {changeLanguage('ja')
     const posts = await getCollection("blog", ({ data }) => {
-        return !data.draft && data.publishDate < new Date();
+        return data.publishDate < new Date();
     });
     const localizedPosts = posts.filter((page) => {
         const [lang, ...slug] = page.slug.split("/");

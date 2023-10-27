@@ -3,7 +3,7 @@ import rss from "@astrojs/rss";
 
 export const get = async () => {
 	const posts = await getCollection("blog", ({ data }) => {
-		return !data.draft && data.publishDate < new Date();
+		return data.publishDate < new Date();
 	});
 
 	// Sort content entries by publication date
