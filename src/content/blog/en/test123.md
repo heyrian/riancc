@@ -1,7 +1,7 @@
 ---
 title: test123
 customSlug: test123
-draft: true
+draft: false
 tags:
   - test123
 snippet: test123
