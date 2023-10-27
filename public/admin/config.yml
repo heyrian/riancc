@@ -10,8 +10,8 @@ backend:
 # https://decapcms.org/docs/configuration-options/
 publish_mode: editorial_workflow
 display_url: https://rian.cc
-media_folder: "src/assets" # Media files will be stored in the repo under docs/.vuepress/public/media
-public_folder: " /assets" # The src attribute for uploaded media will begin with /media
+media_folder: "public/images" # Media files will be stored in the repo under docs/.vuepress/public/media
+public_folder: " /images" # The src attribute for uploaded media will begin with /media
 i18n:
   structure: "multiple_folders"
   locales: ["zh","en", "ja"]
