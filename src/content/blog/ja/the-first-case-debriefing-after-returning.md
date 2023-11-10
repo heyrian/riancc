@@ -2,7 +2,7 @@
 title: 回歸後的第一次結案復盤
 customSlug: the-first-case-debriefing-after-returning
 tags:
-  - 開發日記
+  - 開発日記
 snippet: 這是我第一次承接與政府相關的案子，當中有遇到一些困難，以及我有犯一些錯誤，希望藉由這次的日記提醒自己未來不要再犯錯。
 publishDate: 2023-11-10 15:58
 category: Life
