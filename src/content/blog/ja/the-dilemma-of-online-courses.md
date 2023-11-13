@@ -1,7 +1,8 @@
 ---
 title: 線上課程的困境與短影音到底還能不能上課
 customSlug: the-dilemma-of-online-courses
-tags: []
+tags:
+  - ショートビデオ
 snippet: |
   有人告訴我線上課程門檻越來越低，龍蛇混雜，已經沒辦法做了。
 
