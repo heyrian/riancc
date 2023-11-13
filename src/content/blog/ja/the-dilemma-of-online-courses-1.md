@@ -7,6 +7,7 @@ snippet: |
 
   首先線上課程絕對不是沒救了，其實一個課能不能上，是來自於他的課程內容有沒有對得起他的價格，讓使用者覺得無可取代或超值。
 publishDate: 2023-11-13 13:48
+category: Business
 image:
   src: " /images/the-dilemma-of-online-courses.png"
   alt: the-dilemma-of-online-courses
