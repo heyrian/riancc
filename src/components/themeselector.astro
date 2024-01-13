@@ -10,7 +10,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
 	<Icon name="fluent:dark-theme-20-filled" class="w-5 dark:text-white" />
 	<select
 		x-data="{
-				theme: localStorage.theme || 'system',
+				theme: localStorage.theme || 'light',
 				updateDocumentClassTheme: function() {
 					if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 						document.documentElement.classList.add('dark');
