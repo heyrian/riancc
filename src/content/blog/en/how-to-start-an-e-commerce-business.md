@@ -3,7 +3,6 @@ title: 探討開展電子商務架站的方法
 tags:
   - eCommerce
   - wordpress
-  -
 image:
   src: /images/how-to-start-an-e-commerce-business.png
   alt: how-to-start-an-e-commerce-business
