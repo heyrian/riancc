@@ -20,41 +20,7 @@
 	},
 	"footer": {
 		"home": "Home",
-		"blog": "Blog",
-		"privacy_policy": "Privacy Policy"
-	},
-	"privacy_policy":{
-		"title":"隱私權政策",
-		"desc":"Welcome to 'Hey!Rian' (hereinafter referred to as this website), in order to enable you to use the various services and information of this website with peace of mind, we would like to explain to you the privacy protection policy of this website in order to protect your rights and interests, please read the following content:",
-		"scope":{
-			"title":"Scope of the Privacy Protection Policy",
-			"desc":"The Privacy Policy covers how this website handles personally identifiable information collected when you use the services on this website. The Privacy Policy does not apply to linked websites outside of this website, nor does it apply to people who are not commissioned or involved in the management of this website."
-		},
-		"collection":{
-			"title":"Collection, Processing and Utilization of Personal Data",
-			"desc":"When you visit this website or use the functional services provided by this website, we will, depending on the functional nature of the service, ask you to provide the necessary personal information, and process and utilize your personal information within the scope of the specific purpose; without your written consent, this website will not use the personal information for other purposes."
-		},
-		"protection":{
-			"title":"Data Protection",
-			"desc":"The host of this website are equipped with firewalls, anti-virus systems and other related information security equipment and the necessary security measures to protect the website and your personal information using strict protection measures, only authorized personnel to access your personal information, the relevant processing staff have signed a confidentiality contract, if there is a violation of the obligation of confidentiality will be subject to the relevant legal penalties. /If you violate the confidentiality obligations, you will be subject to the relevant legal sanctions. If it is necessary to commission other units to provide services due to business needs, this website will also strictly require them to comply with the confidentiality obligations, and to take the necessary checking procedures to ensure that they will actually comply with them."
-		},
-		"link":{
-			"title":"External Links",
-			"desc":"The pages of this website provide links to other websites, and you may click through the links provided on this website to access other websites. However, the linked site does not apply to the privacy protection policy of this website, and you must refer to the privacy protection policy of the linked site."
-		},
-		"third_part":{
-			"title":"Policy on Sharing of Personal Data with Third Parties",
-			"desc":"This website will not provide, exchange, rent or sell any of your personal information to other individuals, organizations, private businesses or public authorities, unless there is a legal basis or contractual obligation to do so.",
-			"example":"The foregoing proviso includes, without limitation:\n\nWith your written consent.\nWhere expressly required by law.\n\nTo avoid danger to your life, body, liberty or property.\n\n\nIn cooperation with a public agency or academic research organization, when necessary for statistical or academic research in the public interest, and the data has been processed or collected by the provider in such a way that it is not possible to identify the specific subject in the manner in which it was disclosed.\nWhen your behavior on the website violates the Terms of Service or may damage or impede the rights of the website and other users or cause damage to any person, the disclosure of your personal information through the analysis of the website management unit is necessary to identify, contact or take legal action.\nIn favor of your rights.\n\nWhen this website commissions a vendor to collect, process, or utilize your personal information, we will fulfill our responsibility to supervise and manage the outsourced vendor or individual."
-		},
-		"coockie":{
-			"title":"Use of Cookies",
-			"desc":"In order to provide you with the best service, this website will place and use our cookies in your computer. If you do not want to accept the writing of cookies, you can set the privacy level in the function of the browser you are using to be high, so that you can refuse the writing of cookies, but it may lead to the inability of some functions of the website to perform normally."
-		},
-		"policy":{
-			"title":"Amendments to the Privacy Protection Policy",
-			"desc":"The privacy policy of this website will be amended from time to time in response to demand, and the amended terms will be posted on the website."
-		}
+		"blog": "Blog"
 	},
 	"features": {
 		"learn_more": "Learn more",

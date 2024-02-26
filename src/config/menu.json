@@ -17,10 +17,6 @@
     {
       "title": "header.blog",
       "path": "/blog"
-    },
-    {
-      "title": "footer.privacy_policy",
-      "path": "/privacy-policy"
     }
   ]
 }
