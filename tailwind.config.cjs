@@ -8,26 +8,21 @@ let h4 = h5 * font_scale;
 let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
-let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
+
+let fontPrimaryType, fontSecondaryType;
 if (theme.fonts.font_family.primary) {
-  fontPrimary = theme.fonts.font_family.primary
-    .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
   fontPrimaryType = theme.fonts.font_family.primary_type;
 }
 if (theme.fonts.font_family.secondary) {
-  fontSecondary = theme.fonts.font_family.secondary
-    .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
   fontSecondaryType = theme.fonts.font_family.secondary_type;
 }
 
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
-	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-	theme: {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  safelist: [{ pattern: /^swiper-/ }],
+  darkMode: "class",
+  theme: {
     screens: {
       sm: "540px",
       md: "768px",
@@ -35,7 +30,11 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-		extend: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
+    extend: {
       colors: {
         text: theme.colors.default.text_color.default,
         light: theme.colors.default.text_color.light,
@@ -58,7 +57,7 @@ module.exports = {
           "theme-dark": theme.colors.darkmode.theme_color.theme_dark,
         },
       },
-			fontSize: {
+      fontSize: {
         base: font_base + "px",
         h1: h1 + "rem",
         "h1-sm": h1 * 0.8 + "rem",
@@ -70,12 +69,13 @@ module.exports = {
         h5: h5 + "rem",
         h6: h6 + "rem",
       },
-			fontFamily: {
-				primary: [fontPrimary, fontPrimaryType],
-        secondary: [fontSecondary, fontSecondaryType]
-			},
-		},
-	},
-	plugins: [require("@tailwindcss/typography"), require.resolve("prettier-plugin-astro")],
-	darkMode: "class",
+      fontFamily: {
+        primary: ["var(--font-primary)", fontPrimaryType],
+        secondary: ["var(--font-secondary)", fontSecondaryType],
+      },
+    },
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 };
