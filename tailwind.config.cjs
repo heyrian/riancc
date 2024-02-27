@@ -1,81 +1,53 @@
-const theme = require("./src/config/theme.json");
-
-let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
-let font_scale = Number(theme.fonts.font_size.scale);
-let h6 = font_base / font_base;
-let h5 = h6 * font_scale;
-let h4 = h5 * font_scale;
-let h3 = h4 * font_scale;
-let h2 = h3 * font_scale;
-let h1 = h2 * font_scale;
-
-let fontPrimaryType, fontSecondaryType;
-if (theme.fonts.font_family.primary) {
-  fontPrimaryType = theme.fonts.font_family.primary_type;
-}
-if (theme.fonts.font_family.secondary) {
-  fontSecondaryType = theme.fonts.font_family.secondary_type;
-}
-
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  safelist: [{ pattern: /^swiper-/ }],
-  darkMode: "class",
-  theme: {
-    screens: {
-      sm: "540px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      "2xl": "1536px",
-    },
-    container: {
-      center: true,
-      padding: "2rem",
-    },
-    extend: {
-      colors: {
-        text: theme.colors.default.text_color.default,
-        light: theme.colors.default.text_color.light,
-        dark: theme.colors.default.text_color.dark,
-        primary: theme.colors.default.theme_color.primary,
-        secondary: theme.colors.default.theme_color.secondary,
-        body: theme.colors.default.theme_color.body,
-        border: theme.colors.default.theme_color.border,
-        "theme-light": theme.colors.default.theme_color.theme_light,
-        "theme-dark": theme.colors.default.theme_color.theme_dark,
-        darkmode: {
-          text: theme.colors.darkmode.text_color.default,
-          light: theme.colors.darkmode.text_color.light,
-          dark: theme.colors.darkmode.text_color.dark,
-          primary: theme.colors.darkmode.theme_color.primary,
-          secondary: theme.colors.darkmode.theme_color.secondary,
-          body: theme.colors.darkmode.theme_color.body,
-          border: theme.colors.darkmode.theme_color.border,
-          "theme-light": theme.colors.darkmode.theme_color.theme_light,
-          "theme-dark": theme.colors.darkmode.theme_color.theme_dark,
-        },
-      },
-      fontSize: {
-        base: font_base + "px",
-        h1: h1 + "rem",
-        "h1-sm": h1 * 0.8 + "rem",
-        h2: h2 + "rem",
-        "h2-sm": h2 * 0.8 + "rem",
-        h3: h3 + "rem",
-        "h3-sm": h3 * 0.8 + "rem",
-        h4: h4 + "rem",
-        h5: h5 + "rem",
-        h6: h6 + "rem",
-      },
-      fontFamily: {
-        primary: ["var(--font-primary)", fontPrimaryType],
-        secondary: ["var(--font-secondary)", fontSecondaryType],
-      },
-    },
-  },
-  plugins: [
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['Noto Sans CJK TC', 'Noto Sans TC', ...defaultTheme.fontFamily.sans],
+        mono: ['JetBrains Mono', 'Fira Code', ...defaultTheme.fontFamily.mono],
+        serif: [...defaultTheme.fontFamily.serif],
+			},
+		},
+	},
+	plugins: [
     require("@tailwindcss/typography"),
-  ],
+    require('tailwindcss-fluid-type')({
+      // your fluid type settings
+      // works only with unitless numbers
+      // This numbers are the defaults settings
+      settings: {
+        fontSizeMin: 1.125, // 1.125rem === 18px
+        fontSizeMax: 1.25, // 1.25rem === 20px
+        ratioMin: 1.125, // Multiplicator Min
+        ratioMax: 1.2, // Multiplicator Max
+        screenMin: 20, // 20rem === 320px
+        screenMax: 96, // 96rem === 1536px
+        unit: 'rem', // default is rem but it's also possible to use 'px'
+        prefix: '', // set a prefix to use it alongside the default font sizes
+        extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
+      },
+      // Creates the text-xx classes
+      // This are the default settings and analog to the tailwindcss defaults
+      // Each `lineHeight` is set unitless and we think that's the way to go especially in context with fluid type.
+      values: {
+        xs: [-2, 1.6],
+        sm: [-1, 1.6],
+        base: [0, 1.6],
+        lg: [1, 1.6],
+        xl: [2, 1.5],
+        '2xl': [3, 1.5],
+        '3xl': [4, 1.5],
+        '4xl': [5, 1.5],
+        '5xl': [6, 1.5],
+        '6xl': [7, 1.5],
+        '7xl': [8, 1.5],
+        '8xl': [9, 1.5],
+        '9xl': [10, 1.5],
+      },
+    }),
+    require.resolve("prettier-plugin-astro")],
+	darkMode: "class",
 };
