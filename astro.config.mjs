@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -61,6 +62,7 @@ export default defineConfig({
 				suppressWarnings: true,
 			},
 		}),
+        vue(),
 	],
 	markdown: {
 		rehypePlugins: [
@@ -68,5 +70,5 @@ export default defineConfig({
 			// This adds links to headings
 			[rehypeAutolinkHeadings, autolinkConfig],
 		],
-	},
+	}
 });
