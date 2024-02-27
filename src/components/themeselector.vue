@@ -8,25 +8,25 @@ interface ConfigSettings {
 
 const { theme_switcher }: ConfigSettings = config.settings;
 const themeSwitcher = theme_switcher;
-const theme = ref('light'); // 預設值
-const themeStatus = ref(false)
+const theme = ref(null); // 預設值
+const themeStatus = ref(null)
 
 const updateDocumentClassTheme = () => {
     if (themeStatus.value ||
         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
         document.documentElement.classList.add('dark');
+        window.dispatchEvent(new Event('updateTheme'));
     } else {
         document.documentElement.classList.remove('dark');
+        window.dispatchEvent(new Event('updateTheme'));
     }
 };
 
-const switchTheme = (event: Event) => {
-    const target = event.target as HTMLSelectElement;
-    const newValue = target;
-    if (newValue) {
+const switchTheme = () => {
+    if (themeStatus.value) {
         localStorage.setItem('theme', 'dark');
-    } else if (!newValue) {
+    } else if (!themeStatus.value) {
         localStorage.setItem('theme', 'light');
     } else {
         localStorage.removeItem('theme');
@@ -44,7 +44,13 @@ watch(theme, newValue => {
 });
 
 onMounted(() => {
-    theme.value = localStorage.getItem('theme') || 'light';
+    if(localStorage.getItem('theme')==='light' || !localStorage.getItem('theme')){
+        themeStatus.value = false
+        theme.value = 'light'
+    }else if(localStorage.getItem('theme')==='dark'){
+        themeStatus.value = true
+        theme.value = 'dark'
+    }
     updateDocumentClassTheme();
 });
 </script>
@@ -52,7 +58,7 @@ onMounted(() => {
 <template>
     <div class="theme-switcher" v-if="themeSwitcher">
         <label class="switch">
-            <input type="checkbox" v-model="themeStatus" @change="switchTheme($event)" />
+            <input type="checkbox" v-model="themeStatus" @change="switchTheme" />
             <span class="slider"></span>
         </label>
     </div>

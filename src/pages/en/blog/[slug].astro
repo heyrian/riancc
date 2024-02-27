@@ -6,7 +6,7 @@ import Container from "@components/container.astro";
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { getArticleReadingTime } from "@utils/blog";
-import Giscus from "@components/giscus.astro";
+import Giscus from "@components/giscus.vue";
 
 changeLanguage("en");
 
@@ -78,6 +78,6 @@ const readTime = getArticleReadingTime(post.body);
 				</div>
 			</a>
 		</div>	
-		<Giscus/>	
+		<Giscus client:load/>	
 	</Container>
 </Layout>
