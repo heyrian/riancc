@@ -5,7 +5,7 @@ import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
 import LanguageSelector from "@components/languageselector.astro";
-import ThemeSelector from "@components/themeselector.astro";
+import ThemeSelector from "@components/themeselector.vue";
 import menu from '@config/menu.json';
 import config from '@config/config.json';
 import Logo from "@components/Logo.astro";
@@ -134,7 +134,7 @@ export const menuitems = menu.main;
 			}
 		</div>
 		<div class="mt-4 sm:mx-auto md:mt-0 flex flex-col md:flex-row gap-4 mb-0">
-			<ThemeSelector/>
+			<ThemeSelector client:load/>
 			<LanguageSelector
 				showFlag={false}
 				class="appearance-none py-1 px-2 rounded bg-slate-100 dark:bg-stone-950"
