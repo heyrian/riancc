@@ -77,7 +77,6 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 
 		{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 		<script src="/src/pwa.ts"></script>
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body class="dark:bg-stone-950">
 		<Navbar />
