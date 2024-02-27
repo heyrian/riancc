@@ -4,59 +4,44 @@ import config from '@config/config.json';
 
 interface ConfigSettings {
     theme_switcher: boolean;
+    editorTheme: {
+        dark: string;
+        light: string;
+    };
 }
 
-const { theme_switcher }: ConfigSettings = config.settings;
+const { theme_switcher, editorTheme }: ConfigSettings = config.settings;
 const themeSwitcher = theme_switcher;
-const theme = ref(null); // 預設值
-const themeStatus = ref(null)
+const theme = ref('light'); // 預設值
+const themeStatus = ref(false)
 
 const updateDocumentClassTheme = () => {
-    if (themeStatus.value ||
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-        document.documentElement.classList.add('dark');
-        window.dispatchEvent(new Event('updateTheme'));
-    } else {
-        document.documentElement.classList.remove('dark');
-        window.dispatchEvent(new Event('updateTheme'));
-    }
+    document.documentElement.classList.toggle('dark', themeStatus.value);
+    document.documentElement.dataset.theme = themeStatus.value ? editorTheme.dark : editorTheme.light;
+    window.dispatchEvent(new Event('updateTheme'));
 };
 
 const switchTheme = () => {
-    if (themeStatus.value) {
-        localStorage.setItem('theme', 'dark');
-    } else if (!themeStatus.value) {
-        localStorage.setItem('theme', 'light');
-    } else {
-        localStorage.removeItem('theme');
-    }
+    themeStatus.value ? localStorage.setItem('theme', 'dark'):localStorage.setItem('theme', 'light');
     updateDocumentClassTheme();
 };
 
 watch(theme, newValue => {
-    if (newValue === 'system') {
-        localStorage.removeItem('theme');
-    } else {
-        localStorage.setItem('theme', newValue);
-    }
+    themeStatus.value = newValue === 'dark';
+    localStorage.setItem('theme', newValue);
     updateDocumentClassTheme();
 });
 
 onMounted(() => {
-    if(localStorage.getItem('theme')==='light' || !localStorage.getItem('theme')){
-        themeStatus.value = false
-        theme.value = 'light'
-    }else if(localStorage.getItem('theme')==='dark'){
-        themeStatus.value = true
-        theme.value = 'dark'
-    }
+    const storedTheme = localStorage.getItem('theme');
+    themeStatus.value = storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    theme.value = storedTheme || (themeStatus.value ? 'dark' : 'light');
     updateDocumentClassTheme();
 });
 </script>
 
 <template>
-    <div class="theme-switcher" v-if="themeSwitcher">
+    <div class="theme-switcher mx-auto" v-if="themeSwitcher">
         <label class="switch">
             <input type="checkbox" v-model="themeStatus" @change="switchTheme" />
             <span class="slider"></span>
