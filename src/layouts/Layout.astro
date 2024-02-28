@@ -74,10 +74,10 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 	</head>
 	<body class="dark:bg-stone-950">
 		<Navbar />
-		<div class="relative isolate pt-14 dark:bg-stone-950">
+		<div class="relative isolate pt-44 dark:bg-stone-950">
 			<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
 				<svg
-					class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem] animate-slide"
+					class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[50rem] animate-slide"
 					viewBox="0 0 1155 678">
 					<path
 						fill="url(#9b2541ea-d39d-499b-bd42-aeea3e93f5ff)"
@@ -129,17 +129,6 @@ const makeTitle = title ? title + " - " + config.site.title : `${config.site.tit
 			</div>
 		</div>
 		<Footer />
-		<script>
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on("init", user => {
-					if (!user) {
-						window.netlifyIdentity.on("login", () => {
-							document.location.href = "/admin/";
-						});
-					}
-				});
-			}
-		</script>
 		<style is:global>
 			/* Improve Page speed */
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
