@@ -11,6 +11,14 @@ snippet: 這是一個前端工程師在選擇部落格架站技術的比較文�
 publishDate: 2023-10-16 16:02
 category: Development
 ---
+
+<!-- <details><summary>Open example</summary>
+
+Tada! :tada:
+
+</details> -->
+
+
 從2019年開始創業之後開始跟技術圈脫節，因此從2019到2023興起的技術我就沒有跟上，決定重新啟動部落格，參考 [VueMaster](https://www.vuemastery.com/blog/nuxt-vs-vitepress-vs-astro) 的文章，我列舉我目前有的幾個選擇：
 
 * Wordpress + Bitnami + GCP Compute Engine

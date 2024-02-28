@@ -21,13 +21,11 @@ const backend = i18next.t("about.tech.type.backend.desc", { returnObjects: true 
 
 <Layout title={t("header.about")}>
 	<Container>
-		
-
 		<div>
 			
 			<div class="flex flex-col lg:flex-row lg:mb-10 item-center justify-center">
 				<Image
-							class="block mx-auto rounded-full dark:bg-transparent dark:bg-zinc-900/50 bg-gray-300/50 bg-opacity-50 lg:mr-20"
+							class="block mx-auto rounded-full dark:bg-transparent dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white bg-opacity-50 lg:mr-20"
 							src={banner}
 							alt="Rian"
 							width={500}
@@ -52,39 +50,38 @@ const backend = i18next.t("about.tech.type.backend.desc", { returnObjects: true 
 			</div>
 			<hr/ class="py-4">
 			<div class="grid md:grid-cols-3 mx-8 p-2  dark:text-white">
-
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.experience.title")}</h2>
 					<ul class="list-disc list-inside">
 						{experience.map((item) => <li class="py-1">{item}</li>)}
 					</ul>
 				</div>
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.personal_characteristics.title")}</h2>
 					<ul class="list-disc list-inside">
 						{personal_characteristics.map((item) => <li class="py-1">{item}</li>)}
 					</ul>
 				</div>
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.learn.title")}</h2>
 					<ul class="list-disc list-inside">
 						{learn.map((item) => <li class="py-1">{item}</li>)}
 					</ul>
 				</div>
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.preference.title")}</h2>
 					<ul class="list-disc list-inside">
 						{preference.map((item) => <li class="py-1">{item}</li>)}
 					</ul>
 				</div>
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.tech.type.frontend.title")}</h2>
 					<ul class="list-disc list-inside">
 						{frontend.map((item) => <li class="py-1">{item}</li>)}
 					</ul>
 				</div>
 	
-				<div class="dark:bg-zinc-900/50 bg-gray-300/50 md:mx-5 p-5 rounded-lg my-4 bg-opacity-50">
+				<div class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-5 rounded-3xl my-4 bg-opacity-50">
 					<h2 class="text-2xl my-2">{t("about.tech.type.backend.title")}</h2>
 					<ul class="list-disc list-inside">
 						{backend.map((item) => <li class="py-1">{item}</li>)}
