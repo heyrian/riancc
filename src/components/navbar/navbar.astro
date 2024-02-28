@@ -12,7 +12,7 @@ import Logo from '@components/Logo.astro';
 export const menuitems = menu.main;
 //alpine.js
 ---
-<script>
+<script is:inline>
 const button = document.querySelector('.hamburger');
 const nav = document.querySelector('.navbar')
 button?.addEventListener('click', () => {

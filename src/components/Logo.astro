@@ -28,7 +28,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
   {
     src || srcDarkmode || logo || logo_darkmode ? (
       <>
-      <img src={src ? src : logo} class="inline-block h-mlogo w-mlogo md:h-logo md:w-logo" alt={title} format="webp">
+      <img src={src ? src : logo} class="inline-block dark:hidden h-mlogo w-mlogo md:h-logo md:w-logo" alt={title} format="webp">
         {theme_switcher && (
       <img src={srcDarkmode ? srcDarkmode : logo_darkmode} class="hidden dark:inline-block h-mlogo w-mlogo md:h-logo md:w-logo" alt={title} format="webp">
         )}
