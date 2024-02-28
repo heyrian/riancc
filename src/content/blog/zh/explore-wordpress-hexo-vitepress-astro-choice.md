@@ -47,7 +47,7 @@ Hexo 真的是五年前就開始陪伴我的好朋友了，基於 Node.js，它�
 
 Astro 支援許多前端框架，React、Vue、Preact 等等，你甚至可以混合框架，比方說像這樣：
 
-```jsx
+```astro title="example.astro"
 ---
 // Example: Mixing multiple framework components on the same page.
 import MyReactComponent from '../components/MyReactComponent.jsx';

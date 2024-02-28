@@ -14,10 +14,6 @@
     "logo_text": "Rian"
   },
 
-  "pwa":{
-    "favicon":"/favicon.png"
-  },
-
   "settings": {
     "theme_switcher": true,
     "primary_button":false,
@@ -30,7 +26,11 @@
     "blog_folder": "blog",
     "blog_page_num":10,
     "banner_secondary_button_link":"/blog",
-    "banner_primary_button_link":"/about"
+    "banner_primary_button_link":"/about",
+    "editorTheme": {
+      "light": "github-light",
+      "dark": "github-dark"
+    }
   },
 
   "giscus":{
@@ -45,23 +45,5 @@
   "params": {
     "contact_form_action": "#",
     "copyright": "Copyright © Rian 2023 - Present. All rights reserved"
-  },
-
-  "navigation_button": {
-    "enable": true,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/astroplate"
-  },
-
-  "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
-    "settings": {}
-  },
-
-  "metadata": {
-    "meta_author": "zeon.studio",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
   }
 }
