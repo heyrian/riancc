@@ -35,7 +35,7 @@ button?.addEventListener('click', () => {
             <Logo />
             <div class="hamburger inline-block md:hidden" onclick={() => {!isOpen}}>
                 <input class="checkbox" type="checkbox" />
-                <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                <svg fill="none" viewBox="0 0 50 50" height="30" width="30">
                     <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black" d="M6 11L44 11"
                     ></path>
                     <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43" class="lineMid line"
@@ -46,11 +46,11 @@ button?.addEventListener('click', () => {
             </div>
         </div>
         <nav
-            class="navbar duration-500 max-h-0 overflow-hidden w-full pt-10 text-center flex flex-col md:max-h-screen md:mt-0 md:flex-row md:items-center md:pb-0 lg:pl-8"
+            class="navbar duration-500 max-h-0 overflow-hidden w-full text-center flex flex-col md:max-h-screen md:mt-0 md:flex-row md:items-center md:pb-0 lg:pl-8"
         >
         <!-- flex flex-col md:mt-0 lg:pl-8 md:items-center w-full pb-4 md:pb-0 transition-all ease-out md:transition-none md:justify-center md:flex-row -->
             <div
-                class="flex flex-col text-center gap-2 md:w-full md:justify-center md:items-center md:flex md:flex-row md:mx-auto"
+                class="flex flex-col text-center gap-2 pt-5 md:pt-0 md:w-full md:justify-center md:items-center md:flex md:flex-row md:mx-auto"
             >
                 {
                     menuitems.map(item => (

@@ -63,8 +63,8 @@
 }
 
 .hamburger {
-	height: 50px;
-	width: 50px;
+	height: 30px;
+	width: 30px;
 	transform: 0.2s;
 	position: relative;
 }

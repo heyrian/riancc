@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
+const config = require('./src/config/config.json');
 
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -10,6 +11,14 @@ module.exports = {
         mono: ['JetBrains Mono', 'Fira Code', ...defaultTheme.fontFamily.mono],
         serif: [...defaultTheme.fontFamily.serif],
 			},
+      height: {
+        'logo': `${config.site.logo_height}px`,
+        'mlogo':`${config.site.mlogo_height}px`,
+      },
+      width: {
+        'logo': `${config.site.logo_width}px`,
+        'mlogo':`${config.site.mlogo_width}px`,
+      }
 		},
 	},
 	plugins: [
