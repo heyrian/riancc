@@ -10,6 +10,7 @@ import alpinejs from '@astrojs/alpinejs';
 import AstroPWA from '@vite-pwa/astro';
 import config from './src/config/config.json';
 import expressiveCode from 'astro-expressive-code';
+import mdx from '@astrojs/mdx';
 import config from './src/config/config.json';
 
 const allEditorTheme = Object.values(config.settings.editorTheme);
@@ -24,9 +25,9 @@ export default defineConfig({
     },
     integrations: [
         tailwind({
-          config: {
-            applyBaseStyles: false,
-          },
+            config: {
+                applyBaseStyles: false
+            }
         }),
         expressiveCode({
             themes: allEditorTheme,
@@ -76,7 +77,8 @@ export default defineConfig({
                 suppressWarnings: true
             }
         }),
-        vue()
+        vue(),
+        mdx()
     ],
     markdown: {
         rehypePlugins: [
