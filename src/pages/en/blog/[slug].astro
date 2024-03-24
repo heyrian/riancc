@@ -69,7 +69,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
         <div class="mx-auto prose prose-lg dark:prose-invert mt-6 dark:text-gray-200">
             <Content />
         </div>
-        <aside class="fixed top-1/4 right-20 w-1/4 h-1/5 hidden xl:block dark:text-white">
+        <aside class="fixed top-1/4 right-10 w-1/4 h-1/5 hidden xl:block dark:text-white">
             <div class="absolute top-0 divide-y divide-primary-200 dark:divide-primary-800">
                 <div class="p-4">
                     {
@@ -79,7 +79,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                                     {headings.map(({ depth, slug: headingSlug, text }) => (
                                         <li>
                                             <a
-                                                class={`toc-link block ${depth <= 2 ? 'mt-3' : 'mt-2 pl-3 text-sm'}`}
+                                                class={`toc-link block ${depth <= 2 ? 'mt-3 font-bold text-base' : 'mt-2 pl-3 text-sm'}`}
                                                 href={`#${headingSlug}`}
                                                 aria-label={`移動到 ${text} 標題區塊`}
                                             >

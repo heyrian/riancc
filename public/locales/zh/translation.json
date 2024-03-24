@@ -88,12 +88,12 @@
 			"type":{
 				"frontend":{
 					"title":"網頁前端",
-					"desc":["目前擅長 Javascript。","擅長使用 Vue3，喜歡 Composition API 帶來的彈性。","很早以前使用過 React，但是那時候 Javascript 不熟，所以吃很多苦頭。"]
+					"desc":["目前擅長 Javascript。","擅長使用 Vue3，喜歡 Composition API 帶來的彈性。"]
 				},
 
 				"backend":{
 					"title":"網頁後端",
-					"desc":["寫過 Node.js Express","曾經學習過 Sequlize + MySql，因為那時候是幫店面寫管理系統，前後端都寫太辛苦了，後來跑去用 Firebase。","有計劃學習 Python。"]
+					"desc":["有計劃學習 Python。"]
 				}
 			}
 		},
