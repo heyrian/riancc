@@ -40,7 +40,7 @@
 </script>
 
 <template>
-    <div v-if="switcher" class="mx-auto prose dark:prose-invert mt-20" ref="comment">
+    <div v-if="switcher" class="mx-auto prose dark:prose-invert mt-20 max-w-4xl" ref="comment">
         <!-- Giscus 评论组件的容器 -->
     </div>
 </template>

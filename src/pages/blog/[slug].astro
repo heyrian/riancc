@@ -1,30 +1,44 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import { Icon } from "astro-icon";
-import { localizePath } from "astro-i18next";
-import { getArticleReadingTime } from "@utils/blog";
-import Giscus from "@components/giscus.vue";
+import i18next, { changeLanguage, t } from 'i18next';
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/container.astro';
+import { Icon } from 'astro-icon';
+import { localizePath } from 'astro-i18next';
+import { getArticleReadingTime } from '@utils/blog';
+import { getRelatedPosts } from '../../../plugins/getRelatedPosts';
+import Giscus from '@components/giscus.vue';
 
-changeLanguage("zh");
+changeLanguage('zh');
 
 // Generate a new path for every collection post
-export async function getStaticPaths() {changeLanguage('zh')
-    const blogEntries = await getCollection("blog");
+export async function getStaticPaths() {
+    changeLanguage('zh');
+    const blogEntries = await getCollection('blog');
     var localizedBlogEntries = blogEntries.filter(entry => entry.slug.startsWith(i18next.language));
+
+    const posts = await getCollection('blog', ({ data }) => {
+        return data.publishDate < new Date();
+    });
+    const allPosts = posts.filter(page => {
+        const [lang, ...slug] = page.slug.split('/');
+        return lang === i18next.language;
+    });
+
     return localizedBlogEntries.map(post => {
         let slug = post.slug;
-        slug = slug.substring(3).replaceAll("blog/", "");
+        slug = slug.substring(3).replaceAll('blog/', '');
         return {
             params: { slug: slug },
-            props: { post: post }
+            props: {
+                post: post,
+                relatedPosts: getRelatedPosts(allPosts, post.slug, post.data.category)
+            }
         };
     });
 }
 // Get the post directly from the prop on render
-const { post, lang } = Astro.props;
+const { post, lang, relatedPosts } = Astro.props;
 const { data, render } = post;
 const { Content, headings, remarkPluginFrontmatter } = await render();
 const readTime = getArticleReadingTime(post.body);
@@ -33,53 +47,85 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
 
 <Layout title={post.data.title} lang={lang}>
     <Container>
-        <div class="mx-auto prose prose-lg dark:prose-invert mt-14">
-            <a
-                href={localizePath(`/blog/category/${post.data.category?.toLowerCase()}`)}
-                class="text-blue-400 dark:text-stone-400 uppercase tracking-wider text-sm font-medium no-underline"
-            >
-                {post.data.category}
-            </a>
-            <h1
-                class="text-4xl font-black mb-3 lg:text-5xl lg:tracking-tight mt-1 lg:leading-tight dark:text-white"
-            >
-                {post.data.title}
-            </h1>
-            <div class="flex gap-2 items-center">
-                <div class="w-full md:w-auto flex flex-wrap gap-3">
-                    {
-                        post.data.tags.map(tag => (
-                            <a
-                                href={localizePath(`/blog/tag/${tag?.toLowerCase()}`)}
-                                class="text-sm text-gray-500 dark:text-stone-300"
-                            >
-                                #{tag}
-                            </a>
-                        ))
-                    }
+        <div class="prose prose-lg mx-auto mt-12 max-w-4xl dark:prose-invert">
+            <div class="mt-12">
+                <a
+                    href={localizePath(`/blog/category/${post.data.category?.toLowerCase()}`)}
+                    class="text-sm font-medium uppercase tracking-wider text-blue-400 no-underline dark:text-stone-400"
+                >
+                    {post.data.category}
+                </a>
+                <h1
+                    class="mb-3 mt-1 text-4xl font-black dark:text-white lg:text-5xl lg:leading-tight lg:tracking-tight"
+                >
+                    {post.data.title}
+                </h1>
+                <div class="flex items-center gap-2">
+                    <div class="flex w-full flex-wrap gap-3 md:w-auto">
+                        {
+                            post.data.tags.map(tag => (
+                                <a
+                                    href={localizePath(`/blog/tag/${tag?.toLowerCase()}`)}
+                                    class="text-sm text-gray-500 dark:text-stone-300"
+                                >
+                                    #{tag}
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div class="mt-4 flex flex-wrap items-center gap-2 md:flex-nowrap">
+                    <time class="text-gray-400 dark:text-stone-400" datetime={post.data.publishDate.toISOString()}>
+                        {
+                            post.data.publishDate
+                                .toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
+                                .replace(/\//g, '-')
+                        }
+                    </time>
                 </div>
             </div>
-            <div class="flex gap-2 mt-4 items-center flex-wrap md:flex-nowrap">
-                <time class="text-gray-400 dark:text-stone-400" datetime={post.data.publishDate.toISOString()}>
-                    {post.data.publishDate.toLocaleDateString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit' })
-					.replace(/\//g, '-')}
-                </time>
+            <div class="mt-6 dark:text-gray-200">
+                <Content />
             </div>
+            
+            <div class="my-12">
+                {
+                    relatedPosts.length > 0 && (
+                        <>
+                            <h2 class="text-2xl">延伸閱讀</h2>
+                            <ul>
+                                {relatedPosts.map(post => (
+                                    <li>
+                                        <a href={`/${post.slug}/`}>{post.data.title}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    )
+                }
+            </div>
+            <!-- <div class="mt-20">
+                <a href={localizePath('/blog')}>
+                    <div class="flex flex-row items-center justify-center dark:text-stone-200">
+                        <Icon name="tabler:chevron-left" class="h-6 w-6" />
+                        <p class="ml-2">{t('blog.back_blog_text')}</p>
+                    </div>
+                </a>
+            </div> -->
         </div>
-        <div class="mx-auto prose prose-lg dark:prose-invert mt-6 dark:text-gray-200">
-            <Content />
-        </div>
-        <aside class="fixed top-1/4 right-10 w-1/4 h-1/5 hidden xl:block dark:text-white">
-            <div class="absolute top-0 divide-y divide-primary-200 dark:divide-primary-800">
+        <aside class="fixed right-10 top-1/4 hidden h-1/5 w-1/4 dark:text-white xl:block">
+            <div class="divide-primary-200 dark:divide-primary-800 absolute top-0 divide-y">
                 <div class="p-4">
                     {
                         Boolean(headings.length) && (
                             <div>
-                                <ul data-toc class="toc m-0 list-none p-0">
+                                <ul data-toc class="toc m-0 w-80 list-none p-0">
                                     {headings.map(({ depth, slug: headingSlug, text }) => (
                                         <li>
                                             <a
-                                                class={`toc-link block ${depth <= 2 ? 'mt-3 font-bold text-base' : 'mt-2 pl-3 text-sm'}`}
+                                                class={`toc-link block ${
+                                                    depth <= 2 ? 'mt-3 text-base font-bold' : 'mt-2 pl-3 text-sm'
+                                                }`}
                                                 href={`#${headingSlug}`}
                                                 aria-label={`移動到 ${text} 標題區塊`}
                                             >
@@ -94,15 +140,6 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                 </div>
             </div>
         </aside>
-
-        <div class="mx-auto mt-20">
-            <a href={localizePath('/blog')}>
-                <div class="flex flex-row align-middle justify-center dark:text-stone-200">
-                    <Icon name="tabler:chevron-left" class="w-6 h-6" />
-                    <p class="ml-2">{t('blog.back_blog_text')}</p>
-                </div>
-            </a>
-        </div>
         <Giscus client:load />
     </Container>
 </Layout>

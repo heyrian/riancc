@@ -9,10 +9,10 @@
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "150",
-    "logo_height": "80",
-    "mlogo_width": "75",
-    "mlogo_height": "40",
+    "logo_width": "120",
+    "logo_height": "64",
+    "mlogo_width": "120",
+    "mlogo_height": "64",
     "logo_text": "Rian"
   },
 
