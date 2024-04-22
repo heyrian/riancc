@@ -1,11 +1,9 @@
 ---
 title: 探討開展電子商務架站的方法
+customSlug: how-to-start-an-e-commerce-business
 tags:
   - eCommerce
   - WordPress
-image:
-  src: /images/how-to-start-an-e-commerce-business.png
-  alt: how-to-start-an-e-commerce-business
 snippet: 從各個角度剖析開展電子商務可能的方法，從人力面、營運面，結合自身經驗的綜合評估，希望對大家有幫助。
 publishDate: 2024-01-16 17:39
 category: Business

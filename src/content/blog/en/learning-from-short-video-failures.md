@@ -8,9 +8,6 @@ snippet: |
   身為一個購買三門短影音課程，而三堂都被割韭菜的我，覺得有一些甘苦談可以跟大家分享，這些費用加總起來去上燒賣的廣告投手也是綽綽有餘，真的也只能摸摸鼻子。​
 publishDate: 2023-11-12 20:07
 category: Business
-image:
-  src: " /images/learning-from-short-video-failures.png"
-  alt: learning from short video failures
 ---
 這幾天看到行銷社團因為短影音課程討論得非常熱烈，當中有個學長說出短影音課程的困境，都是真的～～～
 

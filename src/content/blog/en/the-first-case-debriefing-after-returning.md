@@ -6,9 +6,6 @@ tags:
 snippet: 這是我第一次承接與政府相關的案子，當中有遇到一些困難，以及我有犯一些錯誤，希望藉由這次的日記提醒自己未來不要再犯錯。
 publishDate: 2023-11-10 15:58
 category: Life
-image:
-  src: " /images/the-first-case-debriefing-after-returning-cover.png"
-  alt: the-first-case-debriefing-after-returning
 ---
 這是我第一次接與政府相關的案子，但也有可能是最後一次，我真的比較少接觸公家機關的案子 XD
 

@@ -1,5 +1,6 @@
 ---
 title: 探討開展電子商務架站的方法
+customSlug: how-to-start-an-e-commerce-business
 tags:
   - eCommerce
   - WordPress

@@ -1,13 +1,11 @@
 ---
 title: 探索 Wordpress、Hexo、Vite Press 到 Astro 的選擇之道
+customSlug: explore-wordpress-hexo-vitepress-astro-choice
 tags:
   - astro
   - frontend
   - webdev
-image:
-  src: /images/build-blog-so-easy-by-astro.png
-  alt: build-blog-so-easy-by-astro
-snippet: 這是一個前端工程師在選擇部落格架站技術的比較文章，裡面包含現在常見的 Wordpress、Hexo、Vite Press、Astro。
+snippet: This is a front-end engineers in the choice of blog site technology comparison article, which contains now common Wordpress, Hexo, Vite Press, Astro.
 publishDate: 2023-10-16 16:02
 category: Development
 ---
