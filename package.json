@@ -10,7 +10,6 @@
 		"build:localized": "npm run i18n:generate && npm run build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"article:generate": "node ./scripts/generate-article.js",
 		"i18n:generate": "astro-i18next generate && npm run script:change-language-in-dynamic-pages",
 		"script:change-language-in-dynamic-pages": "node ./scripts/change-language-in-dynamic-pages.js",
 		"pwa:generate-assets": "pwa-assets-generator --preset minimal public/logo.svg"
