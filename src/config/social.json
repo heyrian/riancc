@@ -2,17 +2,17 @@
   "main": [
     {
       "name": "facebook",
-      "icon": "facebook",
-      "link": "https://www.facebook.com/hey.riannn"
+      "icon": "mdi:facebook",
+      "link": "https://www.facebook.com/hey.rian.cc"
     },
     {
       "name": "instagram",
-      "icon": "instagram",
-      "link": "https://instagram.com/hey.riannn"
+      "icon": "mdi:instagram",
+      "link": "https://instagram.com/hey.rian.cc"
     },
     {
       "name": "github",
-      "icon": "github",
+      "icon": "mdi:github",
       "link": "https://www.github.com/heyrian"
     }
   ]
