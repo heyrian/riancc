@@ -1,22 +1,37 @@
 export function getRelatedPosts(allPosts, currentSlug, currentCats) {
     // random selection function
     const randomLot = (array, num) => {
-        let newArray = [];
+        const result = [];
+        const usedIndices = new Set();
 
-        while (newArray.length < num && array.length > 0) {
-            const randomIndex = Math.floor(Math.random() * array.length);
-            newArray.push(array[randomIndex]);
-            array.splice(randomIndex, 1);
+        while (result.length < num && result.length < array.length) {
+            let randomIndex = Math.floor(Math.random() * array.length);
+            while (usedIndices.has(randomIndex)) {
+                randomIndex = Math.floor(Math.random() * array.length);
+            }
+            usedIndices.add(randomIndex);
+            result.push(array[randomIndex]);
         }
 
-        return newArray;
+        return result;
     };
-    const relatedPosts = allPosts.filter(
-        post =>
-          post.slug !== currentSlug &&
-          post.data.category.includes(currentCats[0])
-      )
-    
-      return randomLot(relatedPosts, 4) // random selection
-      // return relatedPosts.slice(0, 4)
+
+    const normalizeSlug = (slug) => {
+        if (slug.startsWith('zh/')) {
+            return slug.replace('zh/', 'blog/');
+        } else if (slug.startsWith('en/')) {
+            return slug.replace('en/', 'en/blog/');
+        }
+        return slug;
+    };
+
+    const relatedPosts = allPosts
+        .filter(post => post.slug !== currentSlug && post.data.category.includes(currentCats[0]))
+        .map(post => ({
+            ...post,
+            slug: normalizeSlug(post.slug)
+        }));
+
+    return randomLot(relatedPosts, 4);
+    // return relatedPosts.slice(0, 4)
 }
