@@ -18,10 +18,28 @@ module.exports = {
       width: {
         'logo': `${config.site.logo_width}px`,
         'mlogo':`${config.site.mlogo_width}px`,
-      }
+      },
+      // typography: {
+      //   DEFAULT: {
+      //   },
+      // },
 		},
 	},
 	plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.article': {
+          '::selection': {
+            'background-color': '#a29baf',
+            'color': '#fff',
+          },
+          'a': {
+            'background-image': 'linear-gradient(transparent 70%, #a29baf 0)',
+            'text-decoration': 'none',
+          },
+        },
+      });
+    },
     require("@tailwindcss/typography"),
     require('tailwindcss-fluid-type')({
       // your fluid type settings
