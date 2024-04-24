@@ -14,6 +14,8 @@
 	}
 	.heading-wrapper:hover .anchor-link {
 		visibility: visible;
+		background-image: none;
+		cursor: pointer;
 	}
 }
 
