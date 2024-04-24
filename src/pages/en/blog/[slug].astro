@@ -81,7 +81,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                     </time>
                 </div>
             </div>
-            <div class="mt-6 dark:text-gray-200">
+            <div class="mt-6 article dark:text-gray-200">
                 <Content />
             </div>
             
@@ -89,7 +89,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                 {
                     relatedPosts.length > 0 && (
                         <>
-                            <h2 class="text-2xl">延伸閱讀</h2>
+                            <h2 class="text-2xl">Related Article</h2>
                             <ul>
                                 {relatedPosts.map(post => (
                                     <li>
