@@ -1,101 +1,73 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
-import Layout from "@layouts/Layout.astro";
-import banner from "assets/banner.png";
-import { Image } from "astro:assets";
-import Container from "@components/container.astro";
-import Sectionhead from "@components/sectionhead.astro";
-import Faq from "@components/faq.astro";
+import i18next, { changeLanguage, t } from 'i18next';
+import Layout from '@layouts/Layout.astro';
+import banner from 'assets/banner.png';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+import Container from '@components/container.astro';
+import Sectionhead from '@components/sectionhead.astro';
+import Faq from '@components/faq.astro';
+import social from '@config/social.json';
 
-changeLanguage("zh");
+changeLanguage('zh');
 
-const personal_characteristics = i18next.t("about.personal_characteristics.desc", { returnObjects: true });
-const learn = i18next.t("about.learn.desc", { returnObjects: true });
-const information = i18next.t("about.information.desc", { returnObjects: true });
-const values = i18next.t("about.values.desc", { returnObjects: true });
-const preference = i18next.t("about.preference.desc", { returnObjects: true });
-const experience = i18next.t("about.experience.desc", { returnObjects: true });
-const frontend = i18next.t("about.tech.type.frontend.desc", { returnObjects: true });
-const backend = i18next.t("about.tech.type.backend.desc", { returnObjects: true });
+const props = Astro.props;
+const experience = i18next.t('about.experience.desc', { returnObjects: true });
+const source = social.main;
 ---
 
 <Layout title={t('header.about')}>
-    <Container>
-        <div class="mx-auto max-w-4xl prose prose-lg">
-            <div class="flex flex-col items-center">
-                <Image
-                    class="block rounded-full dark:bg-transparent dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white bg-opacity-50"
-                    src={banner}
-                    alt="Rian"
-                    width={300}
-                    height={300}
-                />
-                <div>
-                    <h1 class="text-center">{t('header.about')}</h1>
-                    <div class="px-10 pb-5 md:px-6 md:pb-0 dark:text-white">
-                        <ul class="list-disc list-inside text-left mt-4">
-                            {information.map(item => <li class="py-1">{item}</li>)}
-                        </ul>
-                        <!-- <hr class="my-4" />
-                    <ul class="list-disc list-inside text-left max-w-md">
-                        {values.map(item => <li class="py-1">{item}</li>)}
-                    </ul> -->
-                    </div>
-                </div>
-            </div>
-            <hr/>
-            <div class="dark:text-white">
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.experience.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {experience.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.personal_characteristics.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {personal_characteristics.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.learn.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {learn.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.preference.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {preference.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.tech.type.frontend.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {frontend.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-
-                <div
-                    class="dark:bg-zinc-900/50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] bg-white md:mx-5 p-10 rounded-3xl my-4 bg-opacity-50"
-                >
-                    <h2 class="my-2">{t('about.tech.type.backend.title')}</h2>
-                    <ul class="list-disc list-inside">
-                        {backend.map(item => <li class="py-1">{item}</li>)}
-                    </ul>
-                </div>
-            </div>
+    <div class="flex flex-col justify-center">
+        <div class="mt-10">
+            <Image
+                class="block mx-auto rounded-full bg-white bg-opacity-50 shadow-[0px_20px_30px_-15px_rgba(0,0,0,0.5)] dark:bg-transparent dark:bg-zinc-900/50"
+                src={banner}
+                alt="Rian"
+                width={500}
+                height={500}
+            />
         </div>
-        <Faq />
-    </Container>
+
+        <div class="prose mx-auto dark:text-white">
+            <h1 class="mt-10 text-center dark:text-white">{t('header.about')}</h1>
+
+            <div
+                class="mt-4 mx-auto flex w-max space-x-4 text-gray-500 dark:text-white"
+            >
+                {
+                    source.map(
+                        item =>
+                            item.icon &&
+                            item.link && (
+                                <a
+                                    class="duration-300 hover:text-gray-900 dark:text-white dark:hover:text-gray-100"
+                                    href={item.link}
+                                    title={item.icon}
+                                    target="blank"
+                                    aria-label={item.icon}
+                                >
+                                    <Icon name={item.icon} width="30" />
+                                </a>
+                            )
+                    )
+                }
+                <a
+                    class="duration-300 hover:text-gray-900 dark:text-white dark:hover:text-gray-100"
+                    href="https://www.threads.net/@hey.rian.cc"
+                    title="threads"
+                    target="blank"
+                    aria-label="threads"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256" {...props}>
+                        <path
+                            fill="currentColor"
+                            d="M138.62 128a53.54 53.54 0 0 1 13.1 1.63c-.57 8.21-3.34 15-8.11 19.61A23.89 23.89 0 0 1 127 156c-11.87 0-15-7.58-15-12.07C112 133 125.8 128 138.62 128m85.38 0c0 65.12-35.89 104-96 104s-96-38.88-96-104S67.89 24 128 24s96 38.88 96 104m-152 0c0-43.07 18.32-64 56-64c26.34 0 43 10.08 50.81 30.83a8 8 0 0 0 15-5.66C180.9 55.14 150.9 48 128 48c-26.1 0-45.52 8.7-57.72 25.86C60.8 87.19 56 105.4 56 128s4.8 40.81 14.28 54.14C82.48 199.3 101.9 208 128 208c24.45 0 39.82-8.8 48.41-16.18c10.76-9.25 17.19-21.89 17.19-33.82c0-14.3-6.59-26.79-18.56-35.17a54.16 54.16 0 0 0-7.77-4.5c-2.09-14.65-10-25.75-22.34-31.07c-14.5-6.26-32.93-3.33-43.72 6.93a8 8 0 0 0 11 11.62c5.43-5.14 16.79-8 26.4-3.85a20.05 20.05 0 0 1 10.77 10.92a68.89 68.89 0 0 0-10.76-.85C113.53 112 96 125.15 96 143.93C96 160.2 109 172 127 172a40 40 0 0 0 27.75-11.29c4.7-4.59 10.11-12.2 12.17-24A25.55 25.55 0 0 1 177.6 158c0 13.71-15.76 34-49.6 34c-37.68 0-56-20.93-56-64"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+            {experience.map(item => <li class="py-1">{item}</li>)}
+        </div>
+    </div>
+    <Faq />
 </Layout>
