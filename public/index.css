@@ -3,6 +3,11 @@
 	align-items: baseline;
 	gap: 6px;
 }
+
+.heading-wrapper .anchor-link{
+	background-image: none;
+	cursor: pointer;
+}
 @media (min-width: 50em) {
 	.heading-wrapper {
 		flex-direction: row-reverse;
@@ -14,8 +19,6 @@
 	}
 	.heading-wrapper:hover .anchor-link {
 		visibility: visible;
-		background-image: none;
-		cursor: pointer;
 	}
 }
 
