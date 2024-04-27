@@ -19,10 +19,34 @@ module.exports = {
         'logo': `${config.site.logo_width}px`,
         'mlogo':`${config.site.mlogo_width}px`,
       },
-      // typography: {
-      //   DEFAULT: {
-      //   },
-      // },
+      typography: {
+        lg:{
+          css: {
+            h2:{
+              'margin': '1.5rem 0'
+            },
+          },
+        },
+        DEFAULT: {
+          css: {
+            'h2':{
+              'margin-top': '10px'
+            },
+            'code':{
+              'background': '#d3cedd',
+              'border-radius': '4.8px',
+              'padding': '4px 6px',
+              'border': '0.1px solid #a29baf'
+            },
+            'code::before': {
+              content: 'none',
+            },
+            'code::after': {
+              content: 'none',
+            },
+          },
+        },
+      },
 		},
 	},
 	plugins: [
