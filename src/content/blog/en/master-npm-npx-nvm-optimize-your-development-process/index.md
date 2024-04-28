@@ -1,11 +1,11 @@
 ---
 title: 【前端開發必備工具系列】之一：掌握 npm、nvm、npx，優化你的開發流程
-customSlug: master-npm- npx-nvm-optimize-your-development-process
+customSlug: master-npm-npx-nvm-optimize-your-development-process
 tags:
   - tools
   - frontend
   - webdev
-snippet: 早期大概三四年前，前端要簡易部署到雲服務，大部分是通過 PaaS 平台，那時候比較流行是用 heroku，當時需要在自己的專案上面裝 heroku-cli 工具，使用 command Line 才可以部署上服務，我依稀記得為了這件事我好像還串 CI/CD（那時候還沒有 Github Action），但現在已經不用這麼辛苦了。
+snippet: 本篇介紹 npm、nvm 和 npx 的使用方式，以及如何透過這些工具來優化你的開發流程。
 publishDate: 2024-04-27 12:01
 category: Development
 ---
