@@ -1,30 +1,29 @@
 ---
-import i18next, { changeLanguage, t } from "i18next";
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/container.astro";
-import { Icon } from "astro-icon";
-import { localizePath } from "astro-i18next";
-import { getArticleReadingTime } from "@utils/blog";
-import { getRelatedPosts } from "../../../plugins/get-related-posts";
-import Giscus from "@components/giscus.vue";
+import i18next, { changeLanguage, t } from 'i18next';
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import { localizePath } from 'astro-i18next';
+import { getArticleReadingTime } from '@utils/blog';
+import { getRelatedPosts } from '../../../plugins/get-related-posts';
+import Giscus from '@components/giscus.vue';
 
-changeLanguage("zh");
+changeLanguage('zh');
 
 // Generate a new path for every collection post
-export async function getStaticPaths() {changeLanguage('zh')
-    const blogEntries = await getCollection("blog");
+export async function getStaticPaths() {
+    changeLanguage('zh');
+    const blogEntries = await getCollection('blog');
     var localizedBlogEntries = blogEntries.filter(entry => entry.slug.startsWith(i18next.language));
-    const posts = await getCollection("blog", ({ data }) => {
+    const posts = await getCollection('blog', ({ data }) => {
         return data.publishDate < new Date();
     });
     const allPosts = posts.filter(page => {
-        const [lang, ...slug] = page.slug.split("/");
+        const [lang, ...slug] = page.slug.split('/');
         return lang === i18next.language;
     });
     return localizedBlogEntries.map(post => {
         let slug = post.slug;
-        slug = slug.substring(3).replaceAll("blog/", "");
+        slug = slug.substring(3).replaceAll('blog/', '');
         return {
             params: { slug: slug },
             props: {
@@ -43,8 +42,10 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
 ---
 
 <Layout title={post.data.title} lang={lang}>
-       <article class="mx-8 grid grid-cols-5 grid-rows-8 gap-4 xl:mx-0">
-        <div class="col-span-5 row-span-8 prose prose-lg max-w-full mt-12 dark:prose-invert xl:col-span-3 xl:col-start-2">
+    <article class="mx-8 grid grid-cols-5 grid-rows-8 gap-4 xl:mx-0">
+        <div
+            class="prose prose-lg col-span-5 row-span-8 mt-12 max-w-full dark:prose-invert lg:col-span-3 lg:col-start-2"
+        >
             <header class="mt-12">
                 <a
                     href={localizePath(`/blog/category/${post.data.category?.toLowerCase()}`)}
@@ -81,10 +82,10 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                     </time>
                 </div>
             </header>
-            <div class="mt-6 article dark:text-gray-200">
+            <div class="article mt-6 dark:text-gray-200">
                 <Content />
             </div>
-            
+
             <div class="my-12">
                 {
                     relatedPosts.length > 0 && (
@@ -110,14 +111,14 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                 </a>
             </div> -->
         </div>
-        <aside class="sticky top-32 col-span-1 col-start-5 row-start-2 hidden dark:text-white lg:block">
-            <div class="px-10">
-                <h2 class="font-black text-xl">目錄</h2>
+        <aside class="sticky top-32 col-span-1 col-start-5 row-start-2 hidden dark:text-white xl:block">
+            <div class="px-6 2xl:px-10">
+                <h2 class="text-xl font-black">目錄</h2>
                 <div>
                     {
                         Boolean(headings.length) && (
                             <div>
-                                <ul data-toc class="toc m-0 w-80 list-none p-0">
+                                <ul data-toc class="toc m-0 w-full list-none p-0">
                                     {headings.map(({ depth, slug: headingSlug, text }) => (
                                         <li>
                                             <a
@@ -139,7 +140,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
             </div>
         </aside>
         <Giscus client:load />
-       </article>
+    </article>
 </Layout>
 
 <style>
