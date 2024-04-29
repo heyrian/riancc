@@ -6,7 +6,7 @@ import Container from "@components/container.astro";
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { getArticleReadingTime } from "@utils/blog";
-import { getRelatedPosts } from "../../../plugins/getRelatedPosts";
+import { getRelatedPosts } from "../../../plugins/get-related-posts";
 import Giscus from "@components/giscus.vue";
 
 changeLanguage("zh");
@@ -43,9 +43,9 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
 ---
 
 <Layout title={post.data.title} lang={lang}>
-    <Container>
-        <div class="prose prose-lg mx-auto mt-12 max-w-4xl dark:prose-invert">
-            <div class="mt-12">
+       <article class="mx-8 grid grid-cols-5 grid-rows-8 gap-4 xl:mx-0">
+        <div class="col-span-5 row-span-8 prose prose-lg max-w-full mt-12 dark:prose-invert xl:col-span-3 xl:col-start-2">
+            <header class="mt-12">
                 <a
                     href={localizePath(`/blog/category/${post.data.category?.toLowerCase()}`)}
                     class="text-sm font-medium uppercase tracking-wider text-blue-400 no-underline dark:text-stone-400"
@@ -80,7 +80,7 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                         }
                     </time>
                 </div>
-            </div>
+            </header>
             <div class="mt-6 article dark:text-gray-200">
                 <Content />
             </div>
@@ -110,9 +110,10 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
                 </a>
             </div> -->
         </div>
-        <aside class="fixed right-10 top-1/4 hidden h-1/5 w-1/4 dark:text-white xl:block">
-            <div class="divide-primary-200 dark:divide-primary-800 absolute top-0 divide-y">
-                <div class="p-4">
+        <aside class="sticky top-32 col-span-1 col-start-5 row-start-2 hidden dark:text-white lg:block">
+            <div class="px-10">
+                <h2 class="font-black text-xl">目錄</h2>
+                <div>
                     {
                         Boolean(headings.length) && (
                             <div>
@@ -138,5 +139,23 @@ const lastModified = new Date(remarkPluginFrontmatter.lastModified);
             </div>
         </aside>
         <Giscus client:load />
-    </Container>
+       </article>
 </Layout>
+
+<style>
+    :global(html) {
+        /* ...TRUNCATED */
+
+        color: hsl(var(--colour-text-hue) var(--colour-text-saturation) var(--colour-text-luminance));
+
+        scroll-behavior: smooth;
+    }
+    :global(h2[id], h3[id], h4[id], h5[id], h6[id]) {
+        scroll-margin-top: 120px; /* 根據你的需求進行調整 */
+    }
+    @media (prefers-reduced-motion: reduce) {
+        :global(html) {
+            scroll-behavior: auto;
+        }
+    }
+</style>
