@@ -38,11 +38,18 @@ module.exports = {
             'h2':{
               'margin-top': '10px'
             },
+            'h2 code':{
+              'color': 'black'
+            },
+            'h3 code':{
+              'color': 'black'
+            },
             'code':{
               'background': '#d3cedd',
               'border-radius': '4.8px',
               'padding': '4px 6px',
-              'border': '0.1px solid #a29baf'
+              'border': '0.1px solid #a29baf',
+              'color': 'black'
             },
             'code::before': {
               content: 'none',
