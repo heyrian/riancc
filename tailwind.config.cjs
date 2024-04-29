@@ -8,7 +8,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Noto Sans CJK TC', 'Noto Sans TC', ...defaultTheme.fontFamily.sans],
-        mono: ['JetBrains Mono', 'Fira Code', ...defaultTheme.fontFamily.mono],
+        mono: [...defaultTheme.fontFamily.mono],
         serif: [...defaultTheme.fontFamily.serif],
 			},
       height: {
