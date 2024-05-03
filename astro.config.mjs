@@ -34,7 +34,15 @@ export default defineConfig({
                 codeFontSize: '1rem'
             }
         }),
-        sitemap(),
+        sitemap({
+            i18n: {
+                defaultLocale: 'zh', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+                locales: {
+                    zh: 'zh-TW',
+                    en: 'en-US'
+                }
+            }
+        }),
         astroI18next(),
         AstroPWA({
             mode: 'production',
