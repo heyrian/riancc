@@ -1,114 +1,96 @@
 ---
-title: 探討開展電子商務架站的方法
+title: Exploring Methods for Developing E-commerce Websites
 customSlug: how-to-start-an-e-commerce-business
 tags:
   - eCommerce
   - WordPress
-snippet: 從各個角度剖析開展電子商務可能的方法，從人力面、營運面，結合自身經驗的綜合評估，希望對大家有幫助。
+snippet: This article analyzes possible methods for developing e-commerce from various angles, including manpower and operations, combined with a comprehensive evaluation based on personal experience. I hope it will be helpful to everyone.
 publishDate: 2024-01-16 17:39
 category: Business
 ---
 
-提醒：電子商務的情況繁雜，這邊僅列出我常遇到的情況，本偏偏重技術沒錢型賣家，因為我屬於這類型，以下不涵蓋所有情形，僅供參考，只希望對大家有幫助。
+Reminder: E-commerce situations are complex. Here, I only list the situations I often encounter, and this article is biased towards sellers with technical skills but limited funds, as I belong to this category. The following does not cover all situations and is for reference only. I just hope it will be helpful to everyone.
 
-## 步驟一：確認需求
+## Step 1: Confirm Requirements
 
-市面上需要網站不外乎有以下需求（包含但不限於）：
+The common requirements for websites in the market include (but are not limited to):
 
-1. SEO 引流，形象官方網站引流（發布公告文章、價格頁面等等）。
+1. SEO traffic, official image website traffic (publishing announcement articles, price pages, etc.).
+2. Online transactions (+ offline logistics).
+3. Online and offline OMO integration (membership or other customized systems).
 
-2. 線上交易(+線下物流)。
+Many business owners will consider what they may need in the future. My personal suggestion is to focus on current requirements. Assuming what might be needed in the future without certainty will most likely result in adding unnecessary features and increasing costs.
 
-3. 線上與實體 OMO 整合（會員或其他客製系統）。
+**Without certainty, leave future matters for the future to solve.**
 
+## Step 2: Assess Resources
 
+Assess your current manpower and financial resources, including the roles involved and the monthly budget.
 
-許多業主會思考未來我可能也會需要什麼什麼，個人建議以現有需求考量為主，現在去假設未來可能要什麼，不然有極大機率是多開功能徒增花費。
+The common solutions in the market are as follows (including but not limited to):
 
-**沒有確定的情況下，未來的事交給未來再解決。**
+1. Self-built website with outsourced professional engineering team for system development
 
-## 步驟二：盤點資源
+   1. Manpower: A role to interface with the outsourced team.
 
-盤點目前的人力及金錢資源，當中的人力包含，以及月預算。
+   2. System cost: Requires a lot of money (conservatively estimated at monthly turnover of [NTD.100 million or above](https://www.facebook.com/backtrue/posts/pfbid032GgEs2okdwUkRaMotcRjKQoxiqxkzGtjWWP9aqMMjbcKaaK3C8WFtRVPSFBPGaVTl)).
 
+2. Online store platform (91, QDM, etc.)
 
+   1. Manpower: Requires a website administrator to handle the website. Technical skills don't need to be very proficient, but it may require more time.
 
-市面上的解決方法大致上是以下（包含但不限於）：
+   2. System cost: Store setup prices vary. Conservatively estimate an annual system fee of NTD.120,000 (excluding fees for payment and logistics, etc.).
 
-1. 自架站之外包專業工程團隊開發系統
+3. Self-built website using the "poor man's method"
 
-   1. 人力面：有個與外包團隊對接的角色。
+   1. Manpower: Your company already has engineers or someone dedicated to handling system-related matters (may not be an expert but willing to research in-depth).
 
-   2. 系統費用：要有錢，很多錢（營業程度保守估計[月營業額1000萬](https://www.facebook.com/backtrue/posts/pfbid032GgEs2okdwUkRaMotcRjKQoxiqxkzGtjWWP9aqMMjbcKaaK3C8WFtRVPSFBPGaVTl)以上）。
+   2. System: Wordpress, Joomla, Wix, etc.
 
-2. 線上開店平台（91﹑QDM…）
+4. E-commerce platform (Shopee, MOMO, etc.)
 
-   1. 人力面：需要有個網站管理員的人力去處理，技術面不需要太純熟，但可能需要多花一點時間。
+   1. Manpower: Still requires someone to handle product listings, images, videos, in-site advertising, etc.
+   2.System cost: Commission is charged only when there are transactions.
 
-   2. 系統費用：各家開店價格不一，保守估計一年抓 12 萬系統費（不含金物流等等費用）。
+Step 3: Analyze Business Stage
 
-3. 自架站之貧民開站法
+This sequence is based on financial capability:
 
-   1. 人力面：你們公司本來就有在養工程師，或是有專門的人負責處理系統面的事（可能不是專精，但也願意深入研究）
+### Wealthy Level 1: I have a Big Sugar Daddy
 
-   2. 系統面：Wordpress、joomla、Wix 等等。
+If you have money and a big sugar daddy, you can directly outsource to a team or have an in-house team. As discussed in Xiaohei's Facebook article, if your business scale is large enough, outsourcing is not a problem. (This article focuses on low-cost methods. I'll share details on high-cost methods if I have the opportunity to become wealthy in the future. QQ)
 
-4. 電商平台（蝦皮、MOMO…）
+### Wealthy Level 2: Some budget, but no sugar daddy
 
-   1. 人力面：一樣要有個人力去處理上架商品、圖片、影音、站內廣告等等。
+Requirements belong to Step 1's A or B: The business scale is not that large, but if you can afford an annual system fee of about 150,000 (only system fee, excluding payment, logistics, manpower, etc.), it is recommended to directly use a store platform. The difference lies in the level of support for payment and logistics by each platform. You may need to do some research or usually store platforms offer trial periods for you to try out.
 
-   2. 系統費用：有交易再抽成。
+The only thing to note is the search engine optimization of each platform. You can refer to [Xiaohei's post](https://www.facebook.com/backtrue/posts/pfbid0iSZtZC7yLhA8WdWhyifCAkZUW5D3jJiD3SJy7ABvtbUXch6LZrLEnp6hUaRTBwNml). He has created a [comparison table](https://app.heptabase.com/524d479f-6451-43be-a51c-edf235da26a2/card/2ba3a86e-886a-4d6c-8f8c-67f68001d244) for the search engine optimization evaluation of various store platforms.
 
-## 步驟三：分析營業階段
+If the requirement is Step 1's C: It is recommended to use a store platform with other services (inline for restaurant queuing, Ocard for Line membership cards, Ominichat for CRM conversational commerce).
 
-這編排序以金錢能力：
+his is also a budget, but it will still be cheaper than outsourcing to an engineering team.
 
-### 有錢層級一：I have a Big Sugar Daddy
+### No Money Level 1: No people, no money
 
-有錢有大乾爹的情況就是直接外包團隊或養團隊，如小黑老師在臉書探討的文章，營業層級有到的話，就直接外包沒問題。（本篇文章偏向探討沒錢作法，有錢作法細節等我未來有機會變有錢之後再來分享QQ）
+For this type, I recommend first evaluating your own monthly revenue. If the requirement is Step 1's A, I think using social media platforms with portaly or linktr is sufficient.
 
-### 有錢層級二：有一些預算，但沒乾爹
+For B, if your budget is not enough for a store platform, I recommend starting on an e-commerce platform until your business scale expands.
+In terms of cost, although Shopee has been adjusting its fees year by year, compared to self-built websites, it is much lower in terms of both money and manpower. The downside is being tied to Shopee, but there's no other choice, as this is already the lowest-cost e-commerce entrepreneurship.
 
-需求屬於步驟一的 A 或 B：營運規模沒那麼大，但如果可以負擔一年系統費大約15萬（Only系統費，不含金流、物流、人力 blabla…）建議直接使用開店平台，差異點就是各家使用的金流物流支援程度，細節可能要爬文，或是通常開店平台會有一些使用試用期，自己去用看看。
+### No Money Level 2: Hardworking technical sellers
 
-唯一要注意的是，在注意各個平台在搜尋優化的地方，可以參考[小黑老師這篇貼文](https://www.facebook.com/backtrue/posts/pfbid0iSZtZC7yLhA8WdWhyifCAkZUW5D3jJiD3SJy7ABvtbUXch6LZrLEnp6hUaRTBwNml)，他有製作一個各家開店平台的搜尋優化評比的[比較表格](https://app.heptabase.com/524d479f-6451-43be-a51c-edf235da26a2/card/2ba3a86e-886a-4d6c-8f8c-67f68001d244)。
+This is the area I can discuss more. As a hardworking technical seller, most of the technical small-budget sellers I know use Wordpress to solve requirement A because Wordpress has the largest ecosystem and it's easier to find solutions when encountering problems.
 
+What to watch out for is to be careful not to over-inflate the requirements, because Wordpress plugins, such as basic themes, page editors, and backups, may require a subscription fee of over 10,000 per year, and it increases based on your requirements.
 
+This is not absolute and still depends on your technical skills. For example, if your site is deployed on GCP or AWS and you use the Snapshot feature, you may be able to save money on backup plugins.
 
-如果需求是步驟一的 C：會建議使用開店平台搭其他服務（餐廳排隊可以用inline、Line 會員卡可以用 Ocard、CRM 對話商務可以搭 Ominichat）。
+For requirement B, it usually extends the usage method of A and installs Woocommerce. One thing to note is that the marketing flexibility of Woocommerce is not very high. Customization may be difficult for features like point collection and "spend a thousand, get a hundred" if your technical skills are not deep enough. Among e-commerce websites using Wordpress, you can refer to Wangmiao, which I think is already quite excellent.
 
-這也是一筆預算，但還是會比你外包工程團隊便宜。
+If you belong to A and want to expand to B, you can initially use Woocommerce, which has a lower cost. When you have stable traffic later, you'll have the budget to:
 
+1. Use an AB site model, Wordpress + store platform
+2. Explore the technology yourself or find an engineer to handle the e-commerce part
 
-
-### 沒錢層級一：沒人沒錢
-
-這類型會先建議評估自身月營收。需求是步驟一的 A，我認為社群平台搭配傳送門 portaly 或 linktr，就很夠用了。
-
-B 我建議預算不夠上開店平台的話，就先在電商平台蹲到營業規模擴大為止。
-
-以成本來說的話蝦皮雖然逐年調整手續費，但跟自架站比起來，不管是金錢還是人力都低很多，隱患就是綁死蝦皮，這也沒辦法，畢竟這已經是最低成本的電子商務創業。
-
-### 沒錢層級二：肝肝技術賣家
-
-這個就是我比較可以探討的範疇，身為肝肝技術賣家來說，大部分我認識的技術型小資賣家會使用 Wordpress 解決 A 需求，因為 Wordpress 生態圈最大，遇到問題也比較可以找到方法解決。
-
-要注意的就是要小心需求不要過渡膨脹，因為 Wordpress 的外掛，像是基本主題、頁面編輯器、備份，一年下來可能就需要上萬塊的訂閱費用，依照你的需求就往上增加。
-
-這也不是絕對，還是會根據你的技術而定，比方說你如果站點部屬在 GCP 或 AWS，使用 Snapshop 功能，可能就可以把備份外掛的錢省下來。
-
-
-
-B 需求的話，通常延伸 A 使用方法，安裝 Woocommerce，當中需要注意是，Woocommerce 的行銷彈性就不會很高，什麼集點、滿千送百之類的，技術不夠深的話客製化可能有困難，當中使用 Wordpress 架站的電商網站，可以參考汪喵，我覺得已經算是很優秀了。
-
-如果你是屬於 A 要拓展 B 的話，初步可以先用 Woocommerce，成本比較低，等之後有穩定流量就有預算：
-
-1. 使用AB站的模式，wordpress+開店平台
-
-2. 自己鑽研技術或是找工程師來做電商這塊
-
-
-
-沒錢部分先不討論 C，多半參照有錢層級二，使用其他服務。畢竟你能做 C，要不是你有錢就是你有技術。
-
-希望我這些分享可以幫助大家，有需要改進的地方也歡迎大家指教。 
+For the no-money part, C is not discussed for now. Mostly refer to Wealthy Level 2 and use other services. After all, if you can do C, you either have money or technical skills.
+I hope my sharing can help everyone. If there are areas that need improvement, please feel free to point them out.

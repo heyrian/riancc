@@ -1,32 +1,28 @@
 ---
-title: 那一年我為了要學會短影音，結果被割韭菜的故事
+title: The Year I Tried to Learn Short Videos and Ended Up Being Ripped Off
 customSlug: learning-from-short-video-failures
 tags:
   - Short Video
 snippet: |
-  這幾天看到行銷社團因為短影音課程討論得非常熱烈，當中有個學長說出短影音課程的困境，都是真的～～～
-  身為一個購買三門短影音課程，而三堂都被割韭菜的我，覺得有一些甘苦談可以跟大家分享，這些費用加總起來去上燒賣的廣告投手也是綽綽有餘，真的也只能摸摸鼻子。​
+  These past few days, I've seen marketing groups discussing short video courses with great enthusiasm. One senior member pointed out the difficulties with short video courses, and it's all true~~~ As someone who purchased three short video courses and was ripped off in all three, I feel I have some stories to share with everyone. The total cost of these courses is more than enough to take Xiaomei's advertising course, and I can only touch my nose in resignation.
 publishDate: 2023-11-12 20:07
 category: Business
 ---
-這幾天看到行銷社團因為短影音課程討論得非常熱烈，當中有個學長說出短影音課程的困境，都是真的～～～
+The Year I Tried to Learn Short Videos and Ended Up Being Ripped Off
+These past few days, I've seen marketing groups discussing short video courses with great enthusiasm. One senior member pointed out the difficulties with short video courses, and it's all true~~~ 
 
-身為一個購買三門短影音課程，而三堂都被割韭菜的我，覺得有一些甘苦談可以跟大家分享，這些費用加總起來去上燒賣的廣告投手也是綽綽有餘，真的也只能摸摸鼻子。​
+As someone who purchased three short video courses and was ripped off in all three, I feel I have some stories to share with everyone. The total cost of these courses is more than enough to take Xiaomei's advertising course, and I can only touch my nose in resignation.
 
-從去年開始發現短影音的勢頭開始在崛起，我會一點剪接但沒辦法去了解到一些起號概念，於是就在 TikTok 上去找有相關涉略的人，沒有找代操也是因為工程師自幹個性，加上我小小老闆我就很窮，要是自己會了就可以省錢麻QQ
+These past few days, I've seen marketing groups discussing short video courses with great enthusiasm. One senior member pointed out the difficulties with short video courses, and it's all true~~~ As someone who purchased three short video courses and was ripped off in all three, I feel I have some stories to share with everyone. The total cost of these courses is more than enough to take Xiaomei's advertising course, and I can only touch my nose in resignation. ​
 
-​當中有些是直播課，有些是錄製課，名字我就不說了（雖然我有花錢有話語權，但我也怕被吉啊）我在 Tiktok 上面找到第一家感覺講師是高材生，講話也有條理，自己帳號的流量也算不錯，沒有太多猶豫就去上。
+From last year, I noticed that short videos were starting to rise in popularity. I know a bit about editing but couldn't grasp the concept of starting an account, so I went on TikTok to find people with relevant experience. I didn't look for an agency to operate my account because of my engineer's DIY mentality, and as a small business owner, I'm quite poor. If I can learn it myself, I can save money. QQ​
 
-的確是上一些基本的起號流程，像是影片前三秒是關鍵、人設該怎麼建立會比較好之類的，但就是很基本的東西，這些內容我相信在教學市場有稍微上過一點相關課的人，都可以出來開課來講。只能說效果遠遠達不到我的預期，於是我找了另一個課程。​
+Some of the courses were live, while others were recorded. I won't name names (although I paid for them and have the right to speak, I'm afraid of being banned). I found the first instructor on TikTok who seemed like a high achiever, spoke coherently, and had decent traffic on their own account, so I signed up without much hesitation. Indeed, they taught some basic processes for starting an account, such as the importance of the first three seconds of a video, how to establish a persona, and so on. But it was all very basic stuff that I believe anyone who has taken a few relevant courses in the education market can come out and teach. The results were far from my expectations, so I looked for another course.​
 
-第二個課程也是在 Tiktok 上找到，這個講師還說了很多帳號是從他們課程出來的，所有課程都是直播。除了課程內容重複了第一個講師的內容之外，他在直播中會問你是哪個產業，起號該怎麼拍攝的方向，但也只是給個方向就這樣了。最後上完課，甚至你有興趣的話，也可以參加他們公司的團隊，意思應該是可以販賣他們公司的產品（我不知道這個商業模式算什麼，應該是傳直銷之類的吧），上完之後我也只能苦笑，這樣的課程內容，回推他說之前從他們那邊出來的帳號，只能說就是運氣好撿到初期流量紅利吧。
+I also found the second course on TikTok. This instructor claimed that many accounts came from their courses, and all the courses were live. In addition to repeating the content of the first instructor, they would ask about your industry during the live session and suggest directions for filming your account, but that was it. After finishing the course, they even suggested joining their company's team if you were interested, which I assume meant selling their company's products (I don't know what this business model is called, probably some kind of multi-level marketing). After completing it, I could only smile bitterly. Looking back at the accounts they claimed came from their courses, I can only say they were lucky to catch the early traffic benefits.
 
-上了兩門課之後我覺得可能，Tiktok 的教學環境還沒有很成熟，我去上中國抖音的課總可以吧，查詢下來只能說中國講師每個都很狼性，在直播推銷自己的課程的時候，每個都感覺上了他們的課之後，下一個爆款影片就會是我。
+After taking two courses, I thought that maybe the TikTok teaching environment wasn't mature enough, so I decided to take a course on Douyin (Chinese TikTok). After some research, I can only say that every Chinese instructor is very aggressive. When promoting their courses during live streams, each one made it seem like after taking their course, my next viral video would be just around the corner.
+I watched those Douyin instructors' live streams for a week or two and selected a course by a photographer from Northeast China. The content was really substantial, including possible monetization methods, several fixed script types for shooting videos (educational, product-selling, process-sharing, etc.), how to film, whether to use a phone or camera, and so on.
 
-蹲一兩週看那些抖音講師的直播，篩選出一個東北一個攝影師起家的課程。內容真的就很乾貨，包含你要變現的話可能有哪幾種形式，拍攝影片可能會有固定幾個腳本類型，講知識的、賣產品的、曬過程的，等等，包含拍攝怎麼拍攝，要用手機拍還是相機拍，怎麼拍等等。
-
-這次上完之後收穫頗豐，但回來用在 Tiktok 上，完全水土不服。
-
-我自己觀察下來的結過是，首先中國抖音跟 Tiktok 的進程不同，人家紅利要結束的打法跟你Tiktok還沒起飛的打法就不同。要變現人家抖音至少還可以掛個小黃車賣貨，你要賣貨你要導外掛個蝦皮賣場，轉個 App 流量在這邊就會先流失一大批，抖音的同城引流與 Tiktok 同城引流算法絲毫不同，光這些東西差異很多就不適用。
-
-失敗之後我就沒有繼續堅持一定要短影音，未來會做而且是肯定要做，但經過過去一年我是心力交瘁，至少在大家還找不到短影音的邏輯以前，我想先暫時休息一下。Q_Q
+After completing this course, I gained a lot, but when I tried to apply it to TikTok, it was completely unsuitable. From my observations, firstly, Douyin and TikTok are at different stages. The strategies for Douyin, where the benefits are about to end, are different from TikTok, which hasn't taken off yet. For monetization, Douyin allows selling goods through a built-in store, while on TikTok, you have to direct traffic to an external Shopee store, resulting in a significant loss of traffic when switching apps. The algorithms for local promotion on Douyin and TikTok are completely different. These numerous differences make the strategies inapplicable.
+After failing, I didn't persist in focusing solely on short videos. I will definitely do it in the future, but after the past year, I'm exhausted. At least until everyone figures out the logic behind short videos, I want to take a temporary break. Q_Q

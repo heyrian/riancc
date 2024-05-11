@@ -1,31 +1,25 @@
 ---
-title: 【前端開發必備工具系列】之二：yarn - 現代化的 JavaScript 套件管理工具
+title: 【Frontend Development Essential Tools Series】Part Two: yarn - A Modern JavaScript Package Management Tool
 customSlug: modernized-javascript-package-management-tools
 tags:
   - tools
   - frontend
   - webdev
-snippet: 本篇介紹由 facebook 開發，替代 npm 的管理工具——yarn，以及其的使用方式以及其優點。
+snippet: This article introduces yarn, a management tool developed by Facebook as an alternative to npm, as well as its usage and advantages.
 publishDate: 2024-04-28 17:38
 category: Development
 ---
 
-## 什麼是 yarn
-- yarn 是由 Facebook 開發的替代 npm 的套件管理工具。
-
-- 一開始主要解決 npm 安裝速度慢以及相依套件版本衝突的問題。
-
-- yarn 使用 `yarn.lock` 檔案來鎖定相依套件的版本，確保在不同環境中安裝的套件版本一致。
-
-- 使用並行安裝，不像 npm 逐步安裝套件。
-
-- 使用更有效的緩存機制。npm 有時候在緩存中存在所需要的套件版本，npm 還是會重新下載套件，因此他的緩存機制比較不可靠；yarn 會自動清理不需要的緩存，減少緩存目錄的體積，如果緩存的套件版本 `yarn.lock` 中的版本不相符，yarn 會重新下載正確版本的套，並更新緩存。
-
-- 提供離線模式以及工作區（Workspaces）支援，工作區的設計對於 Monorepo 架構非常有用，可以共享相依套件並簡化套件之間的引用。
+## What is yarn?
+- yarn is a package management tool developed by Facebook as an alternative to npm.
+- Initially, it mainly solved the problems of slow installation speed and dependency package version conflicts in npm.
+- yarn uses the  `yarn.lock` file to lock the versions of dependency packages, ensuring consistent package versions are installed across different environments.
+- It uses parallel installation, unlike npm which installs packages sequentially.
+- It uses a more efficient caching mechanism. Sometimes npm will re-download packages even if the required package version exists in the cache, making its caching mechanism less reliable; yarn automatically cleans up unnecessary caches, reducing the size of the cache directory. If the cached package version does not match the version in `yarn.lock`, yarn will re-download the correct version and update the cache.
+- It provides offline mode and Workspaces support. The design of Workspaces is very useful for the Monorepo architecture, allowing sharing of dependency packages and simplifying references between packages.
 
 
-
-## 常用命令：
+## Commonly Used Commands:
 
 - `yarn install`
 
@@ -35,27 +29,23 @@ category: Development
 
 - `yarn remove [package]`
 
-## 延伸思考：
+## Extended Thinking:
 
-### `package.lock.json` 已經確保相依套件版本，為什麼 Yarn 卻說他意指要解決相依套件版本衝突的問題？
+### If `package.lock.json` already ensures the versions of dependency packages, why does Yarn say it aims to solve the problem of dependency package version conflicts?
 
-- 主要因為 npm 在早期版本中存在一些問題和限制，在 npm 5 版本之前，npm 沒有 `package-lock.json` 檔案，因此 Yarn 在早於 npm 5 版本就引入了 `yarn.lock` 檔案，用於鎖定相依套件的版本，所以 npm 5 開始借鑑了 Yarn 的解決方案使用了`package.lock.json`。即使 npm 5 引入了 `package-lock.json` 檔案，但 yarn 在效能跟安全性上仍有優勢，受到廣泛使用。
+- This is mainly because npm had some issues and limitations in its early versions. Before npm 5, npm did not have the `package-lock.json` file, so Yarn introduced the `yarn.lock` file earlier than npm 5 to lock the versions of dependency packages. Therefore, npm 5 started to learn from Yarn's solution and used `package-lock.json`. Even though npm 5 introduced the `package-lock.json` file, yarn still has advantages in performance and security, and is widely used.
 
-### 什麼是離線模式？
+### What is offline mode?
 
-- 離線模式是指當你使用 yarn 安裝套件時，這在環境受限或是網路不穩定的情況十分適用，使用 `--offline` 命令啟用離線模式。yarn 會自動將套件的壓縮檔案下載到本地緩存目錄中，在離線的狀態查看緩存目錄使否有所需要的套件。
+- Offline mode refers to when you use yarn to install packages in environments with limited or unstable network conditions. The `--offline` command is used to enable offline mode. yarn automatically downloads the compressed files of packages to the local cache directory and checks if the required packages exist in the cache directory when in offline mode.
 
-### 什麼是工作區（Workspaces）？
+### What is a workspace?
 
-- 工作區（Workspace）是一種組織和管理多個相關專案或套件的方式。
-
-- 目錄結構上，假設專案有兩個工作區 (a、b)，根目錄有一個 `package.json`，兩個工作區底下分別可以個別有自己的 `package.json`。
-
-- 所有專案都共享同一個 `node_modules`，執行 `yarn install`，yarn 會檢查所有套件的相依性並安裝在 node_modules。
-
-- 工作區可以相互引用，在工作區 a 可以將工作區 b 作為相依性參考，在工作區 a 的 `package.json` 下設定。
-
-- my-project 專案目錄結構
+- Workspaces are a way to organize and manage multiple related projects or packages.
+- In terms of directory structure, assuming a project has two workspaces (a and b), the root directory has a `package.json`, and each workspace can have its own `package.json`.
+- All projects share the same `node_modules`. When running `yarn install`, yarn checks the dependencies of all packages and installs them in `node_modules`.
+- Workspaces can reference each other. In workspace a, workspace b can be referenced as a dependency, which is set in the `package.json` of workspace a.
+Directory structure of the my-project project:
 
 ```bash title="my-project"
 my-project/
@@ -70,7 +60,7 @@ my-project/
         └── ...
 ```
 
-- 專案下 package.json
+- `package.json` in the project directory
 
 ```javascript title="package.json"
 {
@@ -78,7 +68,7 @@ my-project/
   "workspaces": ["workspace-a", "workspace-b"]
 }
 ```
-- 工作區 a 的 package.json：
+- `package.json` of workspace a:
 
 ```javascript title="workspace-a/package.json"
 {
@@ -90,7 +80,7 @@ my-project/
   }
 }
 ```
-- 工作區 b 的 package.json，並引用工作區 a：
+- `package.json` of workspace b, referencing workspace a:
 
 ```javascript title="workspace-b/package.json"
 {

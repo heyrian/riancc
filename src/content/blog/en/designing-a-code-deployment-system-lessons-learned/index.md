@@ -1,73 +1,69 @@
 ---
-title: 設計一個程式碼部署系統 心得
+title: Designing a Code Deployment System: Reflections
 customSlug: designing-a-code-deployment-system-lessons-learned
 tags:
   - Deploy
   - backend
   - webdev
-snippet: 早期大概三四年前，前端要簡易部署到雲服務，大部分是通過 PaaS 平台，那時候比較流行是用 heroku，當時需要在自己的專案上面裝 heroku-cli 工具，使用 command Line 才可以部署上服務，我依稀記得為了這件事我好像還串 CI/CD（那時候還沒有 Github Action），但現在已經不用這麼辛苦了。
+snippet: In the early days, about three or four years ago, when frontend developers wanted to easily deploy to cloud services, most of them did so through PaaS platforms. At that time, Heroku was more popular. It required installing the Heroku CLI tool in your own project and using the command line to deploy to the service. I vaguely remember that I might have even set up CI/CD for this (this was before Github Actions), but now it's no longer necessary to go through such a hassle.
 publishDate: 2024-04-24 18:06
 category: Development
 ---
 
 ![deployment-flow](deployment-flow.png)
 
-# 前言
+# Introduction
 
-早期大概三四年前，前端要簡易部署到雲服務，大部分是通過 PaaS 平台，那時候比較流行是用 heroku，當時需要在自己的專案上面裝 heroku-cli 工具，使用 command Line 才可以部署上服務，我依稀記得為了這件事我好像還串 CI/CD（那時候還沒有 Github Action），但現在已經不用這麼辛苦了。
+In the early days, about three or four years ago, when frontend developers wanted to easily deploy to cloud services, most of them did so through PaaS platforms. At that time, Heroku was more popular. It required installing the Heroku CLI tool in your own project and using the command line to deploy to the service. I vaguely remember that I might have even set up CI/CD for this (this was before Github Actions), but now it's no longer necessary to go through such a hassle.
 
-現在大部分的 PaaS 平台，比方說 render、netlify 或是Zeabur，也就是本次的主講者人 Yuanlin 所開發的服務。
+Nowadays, most PaaS platforms, such as Render, Netlify, or Zeabur, which is the service developed by the speaker Yuanlin, allow us to directly create services on these platforms and set them up to obtain authorization from the Github Repo. As long as Github knows that the current branch has a new commit, the platform service will automatically pull the Repo, build, and deploy for us.
 
-> Zeabur成立於2022年，此前已獲得來自奇績創壇的天使輪融資。公司定位於為獨立開發者和企業客戶提供大模型時代一鍵部署服務的PaaS平台，主要旨在幫助開發者解決兩方面的需求痛點：
+> Zeabur was founded in 2022 and has previously received angel round financing from Kirin Entrepreneurship. The company positions itself as a PaaS platform that provides one-click deployment services for independent developers and enterprise customers in the era of large models. Its main purpose is to help developers solve two types of pain points
 > 
+> 1.By encapsulating a series of deployment processes such as server rental, environment configuration, route configuration, domain name configuration, and TLS certificate application, and providing them to developers in a unified manner, the automation of application deployment and the simplification of service deployment workflows are achieved.
+> 2.By adopting a "membership subscription + pay-per-use" model, it helps developers solve the problems of server leasing and hardware resource waste. 
+>
+> [Introduction from Hong Kong Silicon Valley's "Early Projects | Targeting Vercel as a Benchmark, Service Deployment PaaS Platform 'Zeabur' Aims at New Opportunities for Developer Tools in the Era of Large Models"》](https://www.hksilicon.com/articles/2294965)
 > 
-> 一是，通過將服務器租用、配置環境、配置路由、配置域名、TLS證書申請等系列部署流程進行封裝，統一向開發者提供，以實現應用部署上線過程的自動化，簡化服務部署工作流；二是，通過採用「會員訂閱+按量付費」的模式，幫助開發者解決服務器租賃和硬件資源浪費的問題。
-> 
-> [介紹來自香港矽谷《早期項目｜以Vercel為標杆，服務部署PaaS平台「Zeabur」瞄準大模型時代開發者工具新機會》](https://www.hksilicon.com/articles/2294965)
-> 
 
-我們直接在這些 PaaS 的平台上面建立服務，並設定讓服務取得 Github Repo 授權，只要 Github 上面知道目前的 branch 有新的 commit，平台服務會自動幫我們 pull Repo 並且建置、部署。
+## Outline
 
-## 大綱
+The speaker starts from the simplest key point: what are the roles in a code deployment system? The developers who write the code and the users who actually use the website. From this perspective, the speaker begins to sort out the process.
 
-主講人首先從一個最簡單的要點開始，就是程式碼部署系統的角色有哪些？寫出程式碼的人開發者，已經真正使用網站的使用者，從這個角度切入去開始梳理。
+### From the Developer's Perspective
 
-### 從開發者的角度
+- We have completed a project program.
+- Then we upload it to Github. Before uploading to the cloud server, it needs to be built.
+- What happens from the authorization of Github to the build process (question 1)?
 
-- 我們完成了一個專案程式。
-- 接著上傳到 Giuthub，在上傳到雲服務器之前會需要建置（Build）。
-- 從授權 Github 到建置（Build）的過程發生了什麼事（問題一）？
-
-當建置完成，建置（Build）結果可能是一個：
-- 靜態網站（Static Files）
+When the build is complete, the build result may be a:
+- Static Website (Static Files)
 - Container Image
-- Serverless Functions。
-- 最後成功上傳到某個地方（問題二），指向 Domain。
+- Serverless Functions
+- Finally, it is successfully uploaded to a certain place (question 2) and points to a domain.
 
-### 從使用者的角度
-- 使用者送出一個造訪網站的請求。
-- DNS 開始進行解析，DNS 將域名轉換成對應的 ip 地址。
-可能是透過 CNAME Record (Domain)或是 A Record（IP）指向一個 ip。
-- 那這個 ip 是什麼我們先不管（問題三），總之他一定會指向問題二的那個地方。
+### From the User's Perspective
+- The user sends a request to visit the website.
+- DNS begins to resolve, and DNS converts the domain name to the corresponding IP address.
+- It may point to an IP through a CNAME Record (Domain) or an A Record (IP).
+- We don't care what this IP is for now (question 3), but it must point to the place mentioned in question 2.
 
-接著主講者在梳理流程的過程中，開始設下三個問題點，接著一步一步帶我們拆解這三個問題點。
+Then, in the process of sorting out the flow, the speaker sets three question points and gradually deconstructs these three question points for us.
 
-### 那個地方是哪裡？
+### Where is that place?
 
-首先我們需要先知道某個地方（問題二）是什麼？其實就是雲服務。
+First, we need to know what that certain place (question 2) is. In fact, it is the cloud service.
 
-靜態網站可能會上傳：
+Static websites may be uploaded to：
 
-- OSS（Object Storage Service ）服務， 比方說 Amazon S3、GCP Storage 或是 Server folder。
-- Container Image 可能會上傳到 Docker、Kubernetes。
-- Serverless Functions 可能會在 Cloud Function，像是 Lambda 服務上。
+- OSS (Object Storage Service) services, such as Amazon S3, GCP Storage, or Server folder.
+- Container Images may be uploaded to Docker or Kubernetes.
+- Serverless Functions may be on Cloud Functions, such as Lambda services.
 
-（由於本講座屬於付費訂閱制的內容，更詳細的內容請參加 [E+ 成長計畫](https://www.explainthis.io/zh-hant/e-plu)，你會在直播討論區中「設計一個程式碼部署系統」討論串看到接下來的大綱與心得）。
+(Since this lecture is part of a paid subscription, for more detailed content, please join the [E+ Growth Program](https://www.explainthis.io/zh-hant/e-plu). You will see the rest of the outline and reflections in the "Designing a Code Deployment System" discussion thread in the live discussion area.)
 
-## 心得
+## Reflections
 
-主講者先以「是誰在用我們這個服務」，把關鍵角色抓起來做起始點，再從這些角色怎麼開始使用這個服務，把流程拉出來，將當中可能會拓展的關鍵要素先遮蔽。
-
-我可以理解先遮蔽的原因，如果直接開始展開的話，聽眾會有「我是誰我在哪」之感，展開結束後，我們會無法回到這些使用者故事的脈絡之中。
-
-而當中這些關鍵因素就是我們要去探究的原因，除此之外，主講者還提到跨區域以及 DDoS 防範的概念，[更多內容請參考 E+ 成長計畫](https://www.explainthis.io/zh-hant/e-plus)（無工商推薦）。
+The speaker starts with "who is using our service" to identify the key roles and then draws out the process of how these roles begin to use the service, obscuring the key elements that may expand in the process.
+I can understand the reason for obscuring first. If we start to expand directly, the audience will feel "who am I and where am I". After the expansion is complete, we will not be able to return to the context of these user stories.
+And these key factors are the reasons we need to explore. In addition, the speaker also mentioned the concepts of cross-region and DDoS prevention. For more content, please refer to the [E+ Growth Program](https://www.explainthis.io/zh-hant/e-plu) (no commercial recommendation).

@@ -1,5 +1,5 @@
 ---
-title: 【前端開發必備工具系列】之三：pnpm - 更快、更節省空間的套件管理方案
+title: Frontend Development Essential Tools Series 3: pnpm - A Faster and More Space-Efficient Package Management Solution
 customSlug: faster-and-space-saving-package-management-tool-pnpm
 tags:
   - tools
@@ -10,72 +10,72 @@ publishDate: 2024-04-29 20:19
 category: Development
 ---
 
-## 簡介
+## Introduction
 pnpm（performant npm），主要目標在於提升速度與效能，並且減少磁碟空間。使用獨特的安裝策略：當你使用 pnpm 安裝套件時，他會將每個套件的版本儲存全域的儲存目錄（ `pnpm-store`，以下簡稱 Store）中，接著 `node_modules` 會建立一個指向 Store 對應版本套件的硬連結。每個套件的各版本都有唯一的子目錄，不復刻各個專案的 `node _modules`，這大大的節省了本地的儲存空間並加速下載速度。安裝位置通常在 `~/Library/pnpm/store` (mac 系統)。
 
-### 工作區（workspace）
-支援 Monorepo 架構，使用 `pnpm-workspace.yaml` 可以定義工作區，工作區如果有相依性，彼此使用軟連結又稱符號連結（symlink）。
+pnpm (performant npm) aims to improve speed and efficiency while reducing disk space. It uses a unique installation strategy: when you install packages with pnpm, it stores each package version in a global storage directory (`pnpm-store`, hereinafter referred to as Store). Then, `node_modules` creates a hard link to the corresponding version of the package in the Store. Each version of each package has a unique subdirectory, without duplicating `node_modules` for each project. This greatly saves local storage space and speeds up the download process. The installation location is usually at `~/Library/pnpm/store` (Mac system).
 
-### 硬連結（hardlink）
-硬連結允許不同位置可以訪問同一個檔案。也就是說專案下的 `node_modules` 檔案目錄只包含指向 Store 中的連結。硬連結是讓多個檔案名稱關聯到目標指向檔案，所以硬連結是檔案不是目錄。
+### Workspace
+It supports the Monorepo architecture. The workspace can be defined using `pnpm-workspace.yaml`. If workspaces have dependencies, they use soft links, also known as symbolic links (symlinks), to each other.
 
-以安裝 express 為例，左是 npm 安裝的方式，右是 pnpm。過往 npm 會將 express 所依賴的套件扁平化安裝在 `node_modules` 之中；pnpm 所要解決的問題從下圖我們可以看到 pnpm 透過符號連結的方式引用。
+### Hard Link
+Hard links allow access to the same file from different locations. That is, the `node_modules` file directory in the project only contains links to the Store. A hard link associates multiple file names with the target file, so a hard link is a file, not a directory.
+Taking the installation of express as an example, the left is the npm installation method, and the right is pnpm. In the past, npm would install the packages that express depends on in a flattened manner in `node_modules`; we can see from the figure below that pnpm solves this problem by referencing through symbolic links.
 
 ![npm-pnpm-archivist.png](npm-pnpm-archivist.png)
 
-### 符號連結（symlink）
-符號連結是一個特殊檔案，裡面包含了其他檔案或是目錄的路徑。pnpm 會使用符號連結來管理套件之間的連結關係。
+### Symbolic Link (Symlink)
+A symbolic link is a special file that contains the path to other files or directories. pnpm uses symbolic links to manage the linking relationships between packages.
 
 ![symlink-refer.png](symlink-refer.png)
 
-## 總整理
+## Summary
 
-### 硬連結
+### Hard Link
 
-- 主要用途：將套件從本地端 Store 連結到各個專案。
-- 進到 Store 的 files 目錄下可以查看到各個不同的資料夾，裡面全部都是硬連結檔案。由於日安底子不夠深，裡面內容無法探究及驗證。
+- Main purpose: Link packages from the local Store to each project.
+- You can view different folders under the Store's files directory, all containing hard-linked files. Due to my limited knowledge, the content inside cannot be explored and verified.
 
-### 符號連結、軟連結
+### Symbolic Link, Soft Link
 
-- 主要用途：處理套件之間的相依性。
-- 屬於連結檔案類型，使用 `l` 命令查看。
-- 在專案中安裝套件後會自動在 `node_modules/.pnpm` 目錄中建立軟連結，移除套件後，查看專案下 `node_modules/.pnpm` ，軟連結仍然存在。
+- Main purpose: Handle dependencies between packages.
+- It belongs to the link file type and can be viewed using the `l` command.
+- After installing packages in a project, soft links are automatically created in the `node_modules/.pnpm` directory. After removing packages, the soft links still exist in `node_modules/.pnpm` under the project.
 
-
-透過[官網文件](https://pnpm.io/zh-TW/symlinked-node-modules-structure)我們可以知道關係如下：
+Through the [official documentation](https://pnpm.io/zh-TW/symlinked-node-modules-structure), we can understand the relationship as follows:
 
 ![illustration-of-the-principle-of-pnpm.png](illustration-of-the-principle-of-pnpm.png)
 
-### 常用命令：
+### Commonly Used Commands:
 
 - `pnpm install`
 - `pnpm add [package]`
 - `pnpm run [script]`
 - `pnpm remove [package]`
 
-## 延伸思考
+## Extended Thinking
 
-### yarn 既然已經很棒了 我們為什麼又需要 pnpm？
+### Since yarn is already great, why do we need pnpm?
 
-- yarn 及 npm 與 pnpm 相比，省更多磁碟空間，下載的速度也有所不同。
-- pnpm 提供更嚴格的套件解析算法，確認每個套件都只被安裝過一次，避免重複安裝跟版本衝突。
-- pnpm 天然支援 Monorepo 架構。 
+- Compared to yarn and npm, pnpm saves more disk space and has different download speeds.
+- pnpm provides a stricter package resolution algorithm, ensuring that each package is installed - only once, avoiding duplicate installations and version conflicts.
+pnpm natively supports the Monorepo architecture.
 
-### 在 yarn 或 pnpm 的專案下 我還需要 `package.json` 以及 `package.lock.json` 嗎？
-- 我們需要 `package.json`，因為他是 Node.js 專案的核心檔案，不管你使用哪種套件管理工具都需要。
-- 之前我們說到 lock 檔案是管理套件中所相依的套件版本，所以這有所不同。yarn 使用 `yarn.lock` 作為其鎖定檔案，而 pnpm 使用 `pnpm-lock.yaml`。
-- 我們使用了`yarn.lock`或是`pnpm-lock.yaml`，之後都不需要，也不應該有`package-lock.json`檔案，如果檔案並存有可能會混淆或是引發潛在的衝突。
-- 如果你的專案曾經使用過 npm 並且有`package-lock.json`，未來想要切換成 yarn 或是 pnpm，需要將`package-lock.json`移除。
+In a yarn or pnpm project, do I still need `package.json` and `package.lock.json`?
+- We need `package.json` because it is the core file of a Node.js project, regardless of which package management tool you use.
+- Previously, we mentioned that the lock file manages the package versions that the package depends on, so this is different. Yarn uses `yarn.lock` as its lock file, while pnpm uses `pnpm-lock.yaml`.
+- If we use `yarn.lock` or `pnpm-lock.yaml`, we no longer need and should not have the `package-lock.json` file. If the files coexist, it may cause confusion or potential conflicts.
+- If your project has used npm before and has `package-lock.json`, and you want to switch to yarn or pnpm in the future, you need to remove `package-lock.json`.
 
-### 如果我使用 yarn 或是 pnpm 我還可以使用 npx、nvm 等指令嗎？
-- npx 會先在專案的 `node_modules/.bin` 目錄中尋找可以執行的檔案，如果找不到，則會在全域的套件安裝路徑中尋找，因此不受影響。
-- nvm 是用於管理多個 Node.js 版本的工具，無論是 yarn 還是 pnpm 都會需要依賴 Node.js 環境，但須要注意的是在切換 Node.js 版本時，yarn 或是 pnpm 有可能會需要重新安裝，因為他們必須對應到符合的 Node.js 環境。
+### If I use yarn or pnpm, can I still use commands like npx and nvm?
+- `npx` first searches for executable files in the project's `node_modules/.bin` directory. If not found, it searches in the global package installation path, so it is not affected.
+- `nvm` is a tool used to manage multiple Node.js versions. Both yarn and pnpm depend on the Node.js environment. However, it should be noted that when switching Node.js versions, yarn or pnpm may need to be reinstalled because they must correspond to a compatible Node.js environment.
 
-### 有可能在 npm 可以安裝套件，但是在 yarn 或是 pnpm 無法安裝的情況嗎？
+### Is it possible to install packages with npm but not with yarn or pnpm?
 
-- 通常是不會發生，因為他們三者都共用 npm Registry。
-- 如果套件使用 npm 特有的命令或語法有可能 yarn 或 pnpm 沒辦法安裝。
-- 如果套件的相依性複雜，也可能沒辦法安裝。比方說：專案使用兩個套件，他們使用相同子套件，卻不同版本，npm 會安裝比較新版本的套件 B，但 yarn 或 pnpm 有可能會報錯。
+- Usually, this will not happen because all three share the npm Registry.
+- If the package uses npm-specific commands or syntax, yarn or pnpm may not be able to install it.
+- If the package has complex dependencies, it may also be impossible to install. For example, if a project uses two packages that use the same sub-package but different versions, npm will install the newer version of package B, but yarn or pnpm may report an error.
 
   ```bash
   my-project/

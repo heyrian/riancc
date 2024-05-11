@@ -18,21 +18,21 @@ Line LIFF is Line Front-end Framework, a front-end framework launched by Line pl
 
 ![line-liff-demo](line-liff-demo.jpeg)
 
-透過 Line LIFF Browser 開啟。
+Opening through Line LIFF Browser.
 
-### 為什麼我們要使用 LIFF？
+### Why do we need to use LIFF?
 
-透過 Line LIFF 提供的 SDK，我們可以做到以下幾點：
+With the SDK provided by Line LIFF, we can achieve the following:
 
-- 取得 Line 用戶資訊基本資訊。包含 unique ID、顯示名稱、大頭照等基本資訊。
-- 取得 Line 用戶裝置資訊。可以判斷使用者是不是使用 Line 開啟這個裝置，進而確認他的登入狀態。
-- 當我們可以取得登入狀態、Line 使用者資訊，自然可以讓使用者省略登入步驟。
+- Obtain basic information of Line users. Including unique ID, display name, profile picture, and other basic information.
+- Obtain device information of Line users. It can determine whether the user is using Line to open this device, thereby confirming their login status.
+- When we can obtain the login status and Line user information, we can naturally allow users to skip the login step.
 
-## 實作 Line LIFF APP
+## Implementing a Line LIFF APP
 
-### 導入 Line LIFF 到專案中
+### Importing Line LIFF into the project
 
-你可以引入 CDN 、或是透過 NPM 引入 [LIFF SDK](https://developers.line.biz/en/docs/liff/cli-tool-create-liff-app/#create-a-dev-env-using-liff-app)。
+You can import it via CDN or through NPM to import the [LIFF SDK](https://developers.line.biz/en/docs/liff/cli-tool-create-liff-app/#create-a-dev-env-using-liff-app)。
 
 ```html html
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
@@ -42,16 +42,15 @@ Line LIFF is Line Front-end Framework, a front-end framework launched by Line pl
 $ npm install --save @line/liff
 ```
 
-如果你是從 0 開始建置 LIFF APP，可以透過以下指令開啟一個新的專案。
-我個人會偏好這個方法，感覺最快。
+If you are building a LIFF APP from scratch, you can use the following command to start a new project. Personally, I prefer this method as it feels the fastest.
 
-建立 LIFF App 專案。
+Create a LIFF App project.
 
 ```bash shell
 $ npx @line/create-liff-app
 ```
 
-選擇你需要的框架技術：
+Choose the framework technology you need:
 
 ```bash shell
 ? Which template do you want to use? (Use arrow keys)
@@ -63,7 +62,7 @@ $ npx @line/create-liff-app
   nuxtjs
 ```
 
-確認你要使用的語言：
+Confirm the language you want to use:
 
 ```bash shell
 ? JavaScript or TypeScript? (Use arrow keys)
@@ -71,14 +70,14 @@ $ npx @line/create-liff-app
   TypeScript
 ```
 
-輸入 LIFF ID，這邊可以先跳過，之後再更改環境變數：
+Enter the LIFF ID. You can skip this for now and change the environment variable later:
 
 ```bash shell
 ? Please enter your LIFF ID:
 Don't you have LIFF ID? Check out https://developers.line.biz/ja/docs/liff/getting-started/ (liffId)
 ```
 
-選擇你的套件管理工具：
+Choose your package management tool:
 
 ```bash
 ? Which package manager do you want to use? (Use arrow keys)
@@ -86,7 +85,7 @@ Don't you have LIFF ID? Check out https://developers.line.biz/ja/docs/liff/getti
 npm
 ```
 
-完成！
+Done！
 
 ```bash
 yarn install v1.22.19
@@ -106,57 +105,58 @@ Done! Now run:
   yarn dev
 ```
 
-### 部署專案
+### Deploy the project
 
-我們前面有提到，LIFF App 是一個完全獨立的網站，所以我們需要先部署在公開的站點上，我這邊推薦 [Zeabur](http://zeabur.com/)，這個服務團隊是來自台灣的新創公司，DC 24 小時客服，文件都是繁體中文，真的是痛哭流涕。
-之前使用過 heroku，目前也使用過 netlify、render，他們都很方便，但 Zeabur 是實際意義上的「一鍵部署」。
+As we mentioned earlier, a LIFF App is a completely independent website, so we need to deploy it on a public site first. Here, I recommend [Zeabur](http://zeabur.com/), a service team from a Taiwanese startup company with 24/7 customer service, and the documentation is in Traditional Chinese, which is truly moving.
 
-登入之後點擊「創建專案」以及「部署新服務」。
+I have used Heroku before and currently also use Netlify and Render. They are all very convenient, but Zeabur is literally "one-click deployment".
+
+After logging in, click "Create Project" and "Deploy New Service".
 
 
 ![zeabur-deploy-step1.png](zeabur-deploy-step1.png)
 
-點擊 Git，接著會跟你要授權，選擇你放 LIFF App 的 Repo，之後有更新，push上 Github，Zeabur會直接幫你更新。
+Click on Git, and it will ask for authorization. Select the Repo where you store your LIFF App. After updates, push to Github, and Zeabur will directly update for you.
 
 ![zeabur-deploy-step2.png](zeabur-deploy-step2.png)
 
-介面真的很好看，點擊下方的「網路」。
+The interface is really nice. Click on "Network" at the bottom.
 
 ![zeabur-deploy-step3.png](zeabur-deploy-step3.png)
 
-展開後點擊生成域名，取一個你覺得好記得名字，沒衝突就可以完成部署了，真的很快。
+Expand and click on Generate Domain. Choose a name that you find easy to remember. If there are no conflicts, the deployment can be completed, which is really fast.
 
 ![zeabur-deploy-step4.png](zeabur-deploy-step4.png)
 
-### 新增 Line Developer Provider
+### Create Line Developer Provider
 
-接下來進到 [Line Developer Console](https://developers.line.biz/console/) 頁面，新增一個 Provider，新增一個 channel，LIFF 目前只開放給 Login 跟 Mini App，但 Mini App 台灣還沒啟用，所以選擇 Login。
+Next, go to the [Line Developer Console](https://developers.line.biz/console/) page, add a Provider, and add a channel. LIFF is currently only available for Login and Mini App, but Mini App is not yet enabled in Taiwan, so choose Login.
 
 ![line-dev-setting-01.png](line-dev-setting-01.png)
 
-這邊就是填基本資訊，要注意的是 Channel Icon、Name、Description，這些使用者在使用 LIFF 的時候都會看到。
+Here, you fill in the basic information. Pay attention to Channel Icon, Name, and Description, as users will see these when using LIFF.
 
 ![line-dev-setting-02.png](line-dev-setting-02.png)
 
-建立好之後，選擇 LIFF 選單填寫資訊。
+After creation, select the LIFF menu to fill in the information.
 
 ![line-dev-setting-03.png](line-dev-setting-03.png)
 
-要注意：
+Note:
 
-- Size：有分滿版、一半、1/3。
-- 如果要取得使用者資訊：profile 以及 openid 要打勾
-- **Endpoint URL：將你在 Zeabur 部署的網址填上去。**
-- **Module mode：你可以縮小 LIFF App。**
+- Size: There are options for full screen, half, and 1/3.
+- If you want to obtain user information: Check profile and openid.
+- **Endpoint URL: Fill in the URL where you deployed on Zeabur.**
+- **Module mode: You can minimize the LIFF App.**
 
 ![liff-size.png](liff-size.png)
 
-接者你得到 LIFF 網址以及 ID。
+Then you get the LIFF URL and ID.
 
 ![line-dev-setting-04.png](line-dev-setting-04.png)
 
-接者再回去專案，將 `.env` 的 VITE_LIFF_ID 替換 ID，以及在 Zeabur 上新增環境變數。
+Then go back to the project, replace the VITE_LIFF_ID in `.env` with the ID, and add environment variables on Zeabur.
 
-回去看到以下畫面就代表連接成功了，Zeabur 輸入好環境變數要再 Redeploy 才會成功。
+If you see the following screen, it means the connection is successful. You need to re-deploy on Zeabur after entering the environment variables for it to take effect.
 
 ![line-dev-setting-05.png](line-dev-setting-05.png)

@@ -1,60 +1,53 @@
 ---
-title: 回歸後的第一次結案復盤
+title: The First Post-Project Debriefing After My Return
 customSlug: the-first-case-debriefing-after-returning
 tags:
   - Development Journal
-snippet: 這是我第一次承接與政府相關的案子，當中有遇到一些困難，以及我有犯一些錯誤，希望藉由這次的日記提醒自己未來不要再犯錯。
+snippet: This was my first time undertaking a project related to the government, and I encountered some difficulties and made some mistakes. I hope to remind myself through this diary entry not to make the same mistakes in the future.
 publishDate: 2023-11-10 15:58
 category: Life
 ---
-這是我第一次接與政府相關的案子，但也有可能是最後一次，我真的比較少接觸公家機關的案子 XD
+This was my first time taking on a government-related project, but it may also be the last. I rarely deal with projects from public institutions. XD
 
-## 專案上面遇到的困難
+## Difficulties Encountered in the Project
 
-### 背景介紹
+### Background Introduction
 
-這個案子是翻新一個政府的形象網站，裡面包含前台與後台，我們是承包政府機關廠商的下游，承包的廠商（以下稱業主）會讓發包的政府機關（以下稱機關）選擇想要的前後台模板，後台沒有 UI 設計稿，前端使用 template 預設的樣式就可以，前台有設計師給予設計稿，設計師會依照業主選擇的模板來做出相似的設計。
+This project involved revamping a government's image website, including the front-end and back-end. We were a subcontractor of the vendor contracted by the government agency. The contracting vendor (hereinafter referred to as the client) would let the commissioning government agency (hereinafter referred to as the agency) choose the desired front-end and back-end templates. For the back-end, there were no UI design drafts, and the default styles of the template could be used for the front-end. For the front-end, a designer provided design drafts, and the designer would create similar designs based on the template chosen by the client.
 
-前端夥伴加上我是兩位，我主要負責前台跟部分後台，另一位夥伴負責後台跟部分前台，後端也是兩位（其中一位後端還身兼 PM，真的是難為他了）。
+There were two front-end partners, including myself. I was mainly responsible for the front-end and part of the back-end, while the other partner was responsible for the back-end and part of the front-end. There were also two back-end developers (one of them also served as the PM, which was really difficult for him).
 
 ![the-first-case-debriefing-after-returning]( /images/the-first-case-debriefing-after-returning-cover.png "composition api let me free")
 
-### 我所學習到的地方
+### What I Learned
 
-* 掌握多國語系的運作。
+* Mastering the operation of multi-language systems.
+I usually work on back-end projects and rarely deal with front-end-related tasks. This was my first time encountering requirements related to multi-language systems. I learned about the operation mode of multi-language systems and some pitfalls, such as the "@" special character issue. I even applied it to my own technical blog. XD
+* Breaking away from the Options API and embracing the freedom of the Composition API.
+However, when using Vue, due to my previous experience, I was mostly familiar with the Options API. This time, I fully grasped the Composition API, and I'm very happy about it. I really can't go back.
+* Moving beyond Vuex and getting acquainted with the Pinia Store.
+With the clean Composition API, I also learned the Pinia Store, getting rid of Vuex's lengthy API.
 
-   我通常做的都是後台的案子，比較少碰到與前台相關，這次首次接觸到多國語系相關的需求，了解到多國語系的運作模式，還有一些地雷，比方說「@」特殊字元的地雷，我甚至套用到我自己的技術部落格上。XD
-* 跳脫 Option API，投入自由的 Composition API。
+### Difficulties Encountered
 
-   然而在使用 Vue 的時候，我因為之前的經驗，多半都是熟悉 Option API，這次完全掌握 Composition API，我覺得非常高興，真的是再也回不去了。
-* 跳脫 Vuex，初見 Pinia Store。
+* Long design draft production time, compressing development schedule.
+Originally, this project started in July, but the design draft for the homepage wasn't produced until almost the end of August. The reason was that the client needed to constantly confirm design details with the agency, resulting in the complete production of the front-end design drafts only by mid-September. (In between, our PM even asked in the group if this project was in a pending state. 😅)
+* Front-end design elements did not match the template chosen by the agency.
+I guess, possibly due to the urgency of producing drafts in a short time, the design drafts produced by the design team did not align with our expectation of using the template chosen by the agency.
+* Senior officials intervened, making extensive modifications to the design during the acceptance phase.
+Later, we didn't have time to present to the agency during the client's first proposal in mid-September. We completed the first delivery in early October, followed by a lengthy acceptance phase. During the acceptance period, the agency continuously provided feedback to the client on parts that needed modification. (There was one image that I had to reset at least five times...)
 
-   乾淨的 Composition API，連帶學習 Pinia Store，擺脫 Vuex 冗長的 API。
+### My Mistakes and How I Should Improve
 
-### 遇到的困難
+* Schedule and quality are equally important; actively communicate and seek help when facing difficulties.
+During the first submission, there was still sufficient time for planning and development. However, during the acceptance phase, we received a large number of modifications, and repeated development led to mental exhaustion, but more so, I had the mental pressure of these modifications. In consideration of the schedule, I accelerated development but failed to maintain code quality.
+Since I had already agreed to and accepted the modifications, if I had any objections, I should have proposed extending the schedule and corresponding costs at that time. This way, I wouldn't have neglected quality during subsequent revisions, making myself feel aggrieved and unhappy. This is an area where I need to improve.
 
-* 設計稿產出時間過長，壓縮開發時程。
+* In the absence of design drafts, front-end partners should have more consensus.
+The lack of design drafts for the back-end led to two completely different UI presentations when we were creating the back-end. We should have confirmed relevant requirements before development to ensure which UI elements we should keep consistent, avoiding the situation where two parts of the same back-end page were different.
 
-   原本這個案子從七月就開始啟動，但到接近八月底才出首頁的設計稿，原因是業主需要跟機關不斷確認設計細節，而導致前台的設計稿接近九月中才完整產出。（當中我們的 PM還在群裡面問我們這個案子現在是 pending 的狀態嗎 囧）
-* 前台設計元件與機關選擇的模板不相符。
+* Actively discuss with designers when discovering design pattern discrepancies.
+In this project, we communicated with the designer through the client and had little direct communication. However, when we discovered that the design of the homepage differed significantly from the template specified by the agency, we should have actively requested at least one online meeting with the designer. This might have helped make our development smoother.
 
-   我猜想，可能是因為設計端在短時間內急迫性產出稿件，所以產出的設計稿並不如我們預期使用機關所選擇的模板。
-* 高級長官介入，在驗收階段期間進行大量修改設計。
+People learn from their mistakes and gradually grow through repeated experiences. I will remember the mistakes made this time to avoid repeating them in the future.
 
-   後來來不及在九月中業主第一次提案的時間去呈現給機關，在十月初我們完成第一次交付，接著是漫長的驗收階段，而在驗收期間內機關不斷反饋給業主要修改的部分。（當中有一張圖我至少重置五次以上⋯⋯）
-
-### 我所犯的錯誤與我該如何改進
-
-* 時程與品質一樣重要，遇到困難的地方主動溝通尋求幫助。
-
-   在第一次提交的時候，那時尚有足夠的時間去規劃病開發，但在驗收階段時接收到大量修改，重複開發導致心理很疲憊，但更多是我有這些修改的心理壓力。在顧慮時程加速開發，並沒有把程式碼品質顧好。
-
-   既然我已經答應並接受修改，如果有異議我當下應該要提出延長時程及相對應的成本，才不會在後續修正的時候忽視品質，讓自己改得很委屈又不開心，這是我需要改進的地方。
-* 在沒有設計稿的情況下，前端共事的夥伴應該更有共識。
-
-   後台沒有設計稿，導致我們在製作後台時有兩份完全不同的 UI 呈現，這個地方我們在開發前應該要先確認相關需求，確認哪些 UI 我們應該要一致，才不會導致一個後台頁面，兩個地方不一樣的情況。
-* 發現設計模式不同，主動與設計師進行討論。
-
-   這個案子中我們跟設計師都是透過業主交流，比較少直接交流，然而在發現首頁的設計與機關指定的模板差異很多的時候，我們應該主動跟設計師要求至少一次的線上會議，這可能會幫助我們的開發更加順利。
-
-人都是在一次次的經驗中吸取錯誤，逐步成長，我會記取這次的錯誤，讓自己下次不要再犯。

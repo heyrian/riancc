@@ -1,50 +1,38 @@
 ---
-title: 線上課程的困境與短影音到底還能不能上課
+title: The Dilemma of Online Courses and Whether Short Videos Can Still Be Taught
 tags:
   - Short Video
 snippet: |
-  有人告訴我線上課程門檻越來越低，龍蛇混雜，已經沒辦法做了。
-
-  首先線上課程絕對不是沒救了，其實一個課能不能上，是來自於他的課程內容有沒有對得起他的價格，讓使用者覺得無可取代或超值。
+  Some people have told me that the threshold for online courses is getting lower, with a mix of good and bad, and it's no longer feasible to create them. Firstly, online courses are definitely not beyond saving. Actually, whether a course can be offered depends on whether its content justifies its price, making users feel that it's irreplaceable or offers excellent value.
 publishDate: 2023-11-13 13:48
 category: Business
 ---
-昨天發表文章的時候我收到很多私訊，首先我得跟大家道歉，可能我使用割韭菜的詞彙太過聳動，我還是想要釐清一些想法避免造成誤導：
+Yesterday, when I published an article, I received many private messages. First of all, I have to apologize to everyone. Perhaps my use of the term "ripped off" was too sensational. I still want to clarify some thoughts to avoid misunderstandings:
 
-【#1 線上課程絕對不是沒救了】
+## 【#1 Online courses are definitely not beyond saving】
 
-有人告訴我線上課程門檻越來越低，龍蛇混雜，已經沒辦法做了。
+Some people have told me that the threshold for online courses is getting lower, with a mix of good and bad, and it's no longer feasible to create them. Firstly, online courses are definitely not beyond saving. Actually, whether a course can be offered depends on whether its content justifies its price, making users feel that it's irreplaceable or offers excellent value.
+However, being irreplaceable is basically impossible now, mainly because obtaining information has become too easy. In recent years, the pace of environmental change has been too rapid, from the pandemic to the emergence of AI. Drastic changes are occurring in various fields, and the process of diligent production has begun to disappear.
 
-首先線上課程絕對不是沒救了，其實一個課能不能上，是來自於他的課程內容有沒有對得起他的價格，讓使用者覺得無可取代或超值。
+If you can't be irreplaceable and only rely on simply delivering knowledge, and this knowledge can't be verified through environmental changes, it will be easily eliminated.
+Since the former cannot be achieved, we can only rely on the latter. This is what I believe all courses in the future need to pay attention to. Whether it's online courses or offline courses, they all need to understand: what students value now is not just "knowledge delivery." It may be the community after the course, or the instructor's ability to stimulate students' deep self-reflection during the course, and so on.
 
-但無可取代這件事現在基本沒辦法做到，造成這樣的原因主要是取得資訊太過容易。近幾年環境變化的速度太快，疫情過後到 AI 出現，各個領域都在發生劇烈的變化，刻苦生產的過程已經開始變得不存在。
+I can't tell you what you should do to resolve the situation (if I could, I would be the one selling courses now QQ). I can only offer my own insights as a consumer who has spent at least 300,000 to 400,000 on courses.
 
-如果你沒有無法取代，又僅靠單純交付知識，這些知識沒辦法經過環境變化的驗證，很容易就會被淘汰掉。
+The main point of this paragraph is that I want to let the capable teachers around me who are creating online courses not to be too desperate about the environment, because as long as there are profits to be made in a field, it will never be a calm lake forever.
+We should be optimistic~~~ Otherwise, when the Marleyans encounter the Rumbling, they should all jump off a cliff. Why bother living? (Attack on Titan reference)
 
-前者無法實現，就只能靠後者，這也是我認為以後所有課程的需要注意到的事，就是不管線上課程還是實體課程，都需要了解：現在的學生看重的已經不僅僅是「交付知識」，他可能是這門課後的社群，亦或是這個講師在課程內是否能引發學生自我深度思考的能力等等。
+## 【#2 Can short videos still be taught?】
 
-我沒辦法告訴你應該怎麼做才能解套（如果我能告訴你的話現在賣課的就是我QQ），我只能用一個至少有花三四十萬上課的消費者角度提出自身見解。
+I can only say that, to my knowledge, there hasn't been a single short video course in Taiwan that can significantly improve one's skills after completion (if there is, please let me know, it's also possible that I have limited knowledge).
 
-打這段主要是，我想讓我身邊在做線上課程，又有實力的老師們對於環境不要太過絕望，因為只要一個領域有利可圖，他就絕不可能永遠是灘清水。
+I believe everyone who takes a short video course has one thought: after completing these courses, the next viral video will be mine. This is also the main reason I wrote the previous article, to tell everyone that "this is simply our fantasy."
 
-做人要樂觀啊～～～不然當瑪雷人遇到地鳴全都去跳崖就好了啊還活著幹嘛（進擊的巨人梗）
+Telling everyone this is not to discourage you from taking courses, but to prepare you that they may only deliver some "basic knowledge." Because I believe there are definitely people who grit their teeth and endure the pain of their wallets to take courses. If it's for a short video course, hold off for now.
 
-【#2 短影音還能不能上課】
+So what can we do in the field of short videos? I think continuously producing content is the iron law of self-media. Additionally, I've seen some articles discussing this, among them:
+Teacher Xiao Guan from Inosine mentioned that "a lot of practice in filming and editing is very important."
 
-我只能說，我所知道的台灣還沒有一門短影音課，是可以讓上完之後功力大大大增（有的話請告訴我，也有可能是我見識淺薄）。
-
-我相信每個上短影音課程都有一個想法，就是上完這些課，下一個爆款影片就是我，這也是我打上一篇文章的主因，就是告訴大家「這就是單純是我們的幻想」。
-
-告訴大家這些不是叫大家不要上課，而是你要有心理準備就是他們有可能都是交付一些「基礎知識」。因為我相信絕對有人是咬牙忍荷包痛為了去上課的，如果你是為了短影音課程的話就先不要。
-
-那在短影音領域上我們至少能做什麼？我覺得持續發表作品是自媒體的鐵律，另外我看到有一些討論的文章，當中：
-
-得來素的小關老師提到「拍跟剪的大量練習是很重要的」
-
-以及
-
-雪倫老師提到「不如花時間好好想想自己的商業目標，以及所有商業模式跟策略。」
-
-這兩點都很重要，如果有興趣的朋友可以拜讀他們的貼文。
-
-希望我這些想法可以對大家有所幫助。
+And Teacher Sharon mentioned, "It's better to spend time thinking carefully about your business goals and all business models and strategies."
+Both of these points are very important. If you're interested, you can read their posts.
+I hope my thoughts can be of some help to everyone.
