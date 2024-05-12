@@ -2,9 +2,11 @@
 title: Webpack vs Vite：Comparing Front-end Build Tools' Pros, Cons, and Application Scenarios
 customSlug: webpack-vs-vite-front-end-build-tools-pros-cons-application-scenarios
 tags:
-  - tools
-  - frontend
-  - webdev
+  - Package Tools
+  - Front-end Development
+  - Web Development
+  - Webpack
+  - Vite
 snippet: Compare the pros and cons of Webpack and Vite, two major front-end build tools, including build speed, learning cost, bundling settings granularity, and ecosystem maturity. Analyze their application scenarios to help you choose the most suitable build tool for your project needs.
 publishDate: 2024-05-02 18:23
 category: Development

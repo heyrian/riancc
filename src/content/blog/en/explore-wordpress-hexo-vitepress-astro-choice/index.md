@@ -2,9 +2,9 @@
 title: Explore Wordpress Hexo Vitepress Astro Choice
 customSlug: explore-wordpress-hexo-vitepress-astro-choice
 tags:
-  - astro
-  - frontend
-  - webdev
+  - Astro
+  - Front-end Development
+  - Web Development
 snippet: This is a front-end engineers in the choice of blog site technology comparison article, which contains now common Wordpress, Hexo, Vite Press, Astro.
 publishDate: 2023-10-16 16:02
 category: Development

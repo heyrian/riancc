@@ -5,7 +5,7 @@ tags:
   - 套件管理工具
   - 前端工程
   - 網頁開發
-  - yarn
+  - Yarn
 snippet: 本篇介紹由 facebook 開發，替代 npm 的管理工具——yarn，以及其的使用方式以及其優點。
 publishDate: 2024-04-28 17:38
 category: Development

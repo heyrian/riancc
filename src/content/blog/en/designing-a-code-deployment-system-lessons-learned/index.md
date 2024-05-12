@@ -2,9 +2,9 @@
 title: Designing a Code Deployment System：Reflections
 customSlug: designing-a-code-deployment-system-lessons-learned
 tags:
-  - Deploy
-  - backend
-  - webdev
+  - Deployment
+  - Back-end Development
+  - Web Development
 snippet: In the early days, about three or four years ago, when frontend developers wanted to easily deploy to cloud services, most of them did so through PaaS platforms. At that time, Heroku was more popular. It required installing the Heroku CLI tool in your own project and using the command line to deploy to the service. I vaguely remember that I might have even set up CI/CD for this (this was before Github Actions), but now it's no longer necessary to go through such a hassle.
 publishDate: 2024-04-24 18:06
 category: Development

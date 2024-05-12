@@ -2,8 +2,8 @@
 title: 7 Common Project Architecture Management Patterns：Analysis
 customSlug: 7-common-project-architecture-management-patterns-analysis
 tags:
-  - design pattern
-  - project management
+  - Design Pattern
+  - Project Management
 snippet: Understanding the 7 Common Project Architecture Management Patterns：Monorepo, Multi-repo, Microservices, Modular Monolith, Plugin, and Layered Architecture, analyzing their respective advantages, disadvantages, characteristics, and applicable scenarios.
 publishDate: 2024-04-30 20:19
 category: Development

@@ -2,9 +2,10 @@
 title: 【Frontend Development Essential Tools Series】Part Two：yarn - A Modern JavaScript Package Management Tool
 customSlug: modernized-javascript-package-management-tools
 tags:
-  - tools
-  - frontend
-  - webdev
+  - Package Tools
+  - Front-end Development
+  - Web Development
+  - Yarn
 snippet: This article introduces yarn, a management tool developed by Facebook as an alternative to npm, as well as its usage and advantages.
 publishDate: 2024-04-28 17:38
 category: Development

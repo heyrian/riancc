@@ -2,9 +2,12 @@
 title: 【Frontend Development Essential Tools Series】Part One：Mastering npm, nvm, and npx to Optimize Your Development Workflow
 customSlug: master-npm-npx-nvm-optimize-your-development-process
 tags:
-  - tools
-  - frontend
-  - webdev
+  - Package Tools
+  - Front-end Development
+  - Web Development
+  - Npm
+  - Nvm
+  - Nvx
 snippet: This article introduces how to use npm, nvm, and npx, as well as how to optimize your development workflow through these tools.
 publishDate: 2024-04-27 12:01
 category: Development

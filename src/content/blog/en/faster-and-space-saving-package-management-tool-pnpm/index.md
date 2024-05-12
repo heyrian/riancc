@@ -2,9 +2,9 @@
 title: Frontend Development Essential Tools Series 3：pnpm - A Faster and More Space-Efficient Package Management Solution
 customSlug: faster-and-space-saving-package-management-tool-pnpm
 tags:
-  - tools
-  - frontend
-  - webdev
+  - Package Tools
+  - Front-end Development
+  - Web Development
 snippet: This article introduces the features and usage of pnpm, as well as provides an in-depth look at the principles of pnpm, including the concepts of hard links and symbolic links.
 publishDate: 2024-04-29 20:19
 category: Development

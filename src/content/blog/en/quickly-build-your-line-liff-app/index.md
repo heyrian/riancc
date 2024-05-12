@@ -3,8 +3,8 @@ title: Quickly Build Your Line LIFF App
 customSlug: quickly-build-your-line-liff-app
 tags:
   - Line
-  - frontend
-  - webdev
+  - Front-end Development
+  - Web Development
 snippet: Line LIFF is Line Front-end Framework, a front-end framework introduced by the Line platform, which is a great way to enhance the user experience in addition to allowing users to skip this step.
 publishDate: 2024-04-22 17:57
 category: Development
