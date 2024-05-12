@@ -1,5 +1,5 @@
 ---
-title: 探索 Wordpress、Hexo、Vite Press 到 Astro 的選擇之道
+title: Explore Wordpress Hexo Vitepress Astro Choice
 customSlug: explore-wordpress-hexo-vitepress-astro-choice
 tags:
   - astro

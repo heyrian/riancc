@@ -5,14 +5,12 @@ tags:
   - tools
   - frontend
   - webdev
-snippet: 本篇介紹 pnpm 的特性與使用方式，以及深入瞭解 pnpm 的原理，當中包含了硬連結與符號連結的概念。
+snippet: This article introduces the features and usage of pnpm, as well as provides an in-depth look at the principles of pnpm, including the concepts of hard links and symbolic links.
 publishDate: 2024-04-29 20:19
 category: Development
 ---
 
 ## Introduction
-pnpm（performant npm），主要目標在於提升速度與效能，並且減少磁碟空間。使用獨特的安裝策略：當你使用 pnpm 安裝套件時，他會將每個套件的版本儲存全域的儲存目錄（ `pnpm-store`，以下簡稱 Store）中，接著 `node_modules` 會建立一個指向 Store 對應版本套件的硬連結。每個套件的各版本都有唯一的子目錄，不復刻各個專案的 `node _modules`，這大大的節省了本地的儲存空間並加速下載速度。安裝位置通常在 `~/Library/pnpm/store` (mac 系統)。
-
 pnpm (performant npm) aims to improve speed and efficiency while reducing disk space. It uses a unique installation strategy: when you install packages with pnpm, it stores each package version in a global storage directory (`pnpm-store`, hereinafter referred to as Store). Then, `node_modules` creates a hard link to the corresponding version of the package in the Store. Each version of each package has a unique subdirectory, without duplicating `node_modules` for each project. This greatly saves local storage space and speeds up the download process. The installation location is usually at `~/Library/pnpm/store` (Mac system).
 
 ### Workspace
