@@ -1,5 +1,5 @@
 ---
-title: Web Image Optimization: From Basic Concepts to Best Practices for Avoiding CLS
+title: Web Image Optimization：From Basic Concepts to Best Practices for Avoiding CLS
 customSlug: web-image-optimization-best-practices-to-avoid-cls
 tags:
   - Front-end Development

@@ -1,5 +1,5 @@
 ---
-title: Web Image Optimization: 網頁圖片優化：從基本概念到避免 CLS 的最佳實踐
+title: Web Image Optimization：網頁圖片優化：從基本概念到避免 CLS 的最佳實踐
 customSlug: web-image-optimization-best-practices-to-avoid-cls
 tags:
   - 前端工程
