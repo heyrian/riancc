@@ -2,7 +2,7 @@
 title: 探討開展電子商務架站的方法
 customSlug: how-to-start-an-e-commerce-business
 tags:
-  - eCommerce
+  - 電子商務
   - WordPress
 image:
   src: /images/how-to-start-an-e-commerce-business.png

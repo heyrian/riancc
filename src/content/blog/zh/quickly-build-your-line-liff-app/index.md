@@ -3,8 +3,8 @@ title: 快速建置 Line LIFF App
 customSlug: quickly-build-your-line-liff-app
 tags:
   - Line
-  - frontend
-  - webdev
+  - 前端工程
+  - 網頁開發
 snippet: Line LIFF 全名是 Line Front-end Framework，是由 Line 平台推出的一種前端框架，除了讓用戶可以省略這個步驟，增強用戶體驗的好方法。
 publishDate: 2024-04-22 17:57
 category: Development

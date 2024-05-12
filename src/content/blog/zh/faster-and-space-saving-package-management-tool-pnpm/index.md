@@ -2,9 +2,10 @@
 title: 【前端開發必備工具系列】之三：pnpm - 更快、更節省空間的套件管理方案
 customSlug: faster-and-space-saving-package-management-tool-pnpm
 tags:
-  - tools
-  - frontend
-  - webdev
+  - 套件管理工具
+  - 前端工程
+  - 網頁開發
+  - pnpm
 snippet: 本篇介紹 pnpm 的特性與使用方式，以及深入瞭解 pnpm 的原理，當中包含了硬連結與符號連結的概念。
 publishDate: 2024-04-29 20:19
 category: Development

@@ -2,9 +2,9 @@
 title: 探索 Wordpress、Hexo、Vite Press 到 Astro 的選擇之道
 customSlug: explore-wordpress-hexo-vitepress-astro-choice
 tags:
-  - astro
-  - frontend
-  - webdev
+  - Astro
+  - 前端工程
+  - 網頁開發
 image:
   src: build-blog-so-easy-by-astro.png
   alt: build-blog-so-easy-by-astro

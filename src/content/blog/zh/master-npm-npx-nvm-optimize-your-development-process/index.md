@@ -2,9 +2,12 @@
 title: 【前端開發必備工具系列】之一：掌握 npm、nvm、npx，優化你的開發流程
 customSlug: master-npm-npx-nvm-optimize-your-development-process
 tags:
-  - tools
-  - frontend
-  - webdev
+  - 套件管理工具
+  - 前端工程
+  - 網頁開發
+  - npm
+  - nvm
+  - npx
 snippet: 本篇介紹 npm、nvm 和 npx 的使用方式，以及如何透過這些工具來優化你的開發流程。
 publishDate: 2024-04-27 12:01
 category: Development
