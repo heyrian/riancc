@@ -1,5 +1,5 @@
 ---
-title: 【Frontend Development Essential Tools Series】Part Two: yarn - A Modern JavaScript Package Management Tool
+title: 【Frontend Development Essential Tools Series】Part Two：yarn - A Modern JavaScript Package Management Tool
 customSlug: modernized-javascript-package-management-tools
 tags:
   - tools

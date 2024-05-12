@@ -1,5 +1,5 @@
 ---
-title: Frontend Development Essential Tools Series 3: pnpm - A Faster and More Space-Efficient Package Management Solution
+title: Frontend Development Essential Tools Series 3：pnpm - A Faster and More Space-Efficient Package Management Solution
 customSlug: faster-and-space-saving-package-management-tool-pnpm
 tags:
   - tools

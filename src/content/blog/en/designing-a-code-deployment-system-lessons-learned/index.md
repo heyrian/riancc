@@ -1,5 +1,5 @@
 ---
-title: Designing a Code Deployment System: Reflections
+title: Designing a Code Deployment System：Reflections
 customSlug: designing-a-code-deployment-system-lessons-learned
 tags:
   - Deploy
