@@ -11,7 +11,7 @@ changeLanguage('en');
 
 // Generate a new path for every collection post
 export async function getStaticPaths() {
-    changeLanguage('zh');
+    changeLanguage('en');
     const blogEntries = await getCollection('blog');
     var localizedBlogEntries = blogEntries.filter(entry => entry.slug.startsWith(i18next.language));
     const posts = await getCollection('blog', ({ data }) => {
