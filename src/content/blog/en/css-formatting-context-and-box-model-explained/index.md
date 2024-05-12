@@ -6,7 +6,7 @@ tags:
   - Web Layout
   - Front-end Development
 snippet: To master CSS layout，it's essential to understand the concepts of Formatting Contexts and the Box Model. This article will dive into the characteristics and applications of BFC，IFC，GFC，and FFC，while also explaining the calculation methods of the Box Model and the common issue of collapsing margins.
-publishDate: 2024-05-02 18:23
+publishDate: 2024-05-06 14:26
 category: Development
 ---
 
