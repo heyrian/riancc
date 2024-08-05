@@ -1,260 +1,206 @@
-<a href="https://astros.zank.studio">
-  <img src=".github/images/astros.gif" />
-</a>
+# Typography
 
-# [Astros](https://astros.zank.studio)
+<p align='center'>
+  <img src='./public/typograph-og.jpg' alt='Typography' width='600'/>
+</p>
 
-<a href="https://astro.build/">![Astro](.github/images/astro-icon.png)</a>
-<a href="https://tailwindcss.com/">![Tailwind](.github/images/tailwind-icon.png)</a>
-<a href="https://alpinejs.dev/">![Alpine js](.github/images/alpine-icon.png)</a>
+<h6 align='center'>
+<a href="https://astro-theme-typography.vercel.app/">Live Demo</a>
+</h6>
+<h5 align='center'>
+<b>This work is rewrite from <a href="https://github.com/sumimakito/hexo-theme-typography">hexo-theme-Typography</a></b>
+</h5>
+<p align='center'>
+<b>English</b> | <a href="./README.zh-CN.md">简体中文</a>
+</p>
 
-Astros is a template made with [Astro](https://astro.build), [Tailwind](https://tailwindcss.com/) and [AlpineJS](https://alpinejs.dev/).
+## Features
 
-This project is strongly inspired by [Astroship](https://github.com/surjithctly/astroship), [Flowbite](https://flowbite.com/blocks/) and [Tailwind UI](https://tailwindui.com/components) components, make sure to check them out as well!
+- Build with **Astro**, **TypeScript** and **UnoCSS**
+- **Fast**. 100% [Pagespeed Score](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop).
+- **Typography** Derived from prevalent Chinese typographic norms and aims to provide an enhanced reading experience for website visitors.
+- **Responsive**. Responsive and works well on all screen sizes.
+- **Accessible**. A well thought out semantic and accessible content.
+- **SEO friendly**.Open Graph and Twitter Cards support for a better social sharing experience.
+- **Sitemap** and **RSS feed** for search engines.
+- i18n support.
+- Support Disqus, Giscus, Twikoo as comment service.
+- Dark mode support.
 
+## Demo
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/zankhq/astros)
+> Submit a PR to add your blog Demo.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zankhq/astros)
+- [Live Demo](https://astro-theme-typography.vercel.app/)
+- [My Blog](https://blog.moeyua.com/)
+- [Julyfun's Blog (how to fully build this blog using `bun` in minutes)](https://julyfun.fun/posts/%E5%85%89%E9%80%9F%E6%90%AD%E5%BB%BA%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zankhq/astros)
+## Getting Started
 
+Typography is a minimal, responsive and SEO-friendly Astro blog theme. This guide will help you get started with a new project. 
 
-### [🧪 Site preview →](https://astros.zank.studio)
+### Quick Start
 
-### [🧑‍🚀 Astro website →](https://astro.build/)
+You can fork the repository to your account by clicking the Fork button in the upper right corner, click the button below, select the repository you just forked, click the Import button, and you will be taken to the project configuration page.
 
-### [🕮 Astro docs →](https://docs.astro.build/en/getting-started/)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 
+Or you can refer to the [Astro](https://docs.astro.build/guides/deploy/) documentation to deploy to your favorite platform.
+
+### Add post
+
+You can add content by creating a new markdown file in `src/content/posts`. The file need metadata in the frontmatter, like this:
+
+```md
 ---
+title: title
+pubDate: 2021-08-01
+categories: ['article']
+description: 'description'
+---
+```
 
-## Preview
+Or, you can use the following command in your terminal to create a new post:
 
-![Alt text](.github/images/pagespeed-small.png)
+```bash
+pnpm new-post
+```
 
-![Astros Preview](.github/images/astros-preview.png)
+## Updating the theme
 
-## 🧪 Test
+You can simply [`Sync Fork`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) on your own forked project (do not click Discard Changes, otherwise you will lose your own changes).
 
-On the folder run
+## Customization
 
-1. `npm i`  <small>(or `yarn` or `pnpm i`)</small>
-2. `npm run dev`  <small>(or `yarn dev` or `pnpm dev`)</small>
+Typography is highly customizable. The config file is in [src/theme.config.ts](src/theme.config.ts)
 
-(if it's not working report an [issue](https://github.com/zankhq/astros/issues))
+### Social links
 
-## 🚀 Deploy
+Typography has built-in support for adding links to your social media accounts to the site via the social option in the config file:
 
-### Cloudflare pages (suggested)
+```ts
+socials: [
+  {
+    name: "github",
+    href: "https://github.com/moeyua/astro-theme-typography"
+  }
+  ...
+]
+```
 
-You can either click on the button above to deploy to Cloudflare automatically, or you can fork this repository and deploy manually from cloudflare dashboard.
+The `name` is the icon name in [Material Design Icons](https://pictogrammers.com/library/mdi/),
+which will be automatically generated as the icon.
 
-You can leave build settings as defaults.
+> Note that you need to restart the development server to see the changes.
 
-<details>
-<summary>Cloudflare configuration</summary>
+### Navigation links
 
-![Alt text](.github/images/image.png)
+By default, the navigation are `Posts`, `Archive`, `Categories` and `About`. You can add more in the config file:
 
-</details>
+```ts
+navs: [
+  {
+    name: "Categories",
+    href: "/categories"
+  }
+  ...
+]
+```
 
-### Netlify
+And then add the corresponding page in `src/pages`, see more in [Astro Pages](https://docs.astro.build/en/core-concepts/astro-pages/)
 
-`TODO`
+### Dark mode
 
-### Vercel
+Typography supports dark mode. You can change it in the config file:
 
-`TODO`
-
-### Others
-
-You can check the deploy documentation at https://docs.astro.build/en/guides/deploy/
-
-## ✅ Features
-
-- [x] Localization (with astro-i18next)
-- [x] Light/Dark mode (provided by tailwind)
-- [x] Discussion on articles (thanks to giscus)
-- [x] Blog
-- [x] CMS for editing blog post (thanks to decap CMS)
-- [x] PWA (thanks to vite-pwa)
-- [ ] AI to generate article posts
-
-## ✍️ Admin dashboard
-
-You can access the admin dashboard for editing blog post at `/admin` (https://astros.zank.studio/admin)
-
-For more information follow Decap CMS documentation at https://decapcms.org/docs/
-
-In order to access the admin dashboard to change blog articles content you need to have access to the github repo, a quick way to test it test would be fork the repo and than configure decap cms accordingly to your cloud provider (netlify, cloudflare, vercel, etc...).
-
-If you use cloudflare pages you can follow this guide https://github.com/i40west/netlify-cms-cloudflare-pages.
-
-In this case your environment variable should look like this
-
-![Cloudflare environment variable image](.github/images/cloudflare-env-var.png)
-
-If you use netlify it's actually easier, you will need to change in the file `astro.config.mjs` NetlifyCMS config `config.backend.name` to git-gateway. (See https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify for more info)
+```ts
+themeStyle: 'dark' // 'light' | 'dark'
+```
 
 
-## 🧞 Dependencies
+### Internationalization (i18n)
 
-Astros depends on the following packages:
+Typography provides built-in support for multilingual sites. By default, the language is `en-us`, you can change it in the config file:
 
-| Dependency                                                                             | Version        |
-| -------------------------------------------------------------------------------------- | -------------- |
-| [@astrojs/mdx](https://www.npmjs.com/package/@astrojs/mdx)                             | ^0.19.7        |
-| [@astrojs/rss](https://www.npmjs.com/package/@astrojs/rss)                             | ^2.4.3         |
-| [@astrojs/sitemap](https://www.npmjs.com/package/@astrojs/sitemap)                     | ^1.3.3         |
-| [@astrojs/tailwind](https://www.npmjs.com/package/@astrojs/tailwind)                   | ^3.1.3         |
-| [@fontsource-variable/inter](https://www.npmjs.com/package/@fontsource-variable/inter) | ^5.0.2         |
-| [astro](https://www.npmjs.com/package/astro)                                           | ^2.6.1         |
-| [astro-i18next](https://www.npmjs.com/package/astro-i18next)                           | ^1.0.0-beta.21 |
-| [astro-icon](https://www.npmjs.com/package/astro-icon)                                 | ^0.8.1         |
-| [astro-netlify-cms](https://www.npmjs.com/package/astro-netlify-cms)                   | ^0.5.3         |
-| [astro-seo](https://www.npmjs.com/package/astro-seo)                                   | ^0.7.4         |
-| [bad-words](https://www.npmjs.com/package/bad-words)                                   | ^3.0.4         |
-| [dotenv](https://www.npmjs.com/package/dotenv)                                         | ^16.1.4        |
-| [openai](https://www.npmjs.com/package/openai)                                         | ^3.2.1         |
-| [rehype-autolink-headings](https://www.npmjs.com/package/rehype-autolink-headings)     | ^6.1.1         |
-| [rehype-slug](https://www.npmjs.com/package/rehype-slug)                               | ^5.1.0         |
-| [rss-parser](https://www.npmjs.com/package/rss-parser)                                 | ^3.13.0        |
-| [tailwindcss](https://www.npmjs.com/package/tailwindcss)                               | ^3.3.2         |
-
-## Known issues
-
-- Localization is not detected automatically
-
-## FAQ
-
-<br/>
-
-<details>
-  <summary>What is this?</summary>
-<br/>
-  This is a astro template that uses tailwindcss and alpinejs
-</details>
-<br/>
-
-<details>
-  <summary>Why alpinejs? Why don't just use js?</summary>
-<br/>
-  Alpine js is less than 17kb and it make javascript very fast to write, there are also various open source ready to use components like https://js.hyperui.dev, https://devdojo.com/pines, https://www.alpinetoolbox.com/examples, https://alpinejs.dev/components#components
-</details>
-<br/>
-
-<details>
-  <summary>But I don't need alpine js, can I remove it?</summary>
-<br/>
-  Of course, but some components use it and you'll have to edit these, more specifically you ll have to: <br/>
-  <ul style="list-style: inside;">
-    <li>First remove the package with the command <code>npm unistall @astrojs/alpinejs @types/alpinejs alpinejs</code></li>
-    <li>Adjust all components that uses alpine js: <code>faq.astro</code>, <code>themeselector.astro</code>, <code>navbar.astro</code></li>
-  </ul>
-</details>
-<br/>
-
-<details>
-  <summary>Can I remove also tailwidcss?</summary>
-<br/>
-  I mean, you can, but you'll have to basically rewrite all the template, so I don't recommend it
-</details>
-<br/>
-
-<details>
-  <summary>I don't need client routing, how can I remove it?</summary>
-<br/>
-  From astro 2.9 you can opt-in for client routing (https://astro.build/blog/astro-290) by activating the experimental flag viewTransitions <br/>
-  You can remove client routing by removing <code>viewTransitions: true</code> from <code>astro.config.mjs</code> And the <code>ViewTransitions</code> component from Layout.astro
-</details>
-<br/>
-
-<details>
-  <summary>I don't need multiple language, how can I remove it?</summary>
-<br/>
-  One way is to simply keep one language and remove the selector from the footer but in order to fully remove the localization you have to: <br/>
-  <ul style="list-style: inside;">
-    <li>Remove the i18next pacakage <code>npm unistall astro-i18next</code></li>
-    <li>Remove <code>astro-i18next.config.mjs</code> file</li>
-    <li>Remove <code>locales</code> folder from public</li>
-    <li>Remove <code>languageselector.astro</code> file and from footer</li>
-    <li>Find all reference to <code>i18next</code> and <code>astro-i18next</code> and replace with your text</li>
-  </ul>
-</details>
-<br/>
-
-<details>
-  <summary>I don't need dark mode, how can I remove it?</summary>
-<br/>
-  Dark mode is embedded into tailwindcss, so you can't remove it, but you can remove the switch from the navbar
-</details>
-<br/>
-
-<details>
-  <summary>I don't need decap CMS, how can I remove it?</summary>
-<br/>
-  In order to remove decap CMS you need to:
-  <ul style="list-style: inside;">
-    <li>Remove the netlify-cms pacakage <code>npm unistall astro-netlify-cms</code></li>
-    <li>Remove NetlifyCMS configuration from <code>astro.config.mjs</code></li>
-  </ul>
-</details>
-<br/>
-
-<details>
-  <summary>How can I configure the decap CMS authentication with cloudflare?</summary>
-<br/>
-  To configure decap CMS with cloudflare follow this guide <a href="https://github.com/i40west/netlify-cms-cloudflare-pages" target="_blank">https://github.com/i40west/netlify-cms-cloudflare-pages</a>
-</details>
-<br/>
-
-<details>
-  <summary>How can I configure the decap CMS authentication with netlify?</summary>
-<br/>
-  To configure decap CMS with netlify do the followings:
-  <ul style="list-style: inside;">
-    <li>Change NetlifyCMS config <code>config.backend.name</code> to git-gateway</li>
-    <li>Remove <code>disableIdentityWidgetInjection: true</code> from the NetlifyCMS configuration on <code>astro.config.mjs</code></li>
-    <li>Remove <code>auth_endpoint: "/api/auth"</code> from the NetlifyCMS backend configuration on <code>astro.config.mjs</code></li>
-    <li>Use integrated NetlifyCMS auth <a href="https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify" target="_blank">https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify</a></li>
-  </ul>
-</details>
-<br/>
-
-<details>
-  <summary>How can I change the localization languages?</summary>
-<br/>
-  In order to change the languages you have to change the languages in the file <code>astro-i18next.config.mjs</code> and in the netlifyCMS configuration on the file <code>astro.config.mjs</code> <br/>
-  Then change the locales files folders in <code>public/locales</code>
-</details>
-<br/>
-
-<details>
-  <summary>What are the files in the function folder used for?</summary>
-<br/>
-  These are cloudflare function that are used for the authentication to the decap CMS
-</details>
-<br/>
-
-<details>
-  <summary>The build on cloudflare keep failing, why?</summary>
-<br/>
-  One of the problem could be that the Build system version is setted to version 1, make sure that version 2 is selected
-</details>
-<br/>
-
-<details>
-  <summary>Work with modules in relink</summary>
-<br/>
-  This is helpful if you want to apply some changes to various modules while you are working on the website.
-To do so you have to go into each module and run
+```ts
+locale: "zh-cn"
 
 ```
-npm link
+
+For now, Typography supports below languages:
+
+- `en-us`
+- `zh-cn`
+- `zh-tw`
+- `ja-jp`
+
+You can see all supported languages in [src/i18n.ts](src/i18n.ts), and add more if you need.
+
+### Comment
+
+Typography supports multiple comment services, currently supports [Disqus](https://disqus.com/), [Giscus](https://giscus.app/) and [Twikoo](https://twikoo.js.org/).
+
+Enable the corresponding comment service by adding the configuration to the config file, when you fill in multiple comment services, only the first service will be displayed.
+
+#### Disqus
+
+You can enable Disqus by adding the following configuration to the config file:
+
+```ts
+comments: {
+  disqus: {
+    shortname: "your-disqus-shortname"
+  }
+}
 ```
-</details>
-<br/>
 
----
+#### Giscus
 
-<p align="right"><a href="https://zank.studio/" target="_blank">zank.studio</p>
+Based on the [Giscus web component](https://github.com/giscus/giscus-component?tab=readme-ov-file#using-the-web-component) implementation.
+
+The prop names are the same as the data- attributes shown on the [giscus website]((https://giscus.app/)), but written in camelCase with the data- prefix and dashes removed.
+
+You can enable Giscus by adding the following configuration to the config file:
+
+```ts
+comments: {
+  giscus: {
+    repo: "your-repo",
+    repoId: "your-repo-id",
+    category: "your-category",
+    categoryId: "your-category-id",
+    mapping: "title",
+    strict: '0',
+    reactionsEnabled: '1',
+    emitMetadata: '1',
+    inputPosition: 'top',
+    theme: 'light',
+    lang: 'zh-CN',
+    loading: 'lazy',
+  }
+}
+```
+
+#### Twikoo
+
+You can enable Twikoo by adding the following configuration to the config file:
+
+```ts
+comments: {
+  twikoo: {
+    envId: "your-env-id",
+  }
+}
+```
+
+## Pagespeed Score
+
+[![Pagespeed Score](https://github.com/moeyua/astro-theme-typography/assets/45156493/2272f576-d6ff-49ef-a294-5c2acf365907)](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop)
+
+## TODO 
+
+- [ ] WebSub
+- [x] comment
+- [ ] search
+- [ ] analytics
