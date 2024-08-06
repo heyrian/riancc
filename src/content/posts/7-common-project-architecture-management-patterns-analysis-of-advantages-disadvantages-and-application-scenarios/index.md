@@ -2,7 +2,7 @@
 title: 7種常見的專案架構管理模式：優缺點分析與應用場景
 description: 了解7種常見的專案架構管理模式：Monorepo、Multi-repo、微服務、模組化單體、外掛、分層架構，分析各自的優缺點、特性以及適用場景。
 pubDate: 2024-04-30 20:19
-categories: ['Development']
+categories: ['Project-Management']
 ---
 
 ## Mono-repo 單一管理架構

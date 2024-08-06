@@ -2,7 +2,7 @@
 title: 使用 JavaScript 原生 Intl.NumberFormat 輕鬆實現數字格式化和貨幣標示
 description: 在前端開發中，數字格式化和貨幣標示是常見的需求。過去通常需要借助第三方函式庫或自行編寫程式碼來處理，現在 JavaScript 提供了原生的 Intl.NumberFormat 物件，讓數字格式化和貨幣標示變得更加方便。本文介紹了 Intl.NumberFormat 的使用方式，包括 locales 和 options 參數的設置，以及如何使用 format 方法獲得格式化後的結果。
 pubDate: 2024-05-08 21:47
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 在前端開發中，數字格式化和貨幣標示是非常常見的需求。以前我們通常需要借助第三方函式庫或自己編寫程式碼來標示貨幣規格。現在 JavaScript 提供了原生的 `Intl.NumberFormat` 物件，讓數字格式化和貨幣標示變得更方便。

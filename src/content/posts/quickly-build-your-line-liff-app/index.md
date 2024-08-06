@@ -2,7 +2,7 @@
 title: 快速建置 Line LIFF App
 description: Line LIFF 全名是 Line Front-end Framework，是由 Line 平台推出的一種前端框架，除了讓用戶可以省略這個步驟，增強用戶體驗的好方法。
 pubDate: 2024-04-22 17:57
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 ## 了解 Line LIFF
@@ -29,11 +29,11 @@ Line LIFF 全名是 Line Front-end Framework，是由 Line 平台推出的一種
 
 你可以引入 CDN 、或是透過 NPM 引入 [LIFF SDK](https://developers.line.biz/en/docs/liff/cli-tool-create-liff-app/#create-a-dev-env-using-liff-app)。
 
-```html html
+```html title="index.html"
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
 ```
-
-```bash shell
+　
+```bash shell title="Terminal"
 $ npm install --save @line/liff
 ```
 
@@ -42,13 +42,13 @@ $ npm install --save @line/liff
 
 建立 LIFF App 專案。
 
-```bash shell
+```bash title="Terminal"
 $ npx @line/create-liff-app
 ```
 
 選擇你需要的框架技術：
 
-```bash shell
+```bash title="Terminal"
 ? Which template do you want to use? (Use arrow keys)
 ❯ vanilla
   react
@@ -60,7 +60,7 @@ $ npx @line/create-liff-app
 
 確認你要使用的語言：
 
-```bash shell
+```bash title="Terminal"
 ? JavaScript or TypeScript? (Use arrow keys)
 ❯ JavaScript
   TypeScript
@@ -68,14 +68,14 @@ $ npx @line/create-liff-app
 
 輸入 LIFF ID，這邊可以先跳過，之後再更改環境變數：
 
-```bash shell
+```bash title="Terminal"
 ? Please enter your LIFF ID:
 Don't you have LIFF ID? Check out https://developers.line.biz/ja/docs/liff/getting-started/ (liffId)
 ```
 
 選擇你的套件管理工具：
 
-```bash
+```bash title="Terminal"
 ? Which package manager do you want to use? (Use arrow keys)
 ❯ yarn
 npm
@@ -83,7 +83,7 @@ npm
 
 完成！
 
-```bash
+```bash title="Terminal"
 yarn install v1.22.19
 warning package.json: No license field
 info No lockfile found.

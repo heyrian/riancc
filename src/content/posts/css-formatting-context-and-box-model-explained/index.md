@@ -2,7 +2,7 @@
 title: 深入理解 CSS 中的格式化上下文與 Box Model
 description: 想要精通 CSS 佈局，就必須了解格式化上下文（Formatting Context）和 Box Model 的概念。本文將深入探討 BFC、IFC、GFC、FFC 的特性和應用，同時也會說明 Box Model 的計算方式，以及常見的外邊距折疊問題。
 pubDate: 2024-05-06 14:26
-categories: ['Development','css']
+categories: ['Front-end']
 ---
 
 ## BFC、IFC、GFC 和 FFC

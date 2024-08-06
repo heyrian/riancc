@@ -2,7 +2,7 @@
 title: 設計一個程式碼部署系統 心得
 description: 早期大概三四年前，前端要簡易部署到雲服務，大部分是通過 PaaS 平台，那時候比較流行是用 heroku，當時需要在自己的專案上面裝 heroku-cli 工具，使用 command Line 才可以部署上服務，我依稀記得為了這件事我好像還串 CI/CD（那時候還沒有 Github Action），但現在已經不用這麼辛苦了。
 pubDate: 2024-04-24 18:06
-categories: ['Development']
+categories: ['Back-end']
 ---
 
 ![deployment-flow](deployment-flow.png)

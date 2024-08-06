@@ -2,7 +2,7 @@
 title: 【前端開發必備工具系列】之一：掌握 npm、nvm、npx，優化你的開發流程
 description: 本篇介紹 npm、nvm 和 npx 的使用方式，以及如何透過這些工具來優化你的開發流程。
 pubDate: 2024-04-27 12:01
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 ## npm（Node Package Manager）

@@ -2,7 +2,7 @@
 title: Webpack vs Vite：前端建置工具優缺點比較與應用場景
 description: 比較 Webpack 和 Vite 兩大前端建置工具的優缺點，包括建構速度、學習成本、打包設置精細度、生態系成熟度等，並分析其應用場景，助您選擇最適合專案需求的建置工具。
 pubDate: 2024-05-02 18:23
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 ## Webpack 打包工具

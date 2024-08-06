@@ -2,7 +2,7 @@
 title: Web Image Optimization：網頁圖片優化：從基本概念到避免 CLS 的最佳實踐
 description: 圖片是網頁設計中不可或缺的元素，但不當的處理方式可能導致頁面載入速度變慢，甚至影響用戶體驗和 SEO 排名。本文將深入探討網頁圖片優化的基本概念，包括圖片格式、HTML 標籤的使用，以及如何避免 Cumulative Layout Shift（CLS）問題，提供一系列最佳實踐，幫助你打造出更快、更穩定、更高效的網站。
 pubDate: 2024-05-12 12:19
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 圖片是網頁設計中不可或缺的元素，但不當的處理方式可能導致頁面載入速度變慢，甚至影響用戶體驗和 SEO 排名。本文將深入探討網頁圖片優化的基本概念，包括圖片格式、HTML 標籤的使用，以及如何避免 Cumulative Layout Shift（CLS）問題，提供一系列最佳實踐，幫助你打造出更快、更穩定、更高效的網站。
@@ -52,7 +52,11 @@ categories: ['Development']
 
 通常在網頁上會使用 Html 標籤來載入圖片：
 
-![img-tag](img-tag.png)
+```html
+<img src="image.jpg" alt="描述" width="800" height="600" 
+      srcset="image-1.jpg 480w, image-1.jpg 880w" 
+      sizes="(min-width: 480px) 100vw, 880px" loading="lazy">
+```
 
 `<img>`：是最基本的圖片標籤格式，用來插入單一圖片。
 當中基本屬性先不談（src、width、height），比較重要是alt、 srcset、loading 與 sizes 屬性。
@@ -61,7 +65,13 @@ categories: ['Development']
   - sizes：與 srcset 屬性一起使用，指定圖片在不同裝置條件下的顯示大小。它會告訴瀏覽器在不同裝置條件下，圖片應該占用的空間大小。
   - loading：指定圖片的載入方式，可以設定 lazy 延遲載入或是 eager 立即載入。
 
-![picture-tag](picture-tag.png)
+```html
+<picture>
+  <source srcset="image-1.webp" type="image/webp">
+  <img src="image-1.jpg" media="(min-width: 800px)">
+  <img src="image-2.jpg" alt="描述">
+</picture>
+```
 
 `<picture>`：這個標籤屬於容器標籤，可以替同個圖片提供多個圖片來源。當中可以包覆 多個 source 標籤，最後一個必須是 img 標籤，用於 source 圖片來源都不顯示時最後的備選方案。
 

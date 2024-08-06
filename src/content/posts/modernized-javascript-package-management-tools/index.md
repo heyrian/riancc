@@ -2,7 +2,7 @@
 title: 【前端開發必備工具系列】之二：yarn - 現代化的 JavaScript 套件管理工具
 description: 本篇介紹由 facebook 開發，替代 npm 的管理工具——yarn，以及其的使用方式以及其優點。
 pubDate: 2024-04-28 17:38
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 ## 什麼是 yarn

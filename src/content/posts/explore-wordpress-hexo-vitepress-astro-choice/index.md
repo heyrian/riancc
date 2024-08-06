@@ -2,7 +2,7 @@
 title: 探索 Wordpress、Hexo、Vite Press 到 Astro 的選擇之道
 description: 這是一個前端工程師在選擇部落格架站技術的比較文章，裡面包含現在常見的 Wordpress、Hexo、Vite Press、Astro。
 pubDate: 2023-10-16 16:02
-categories: ['Development']
+categories: ['Front-end']
 ---
 
 <!-- <details><summary>Open example</summary>
