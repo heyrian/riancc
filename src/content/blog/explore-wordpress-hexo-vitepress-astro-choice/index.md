@@ -13,7 +13,7 @@ Tada! :tada:
 </details> -->
 
 
-從2019年開始創業之後開始跟技術圈脫節，因此從2019到2023興起的技術我就沒有跟上，決定重新啟動部落格，參考 [VueMaster](https://www.vuemastery.com/blog/nuxt-vs-vitepress-vs-astro) 的文章，我列舉我目前有的幾個選擇：
+從2019年開始創業之後開始跟技術圈脫節，因此從2019到2023興起的技術我就沒有跟上，決定重新啟動部落格，參考 [VueMaster](/blog/https://www.vuemastery.com/blog/nuxt-vs-vitepress-vs-astro) 的文章，我列舉我目前有的幾個選擇：
 
 * Wordpress + Bitnami + GCP Compute Engine
 * Hexo
@@ -29,7 +29,7 @@ Tada! :tada:
 
 ## Hexo
 
-![image.png](hexo.png)
+![image.png](/blog/hexo.png)
 
 Hexo 真的是五年前就開始陪伴我的好朋友了，基於 Node.js，它可以讓前端輕鬆建制一個靜態頁面，網站長的跟五年前差不多，裡面有將近四百多個主題供你選擇，但主題裡面有些寫的技術可能就很陳舊，比方說 jQuery 的套件之類的，我不確定算不算痛點就是了 XD
 
@@ -65,16 +65,16 @@ import MyVueComponent from '../components/MyVueComponent.vue';
 
 ~~這是範例，拜託不要這樣做~~
 
-進到 Astro 網站，首先被官方網站的文件嚇到，[Blog Tutorial](https://docs.astro.build/en/tutorial/0-introduction/) 文件有夠詳細，真的像是旁邊有個老司機手把手教，我這個大菜雞都能很輕鬆 Startup 一個部落格專案。
+進到 Astro 網站，首先被官方網站的文件嚇到，[Blog Tutorial](/blog/https://docs.astro.build/en/tutorial/0-introduction/) 文件有夠詳細，真的像是旁邊有個老司機手把手教，我這個大菜雞都能很輕鬆 Startup 一個部落格專案。
 
-![image 1.png](build-blog-so-easy-by-astro.png)
+![image 1.png](/blog/build-blog-so-easy-by-astro.png)
 
 跟著他的教學過程，發現最後網站部署不是用 Github Page，而是 Netlify（雖然我知道 Astro 可以建置 Static 或 SSR），Netlify 跟前陣子逝去的 Heroku 服務有點相像，之後我會再寫文章來說這個服務。
 
-如果你不想部署到 Netlify 的話，他還有部署到其他的服務的 [Guideline](https://docs.astro.build/en/guides/deploy/)，比方說像是剛剛說的 Github Page，會推薦使用 Github Action 下去做。
+如果你不想部署到 Netlify 的話，他還有部署到其他的服務的 [Guideline](/blog/https://docs.astro.build/en/guides/deploy/)，比方說像是剛剛說的 Github Page，會推薦使用 Github Action 下去做。
 
-![image 2.png](good-doc-let-me-cry.png)
+![image 2.png](/blog/good-doc-let-me-cry.png)
 
-如果真的要講缺點的話，Astro 網站上的[主題](https://astro.build/themes/)沒有像 Hexo 這麼豐富，Filter後發現，裡面通常都是用 React 寫（國外開發者還是比較愛用 React），對於一些 Vue 框架愛用者，在改主題的時候可能會覺得綁手綁腳，但對我來說是沒差（很早期有研究過 React），接下來就是選定主題之後開始做。
+如果真的要講缺點的話，Astro 網站上的[主題](/blog/https://astro.build/themes/)沒有像 Hexo 這麼豐富，Filter後發現，裡面通常都是用 React 寫（國外開發者還是比較愛用 React），對於一些 Vue 框架愛用者，在改主題的時候可能會覺得綁手綁腳，但對我來說是沒差（很早期有研究過 React），接下來就是選定主題之後開始做。
 
 今天就介紹到這邊，我們下篇文章見。

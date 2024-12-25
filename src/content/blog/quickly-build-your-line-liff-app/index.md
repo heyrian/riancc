@@ -12,7 +12,7 @@ tags: ["Line", "LIFF"]
 
 Line LIFF 全名是 Line Front-end Framework，是由 Line 平台推出的一種前端框架。你可以想像 LIFF App 是一個完全獨立的網站，只是我們可以透過 Line 推出的 JavaScript SDK 與 Line 的用戶進行互動。
 
-![line-liff-demo](line-liff-demo.jpeg)
+![line-liff-demo](/blog/line-liff-demo.jpeg)
 
 透過 Line LIFF Browser 開啟。
 
@@ -28,7 +28,7 @@ Line LIFF 全名是 Line Front-end Framework，是由 Line 平台推出的一種
 
 ### 導入 Line LIFF 到專案中
 
-你可以引入 CDN 、或是透過 NPM 引入 [LIFF SDK](https://developers.line.biz/en/docs/liff/cli-tool-create-liff-app/#create-a-dev-env-using-liff-app)。
+你可以引入 CDN 、或是透過 NPM 引入 [LIFF SDK](/blog/https://developers.line.biz/en/docs/liff/cli-tool-create-liff-app/#create-a-dev-env-using-liff-app)。
 
 ```html title="index.html"
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
@@ -104,39 +104,39 @@ Done! Now run:
 
 ### 部署專案
 
-我們前面有提到，LIFF App 是一個完全獨立的網站，所以我們需要先部署在公開的站點上，我這邊推薦 [Zeabur](http://zeabur.com/)，這個服務團隊是來自台灣的新創公司，DC 24 小時客服，文件都是繁體中文，真的是痛哭流涕。
+我們前面有提到，LIFF App 是一個完全獨立的網站，所以我們需要先部署在公開的站點上，我這邊推薦 [Zeabur](/blog/http://zeabur.com/)，這個服務團隊是來自台灣的新創公司，DC 24 小時客服，文件都是繁體中文，真的是痛哭流涕。
 之前使用過 heroku，目前也使用過 netlify、render，他們都很方便，但 Zeabur 是實際意義上的「一鍵部署」。
 
 登入之後點擊「創建專案」以及「部署新服務」。
 
 
-![zeabur-deploy-step1.png](zeabur-deploy-step1.png)
+![zeabur-deploy-step1.png](/blog/zeabur-deploy-step1.png)
 
 點擊 Git，接著會跟你要授權，選擇你放 LIFF App 的 Repo，之後有更新，push上 Github，Zeabur會直接幫你更新。
 
-![zeabur-deploy-step2.png](zeabur-deploy-step2.png)
+![zeabur-deploy-step2.png](/blog/zeabur-deploy-step2.png)
 
 介面真的很好看，點擊下方的「網路」。
 
-![zeabur-deploy-step3.png](zeabur-deploy-step3.png)
+![zeabur-deploy-step3.png](/blog/zeabur-deploy-step3.png)
 
 展開後點擊生成域名，取一個你覺得好記得名字，沒衝突就可以完成部署了，真的很快。
 
-![zeabur-deploy-step4.png](zeabur-deploy-step4.png)
+![zeabur-deploy-step4.png](/blog/zeabur-deploy-step4.png)
 
 ### 新增 Line Developer Provider
 
-接下來進到 [Line Developer Console](https://developers.line.biz/console/) 頁面，新增一個 Provider，新增一個 channel，LIFF 目前只開放給 Login 跟 Mini App，但 Mini App 台灣還沒啟用，所以選擇 Login。
+接下來進到 [Line Developer Console](/blog/https://developers.line.biz/console/) 頁面，新增一個 Provider，新增一個 channel，LIFF 目前只開放給 Login 跟 Mini App，但 Mini App 台灣還沒啟用，所以選擇 Login。
 
-![line-dev-setting-01.png](line-dev-setting-01.png)
+![line-dev-setting-01.png](/blog/line-dev-setting-01.png)
 
 這邊就是填基本資訊，要注意的是 Channel Icon、Name、Description，這些使用者在使用 LIFF 的時候都會看到。
 
-![line-dev-setting-02.png](line-dev-setting-02.png)
+![line-dev-setting-02.png](/blog/line-dev-setting-02.png)
 
 建立好之後，選擇 LIFF 選單填寫資訊。
 
-![line-dev-setting-03.png](line-dev-setting-03.png)
+![line-dev-setting-03.png](/blog/line-dev-setting-03.png)
 
 要注意：
 
@@ -145,14 +145,14 @@ Done! Now run:
 - **Endpoint URL：將你在 Zeabur 部署的網址填上去。**
 - **Module mode：你可以縮小 LIFF App。**
 
-![liff-size.png](liff-size.png)
+![liff-size.png](/blog/liff-size.png)
 
 接者你得到 LIFF 網址以及 ID。
 
-![line-dev-setting-04.png](line-dev-setting-04.png)
+![line-dev-setting-04.png](/blog/line-dev-setting-04.png)
 
 接者再回去專案，將 `.env` 的 VITE_LIFF_ID 替換 ID，以及在 Zeabur 上新增環境變數。
 
 回去看到以下畫面就代表連接成功了，Zeabur 輸入好環境變數要再 Redeploy 才會成功。
 
-![line-dev-setting-05.png](line-dev-setting-05.png)
+![line-dev-setting-05.png](/blog/line-dev-setting-05.png)

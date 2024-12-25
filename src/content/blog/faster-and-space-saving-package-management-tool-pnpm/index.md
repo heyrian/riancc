@@ -17,12 +17,12 @@ pnpm（performant npm），主要目標在於提升速度與效能，並且減�
 
 以安裝 express 為例，左是 npm 安裝的方式，右是 pnpm。過往 npm 會將 express 所依賴的套件扁平化安裝在 `node_modules` 之中；pnpm 所要解決的問題從下圖我們可以看到 pnpm 透過符號連結的方式引用。
 
-![npm-pnpm-archivist.png](npm-pnpm-archivist.png)
+![npm-pnpm-archivist.png](/blog/npm-pnpm-archivist.png)
 
 ### 符號連結（symlink）
 符號連結是一個特殊檔案，裡面包含了其他檔案或是目錄的路徑。pnpm 會使用符號連結來管理套件之間的連結關係。
 
-![symlink-refer.png](symlink-refer.png)
+![symlink-refer.png](/blog/symlink-refer.png)
 
 ## 總整理
 
@@ -38,9 +38,9 @@ pnpm（performant npm），主要目標在於提升速度與效能，並且減�
 - 在專案中安裝套件後會自動在 `node_modules/.pnpm` 目錄中建立軟連結，移除套件後，查看專案下 `node_modules/.pnpm` ，軟連結仍然存在。
 
 
-透過[官網文件](https://pnpm.io/zh-TW/symlinked-node-modules-structure)我們可以知道關係如下：
+透過[官網文件](/blog/https://pnpm.io/zh-TW/symlinked-node-modules-structure)我們可以知道關係如下：
 
-![illustration-of-the-principle-of-pnpm.png](illustration-of-the-principle-of-pnpm.png)
+![illustration-of-the-principle-of-pnpm.png](/blog/illustration-of-the-principle-of-pnpm.png)
 
 ### 常用命令：
 

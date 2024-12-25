@@ -14,7 +14,7 @@ category: ['Life']
 
 前端夥伴加上我是兩位，我主要負責前台跟部分後台，另一位夥伴負責後台跟部分前台，後端也是兩位（其中一位後端還身兼 PM，真的是難為他了）。
 
-![the-first-case-debriefing-after-returning]( the-first-case-debriefing-after-returning-cover.png "composition api let me free")
+![the-first-case-debriefing-after-returning](/blog/the-first-case-debriefing-after-returning-cover.png "composition api let me free")
 
 ### 我所學習到的地方
 

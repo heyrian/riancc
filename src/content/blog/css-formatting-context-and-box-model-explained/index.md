@@ -58,7 +58,7 @@ background: red;
 }
 </style>
 ```
-![between-adjacent-sibling-elements-effect](between-adjacent-sibling-elements-effect.gif)
+![between-adjacent-sibling-elements-effect](/blog/between-adjacent-sibling-elements-effect.gif)
 
 #### 案例二：父元素和第一個或最後一個子元素之間。
   - 當你設定一個父子元素，將子元素設定 margin-top 與 margin-bottom，會發現僅有margin-bottom 有作用。
@@ -78,7 +78,7 @@ margin: 20px 0;
 </style>
 ```
 
-![between-the-parent-element-and-the-first-or-last-child-element-effect](between-the-parent-element-and-the-first-or-last-child-element-effect.gif)
+![between-the-parent-element-and-the-first-or-last-child-element-effect](/blog/between-the-parent-element-and-the-first-or-last-child-element-effect.gif)
 
 ### 怎麼解決：
   - 將兩個塊狀元素隔開的方法都可以，像是改成 `inline-block`、`border`、`float` 等等。

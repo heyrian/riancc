@@ -6,7 +6,7 @@ category: ['Back-end']
 tags: ["CI&CD", "PaaS"]
 ---
 
-![deployment-flow](deployment-flow.png)
+![deployment-flow](/blog/deployment-flow.png)
 
 # 前言
 
