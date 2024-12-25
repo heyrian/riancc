@@ -83,7 +83,7 @@ source 中的屬性包含 srcset、media、type。
 
 ## Cumulative Layout Shift (CLS)
 
-![cumulative-layout-shift](cumulative-layout-shift.gif)
+![cumulative-layout-shift](/blog/cumulative-layout-shift.gif)
 
 這是一個用戶他因為版面位置變動的關係，導致誤觸按鈕的案例。
 
@@ -91,7 +91,7 @@ CLS 是一個衡量網頁視覺穩定的指標，當圖片沒有指定寬度和�
 
 多數工程師可能不知道，CLS 其實在 Google Search Console 中會偵測到，這會影響到網站 SEO 排序。
 
-![search-console-detect-cls](search-console-detect-cls.png)
+![search-console-detect-cls](/blog/search-console-detect-cls.png)
 
 ### 解決 CLS 的方法：
 
