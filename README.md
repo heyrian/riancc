@@ -1,206 +1,352 @@
-# Typography
+# Astro Theme Yi
 
-<p align='center'>
-  <img src='./public/typograph-og.jpg' alt='Typography' width='600'/>
-</p>
+[[English]](./README.md) | [[简体中文]](./README-ZH-CN.md)
 
-<h6 align='center'>
-<a href="https://astro-theme-typography.vercel.app/">Live Demo</a>
-</h6>
-<h5 align='center'>
-<b>This work is rewrite from <a href="https://github.com/sumimakito/hexo-theme-typography">hexo-theme-Typography</a></b>
-</h5>
-<p align='center'>
-<b>English</b> | <a href="./README.zh-CN.md">简体中文</a>
-</p>
+Demo：[Astro-Theme-Yi](https://astro-yi-nu.vercel.app/)
 
-## Features
+A content-focused Astro blog theme, Yi, in Chinese, it means fast and concise.
 
-- Build with **Astro**, **TypeScript** and **UnoCSS**
-- **Fast**. 100% [Pagespeed Score](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop).
-- **Typography** Derived from prevalent Chinese typographic norms and aims to provide an enhanced reading experience for website visitors.
-- **Responsive**. Responsive and works well on all screen sizes.
-- **Accessible**. A well thought out semantic and accessible content.
-- **SEO friendly**.Open Graph and Twitter Cards support for a better social sharing experience.
-- **Sitemap** and **RSS feed** for search engines.
-- i18n support.
-- Support Disqus, Giscus, Twikoo as comment service.
-- Dark mode support.
+![](https://astro-yi.obs.cn-east-3.myhuaweicloud.com/7.png)
 
-## Demo
+![](https://astro-yi.obs.cn-east-3.myhuaweicloud.com/1.png)
 
-> Submit a PR to add your blog Demo.
+![](https://astro-yi.obs.cn-east-3.myhuaweicloud.com/8.png)
 
-- [Live Demo](https://astro-theme-typography.vercel.app/)
-- [My Blog](https://blog.moeyua.com/)
-- [Julyfun's Blog (how to fully build this blog using `bun` in minutes)](https://julyfun.fun/posts/%E5%85%89%E9%80%9F%E6%90%AD%E5%BB%BA%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/)
+### 🔥 Features
 
-## Getting Started
+- [x] Supports multi-platform display.
+- [x] Supports dark mode.
+- [x] Supports Memos.
+- [x] supports i18n.
+- [x] Supports search functionality.
+- [x] SEO-friendly
+- [x] Supports sitemap and RSS.
+- [x] Supports article drafts.
+- [x] Supports Waline/Giscus Comment.
+- [x] Image lazy loading and scaling support.
+- [x] Supports fixed permalinks for articles.
+- [x] Supports meriand
+- [x] Supports mathjax
+- [x] Supports expressive code
 
-Typography is a minimal, responsive and SEO-friendly Astro blog theme. This guide will help you get started with a new project. 
+......
 
-### Quick Start
+### Vercel Deplyment
 
-You can fork the repository to your account by clicking the Fork button in the upper right corner, click the button below, select the repository you just forked, click the Import button, and you will be taken to the project configuration page.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https%3A%2F%2Fgithub.com%2Fcirry%2Fastro-yi)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
+Give it a try! Click the button above, and you can deploy with just one click.
 
-Or you can refer to the [Astro](https://docs.astro.build/guides/deploy/) documentation to deploy to your favorite platform.
+### 👨🏻‍💻 Manual Installation
 
-### Add post
-
-You can add content by creating a new markdown file in `src/content/posts`. The file need metadata in the frontmatter, like this:
-
-```md
----
-title: title
-pubDate: 2021-08-01
-categories: ['article']
-description: 'description'
----
-```
-
-Or, you can use the following command in your terminal to create a new post:
+Recommended for use `nodejs >= 18`，`pnpm >= 8`。
 
 ```bash
-pnpm new-post
+git clone https://github.com/cirry/astro-yi.git
+cd astro-yi
+npm install -g pnpm # install pnpm
+pnpm i  # installs dependencies
+npm run dev # preview, starts local dev server at localhost:4321
 ```
 
-## Updating the theme
+```bash
+npm run build # build your production site to ./dist 
+```
+After the packaging is completed, Upload the `dist` folder to the web server directory.
 
-You can simply [`Sync Fork`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) on your own forked project (do not click Discard Changes, otherwise you will lose your own changes).
+## Configuration
 
-## Customization
-
-Typography is highly customizable. The config file is in [src/theme.config.ts](src/theme.config.ts)
-
-### Social links
-
-Typography has built-in support for adding links to your social media accounts to the site via the social option in the config file:
+In the `src/const.ts` file, you can make some modifications according to your needs.
 
 ```ts
-socials: [
+/**
+ * title {string} website title
+ * favicon {string} website favicon url
+ * description {string} website description
+ * author {string} author
+ * avatar {string} Avatar used in the profile
+ * motto {string} used in the profile
+ * url {string} Website link
+ * recentBlogSize {number} Number of recent articles displayed in the sidebar
+ * archivePageSize {number} Number of articles on archive pages
+ * postPageSize {number} Number of articles on blog pages
+ * feedPageSize {number} Number of articles on feed pages
+ * beian {string} Chinese policy
+ */
+export const site = {
+    title: 'Astro Theme Yi',
+    favicon: '/favicon.svg',
+    description: 'Welcome to my independent blog website! ',
+    author: "xxxxx",
+    avatar: '/avatar.png',
+    motto: 'Keep moving.',
+    url: 'https://astro-yi-nu.vercel.app',
+    recentBlogSize: 5,
+    archivePageSize: 25,
+    postPageSize: 10,
+    feedPageSize: 20,
+    beian: ''
+  }
+
+/**
+ * busuanzi {boolean} Enable Busuanzi Statistics Functionality
+ * lang {string} Default website language: English
+ * codeFoldingStartLines {number} default 16
+ * ga {string} google analytics code
+ * memosUrl {string} memos server url
+ * memosUsername {string} memos login name
+ * memosPageSize {number} 10
+ */
+export const config = {
+  busuanzi: false,
+  lang: 'en', // English: en | 简体中文: zh-cn | 繁體中文: zh-Hant | cs
+  codeFoldingStartLines: 16, // Need to re-run the project to take effect
+  ga: false, // If you want to integrate with Google Analytics, just enter your GA-ID here.
+  
+  // memos config
+  memosUrl: '', // https://xxxx.xxx.xx
+  memosUsername: '', // login name
+  memosPageSize: 10, // number
+}
+
+/**
+ * Navigator
+ */
+export const categories = [
   {
-    name: "github",
-    href: "https://github.com/moeyua/astro-theme-typography"
-  }
-  ...
-]
-```
-
-The `name` is the icon name in [Material Design Icons](https://pictogrammers.com/library/mdi/),
-which will be automatically generated as the icon.
-
-> Note that you need to restart the development server to see the changes.
-
-### Navigation links
-
-By default, the navigation are `Posts`, `Archive`, `Categories` and `About`. You can add more in the config file:
-
-```ts
-navs: [
+    name: "Homepage",
+    iconClass: "ri-home-4-line",
+    href: "/",
+  },
   {
-    name: "Categories",
-    href: "/categories"
+    name: "Blog",
+    iconClass: "ri-draft-line",
+    href: "/blog/1",
+  },
+  {
+    name: "Feed",
+    iconClass: "ri-lightbulb-flash-line",
+    href: "/feed/1",
+  },
+  {
+    name: "Archive",
+    iconClass: "ri-archive-line",
+    href: "/archive/1",
+  },
+  {
+    name: "Message",
+    iconClass: "ri-chat-1-line",
+    href: "/message/",
+  },
+  {
+    name: "Search",
+    iconClass: "ri-search-line",
+    href: "/search",
+  },
+  {
+    name: "More",
+    iconClass: "ri-more-fill",
+    href: "javascript:void(0);",
+    children: [
+      {
+        name: 'About',
+        iconClass: 'ri-information-line',
+        href: '/about',
+      },
+      {
+        name: 'Friends',
+        iconClass: 'ri-user-5-line',
+        href: '/friends',
+        target: '_self', // _self | _blank
+      },
+    ]
   }
-  ...
 ]
-```
 
-And then add the corresponding page in `src/pages`, see more in [Astro Pages](https://docs.astro.build/en/core-concepts/astro-pages/)
+/**
+ * Personal link address
+ */
+export const infoLinks = [
+  {
+    icon: 'ri-telegram-fill',
+    name: 'telegram',
+    outlink: 'xxxxxxx',
+  },
+  {
+    icon: 'ri-twitter-fill',
+    name: 'twitter',
+    outlink: 'xxxxxxx',
+  },
+  {
+    icon: 'ri-instagram-fill',
+    name: 'instagram',
+    outlink: 'xxxxxxx',
+  },
+  {
+    icon: 'ri-github-fill',
+    name: 'github',
+    outlink: 'https://github.com/cirry',
+  },
+  {
+    icon: 'ri-mail-fill',
+    name: 'xxxxxxx@gmail.com',
+    outlink: 'mailto:xxxxxxx@gmail.com',
+  },
+  {
+    icon: 'ri-rss-fill',
+    name: 'rss',
+    outlink: 'https://xxxxx.com/rss.xml',
+  }
+]
 
-### Dark mode
+/**
+ * Donation feature
+ * Please replace the image and paypal link before use.
+ * enable {boolean}
+ * tip {string}
+ */
+export const donate = {
+  enable: false,
+  tip: "Thanks for the coffee !!!☕",
+  wechatQRCode: "/WeChatQR.png",
+  alipayQRCode: "/AliPayQR.png",
+  paypalUrl: "https://paypal.me/xxxxxxxx",
+}
 
-Typography supports dark mode. You can change it in the config file:
+/**
+ * Friends Links Page
+ * name {string}
+ * url {string}
+ * avatar {string}
+ * description {string}
+ */
+export const friendshipLinks =
+  [
+    {
+      name: "Cirry's Blog",
+      url: 'https://cirry.cn',
+      avatar: "https://cirry.cn/avatar.png",
+      description: 'frontend development'
+    },
+  ]
 
-```ts
-themeStyle: 'dark' // 'light' | 'dark'
-```
+/**
+ * Comment Feature
+ * enable {boolean}
+ * type {string} giscus and waline are currently supported.
+ * walineConfig.serverUrl {string} server link
+ * walineConfig.pageSize {number} number of comments per page. default 10
+ * walineConfig.wordLimit {number} Comment word s limit. When a single number is filled in, it 's the maximum number of comment words. No limit when set to 0
+ * walineConfig.count {number} recent comment numbers
+ * walineConfig.pageview {boolean} display the number of page views and comments of the article
+ * walineConfig.reaction {string | string[]} Add emoji interaction function to the article
+ * walineConfig.requiredMeta {string[]}  Set required fields, default anonymous
+ */
+export const comment = {
+  enable: false,
+  type: 'giscus', // waline | giscus,
+  walineConfig:{
+    serverUrl: "https://xxxxx.xxxxx.app",
+    lang: 'en',
+    pageSize: 20,
+    wordLimit: '',
+    count: 5,
+    pageview: true,
+    reaction: true,
+    requiredMeta: ["nick", "mail"],
+    whiteList: ['/message/', '/friends/'],
+  },
 
-
-### Internationalization (i18n)
-
-Typography provides built-in support for multilingual sites. By default, the language is `en-us`, you can change it in the config file:
-
-```ts
-locale: "zh-cn"
-
-```
-
-For now, Typography supports below languages:
-
-- `en-us`
-- `zh-cn`
-- `zh-tw`
-- `ja-jp`
-
-You can see all supported languages in [src/i18n.ts](src/i18n.ts), and add more if you need.
-
-### Comment
-
-Typography supports multiple comment services, currently supports [Disqus](https://disqus.com/), [Giscus](https://giscus.app/) and [Twikoo](https://twikoo.js.org/).
-
-Enable the corresponding comment service by adding the configuration to the config file, when you fill in multiple comment services, only the first service will be displayed.
-
-#### Disqus
-
-You can enable Disqus by adding the following configuration to the config file:
-
-```ts
-comments: {
-  disqus: {
-    shortname: "your-disqus-shortname"
+  // giscus config
+  giscusConfig: {
+    'data-repo': "xxxxxxx",
+    'data-repo-id': "xxxxxx",
+    'data-category': "Announcements",
+    'data-category-id': "xxxxxxxxx",
+    'data-mapping': "pathname",
+    'data-strict': "0",
+    'data-reactions-enabled': "1",
+    'data-emit-metadata': "0",
+    'data-input-position': "bottom",
+    'data-theme': "light",
+    'data-lang': "xxxxxxxxxxx",
+    'crossorigin': "anonymous",
   }
 }
 ```
 
-#### Giscus
+Please modify your website configuration, comment system configuration, appreciation function image, personal information links, and of course, you can also modify other configuration content.
 
-Based on the [Giscus web component](https://github.com/giscus/giscus-component?tab=readme-ov-file#using-the-web-component) implementation.
+### Write a blog 
 
-The prop names are the same as the data- attributes shown on the [giscus website]((https://giscus.app/)), but written in camelCase with the data- prefix and dashes removed.
+With the Yi theme, all you need to do is create a new md document in `src/content/blog` and you're ready to start writing your blog.
 
-You can enable Giscus by adding the following configuration to the config file:
+According to Astro's Markdown document standard, each document should have its own frontmatter information and add `---` as the beginning and the end of the document's header in md to mark the frontmatter, which gives us a lot of convenience:.
 
-```ts
-comments: {
-  giscus: {
-    repo: "your-repo",
-    repoId: "your-repo-id",
-    category: "your-category",
-    categoryId: "your-category-id",
-    mapping: "title",
-    strict: '0',
-    reactionsEnabled: '1',
-    emitMetadata: '1',
-    inputPosition: 'top',
-    theme: 'light',
-    lang: 'zh-CN',
-    loading: 'lazy',
-  }
-}
+1. for example, if we want to add tags and categories to a document or top some documents, we can add some attributes to the document in Frontmatter, such as `tags`, `sticky` and so on.
+
+2. For example, to avoid using Chinese as the blog path and file name, we can set `title` as the title of the md document in Chinese, and the file name in English with `-` as the word connecting symbol.
+
+In Astro-Yi, You need to set two important properties: **title** and **date**, the following is the simplest frontmatter setup for a Md document:
+
+```yaml
+---
+title: Display pictures
+date: 2024-03-05
+---
 ```
 
-#### Twikoo
+If you feel that this is not quite enough, Yi also provides more properties for you to use, this is a complete example:
 
-You can enable Twikoo by adding the following configuration to the config file:
-
-```ts
-comments: {
-  twikoo: {
-    envId: "your-env-id",
-  }
-}
+```yaml
+---
+title: Display pictures
+description: Display pictures
+date: 2024-03-05
+tags: [astro]
+category: astro
+sticky: 100  // Document top weight, the larger the number, the greater the weight
+slug: poem/ci //  Permanent link to document
+mathjax: false // enable formula display
+mermaid: false // enable mermaid
+draft: false
+toc: true
+donate: false
+comment: false
+---
 ```
 
-## Pagespeed Score
+### Write a feed
 
-[![Pagespeed Score](https://github.com/moeyua/astro-theme-typography/assets/45156493/2272f576-d6ff-49ef-a294-5c2acf365907)](https://pagespeed.web.dev/analysis/https-astro-theme-typography-vercel-app/j34nq9tx0s?form_factor=desktop)
+With the Yi theme, all you need to do is create a new md document in `src/content/feed` and you're ready to start writing.
 
-## TODO 
+feed frontmatter needs to set an important property **date**, the rest of the attributes are optional.
 
-- [ ] WebSub
-- [x] comment
-- [ ] search
-- [ ] analytics
+```yaml
+---
+date: 2024-03-20
+---
+```
+
+### Modify icons
+
+All the icons in the blog are using the open source icon library [remixicon](https://remixicon.cn/), you can replace your favorite icons by yourself.
+
+### Note
+
+In the `astro.config.mjs` file in the root directory, it is recommended to modify the `site` property to correctly generate the site map.
+
+```js
+export default defineConfig({
+  site: 'https://xxxx.com',// Modify to your own website address
+  // ...
+})
+```
+
+Add a line to the path of your sitemap file at the end of the robots.txt file in the public directory.
+
+
+```text
+Sitemap: [blog-url]/sitemap-0.xml
+// ps：Sitemap: https://astro-yi-nu.vercel.app/sitemap-0.xml
+```
